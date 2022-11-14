@@ -1,0 +1,20 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik-external
+  name: vault-ingressroute
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`vaultkube.lab.markaplay.net`)
+      priority: 10
+      services:
+        - name: vault-ui
+          port: 8200
+#      middlewares:
+#        - name: vaultstrip
+  tls:
+    secretName: vault-tls

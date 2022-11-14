@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vaultwarden-server
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: vaultwarden-server
+  template:
+    metadata:
+      labels:
+        app: vaultwarden-server
+    spec:
+      containers:
+      - image: vaultwarden/server:1.26.0-alpine
+        name: vaultwarden-server
+        envFrom:
+          - configMapRef:
+              name: vaultwarden-config
+          - secretRef:
+              name: vaultwarden-secrets
+        volumeMounts:
+          - name: vaultwarden-server-vol
+            mountPath: /data/
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 400m
+            memory: 1024Mi
+          limits:
+            memory: 1024Mi
+      volumes:
+        - name: vaultwarden-server-vol
+          persistentVolumeClaim:
+            claimName: vaultwarden-volv-pvc

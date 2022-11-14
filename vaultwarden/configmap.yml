@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: vaultwarden-config
+    labels:
+        app: vaultwarden-server
+data:
+    WEBSOCKET_ENABLED: ENC[AES256_GCM,data:ceO3jw==,iv:JnFeeIAlUv3pJ8wVB1SHIkS1NzVGbBkSSQA6v0UfkBw=,tag:GoCg+PQWQrFy+W9pYmxtuw==,type:str]
+    DOMAIN: ENC[AES256_GCM,data:mWQC2X+b6vnlxgH4NXAB7PpwwabN7ZC/dTrvLH2F2Nj50s0j1Q==,iv:RAxdxmJpnN6iNkSraQIsX+Sen2rQIPG8oKxkMgm+NL8=,tag:hlvjCkqdHSxkOmAuyvKO6Q==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBVR3o5bVFkWm1vVWo2MFVH
+            QU1mdHo3b092NFpvRit0cWVRbWo4aXl1Z0FVCnorMmlIeUhYSXAvZDFpL0RBOTJW
+            bmlJaTNYb0VDYW1PYURqbC9GemwwREkKLS0tIFFjMURScTFjdGFYa2EraEVwb0FR
+            NHc4L005cnNCUHJSRy82N1ZJK3VwTTgKcTi9qtjABqhZSm6OEp1/3pFEmXzsPcR4
+            Seu4cxoRjEhFCoZnK4mymL6JWaEpjsnRGaeV3ivL+BZrL3h2J0fABQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-11-14T23:54:50Z"
+    mac: ENC[AES256_GCM,data:ToDRj3uGMbT0MTr24ZhLg1IJI02NVNp5L4tTLnR3HVWy7F93gL8DmC20eJqrqb1cPfnilG+CpDh252rpId54ly46zQgR9qkHKMT6UM4dX89i92jDxR5+rpgEptbcFL0UVJrOG6aVggMiC743yvUgS45kuhuA6QCWQ7lXebrExN0=,iv:pqHK1jRj3z+BdkPKtRWfojMGp6UAp3WYwgntNee5yZg=,tag:yCXPrJLEc8WncZDvypCitw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
