@@ -3600,13 +3600,12 @@ spec:
                     - sops
                     type: string
                   secretRef:
-                    name: sops-age
-                    # description: The secret name containing the private OpenPGP keys
-                    #   used for decryption.
-                    # properties:
-                    #   name:
-                    #     description: Name of the referent.
-                    #     type: string
+                    description: The secret name containing the private OpenPGP keys
+                      used for decryption.
+                    properties:
+                      name:
+                        description: Name of the referent.
+                        type: string
                     required:
                     - name
                     type: object
