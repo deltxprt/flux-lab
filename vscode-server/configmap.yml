@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: vscode-config
+    namespace: lab
+    labels:
+        app: vscode-server
+data:
+    PUID: ENC[AES256_GCM,data:oOpY/A==,iv:Pa+J1jIV62O+dpILrufFo3BcKx7XISrBbdKLmz5W/o4=,tag:Z3VkbzEVa0oM+RngwJ4gRA==,type:str]
+    PGID: ENC[AES256_GCM,data:TPKYzA==,iv:Lu0oLUktqr2V5GaWucQTmNNJ8VPy82vLXAMRsL/D/cU=,tag:A2dXfXOKKYQoYVBsHoBysA==,type:str]
+    TZ: ENC[AES256_GCM,data:SbG3+i75CIoTQa3MLupg,iv:qQtPaU9aqQb2vRto9NUzfxR2E0GfdAnfBFgwsP9v6mc=,tag:HpfgNt9uUjgfgLMdlGPivA==,type:str]
+    SUDO_PASSWORD_HASH: ENC[AES256_GCM,data:m8aaZsswcbaJ8Uv5L0Tg2hPE7sTh161BBjty0WlkrilEvMk17Gk0reMGToZXQd++A21ctnsDDYAhWuLw,iv:8kA8ksrnaWEJXjxWqNyTHYjVJLAVeIRuL2HFVdSqSIc=,tag:DS0PH9ij40EFGUUmJaAqtg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age10tnwcsfc3a59h85ngj9nu4nhs028az2e9vlt72pwjkclwuqkey7suvg253
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBUSjJBdXo5SCtmUHFjZTFN
+            eGw0eUVLYzlBN3lTaFQ5ZnRLa2xEckhrV1ZvCkJqbHhJS0Y5dFNWNk9PbVFaenBu
+            aEhKeHM5bWFTMjBvSUZaVUhnRkh1SnMKLS0tIHFWR1huWXVwVDB0V2Q5d2NJY1JJ
+            enVtTGladlNkUkt5ckg1U0hEMXp2Qm8Kp1DpYkZZgmFJCLr2kuVTC9K1JX0i+u2j
+            c83thEgK3crrpTOcm4z8XgghncBZwdAE/MLd9jM4M2aZ7lily4S0sA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-11-13T22:47:08Z"
+    mac: ENC[AES256_GCM,data:nWh8VB4KTTgkM/fysj9CIaSkaoXlIC1bNCDLIvIp+Clmkgmeb28PUQJUgvRKAljUEoBhlVPrd0eb4RqBew5QUDdMwH2c8WT16LblMq066kjDEmVc+GeIuAifKAOJeQu5xrIY1vWzBPbvE89IQp43My9u6Gq851XUXjv5OhC/Jxg=,iv:IFuM/PzeQIHLIHDdl48z3z+lE2oAk8IYNVEzm7s9QHA=,tag:nOEoxCs6qJ0MwG7S8oC8pA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

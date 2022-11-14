@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vscode-server
+  namespace: lab
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: vscode-server
+  template:
+    metadata:
+      labels:
+        app: vscode-server
+    spec:
+      containers:
+      - image: linuxserver/openvscode-server
+        name: vscode-server
+        volumeMounts:
+          - name: vscode-server-vol
+            mountPath: /config
+        ports:
+        - containerPort: 3000
+        envFrom:
+          - configMapRef:
+              name: vscode-config
+        resources:
+          requests:
+            cpu: 400m
+            memory: 1024Mi
+          limits:
+            memory: 1024Mi
+      volumes:
+        - name: vscode-server-vol
+          persistentVolumeClaim:
+            claimName: vscode-volv-pvc
