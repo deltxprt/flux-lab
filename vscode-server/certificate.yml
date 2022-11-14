@@ -12,3 +12,4 @@ spec:
   commonName: "vscode.lab.markaplay.net"
   dnsNames:
   - "vscode.lab.markaplay.net"
+  - "code.lab.markaplay.net"
