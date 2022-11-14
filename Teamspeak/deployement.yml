@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teamspeak
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: teamspeak
+  template:
+    metadata:
+      labels:
+        app: teamspeak
+    spec:
+      containers:
+      - image: teamspeak:3.13.7
+        name: teamspeak
+        env:
+        - name: TS3SERVER_LICENSE
+          value: accept
+        ports:
+        - name: query
+          protocol: TCP
+          containerPort: 10011
+        - name: filetransfer
+          protocol: TCP
+          containerPort: 30033
+        - name: voice
+          protocol: UDP
+          containerPort: 9987

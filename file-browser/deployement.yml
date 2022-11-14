@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-browser
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: file-browser
+  template:
+    metadata:
+      labels:
+        app: file-browser
+    spec:
+      containers:
+      - image: filebrowser/filebrowser:latest
+        name: file-browser
+        volumeMounts:
+          - name: filebrowser-vol
+            mountPath: /
+        ports:
+        - containerPort: 80
+      volumes:
+        - name: filebrowser-vol
+          persistentVolumeClaim:
+            claimName: filebrowser-volv-pvc
