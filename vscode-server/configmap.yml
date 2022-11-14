@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
     name: vscode-config
-    namespace: default
+    namespace: lab
     labels:
         app: vscode-server
 data:

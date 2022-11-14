@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: vscode-volv-pvc
-  namespace: default
+  namespace: lab
 spec:
   accessModes:
     - ReadWriteOnce
