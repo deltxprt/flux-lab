@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
     name: vaultwarden-config
+    namespace: vaultwarden
     labels:
         app: vaultwarden-server
 data:
@@ -22,8 +23,8 @@ sops:
             NHc4L005cnNCUHJSRy82N1ZJK3VwTTgKcTi9qtjABqhZSm6OEp1/3pFEmXzsPcR4
             Seu4cxoRjEhFCoZnK4mymL6JWaEpjsnRGaeV3ivL+BZrL3h2J0fABQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-11-14T23:54:50Z"
-    mac: ENC[AES256_GCM,data:ToDRj3uGMbT0MTr24ZhLg1IJI02NVNp5L4tTLnR3HVWy7F93gL8DmC20eJqrqb1cPfnilG+CpDh252rpId54ly46zQgR9qkHKMT6UM4dX89i92jDxR5+rpgEptbcFL0UVJrOG6aVggMiC743yvUgS45kuhuA6QCWQ7lXebrExN0=,iv:pqHK1jRj3z+BdkPKtRWfojMGp6UAp3WYwgntNee5yZg=,tag:yCXPrJLEc8WncZDvypCitw==,type:str]
+    lastmodified: "2022-11-15T00:02:03Z"
+    mac: ENC[AES256_GCM,data:nKO/CqUIOszt29/31bXWSmZ8jgbpmwQm7yUaKbgtoUcwux8uaFk6BVT00W7Ymik76HEKygsWWr8zU54GQtfAlHIKCInTKzEtZmEpN+mXR1nayADtbOdtyjaKE831l8JB6iVxH7Sm8YD4WP3LXMzrEuuKRBJPUeuUVSSA6JStK1Q=,iv:I3ybayJDR5BmH3i6TrmxFzYON9f7fA9zxvjyMfmJ8dg=,tag:/c3uDXss5Ftbp4rooBVlFA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
