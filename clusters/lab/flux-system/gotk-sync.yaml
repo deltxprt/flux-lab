@@ -8,8 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    commit: 24ef8bf8ac761f449b0372d3bf8cef6b8c2a279d
-    #branch: main
+    branch: main
   secretRef:
     name: flux-system
   url: ssh://git@github.com/deltxprt/flux-lab
@@ -26,7 +25,3 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-age
