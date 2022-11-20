@@ -8,7 +8,7 @@ spec:
   pod-security.kubernetes.io/enforce: restricted
 ---
 apiVersion: policy/v1
-kind: PodSecurityAdminission
+kind: PodSecurityAdmission
 metadata:
   labels:
     app: metallb
