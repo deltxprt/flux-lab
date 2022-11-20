@@ -1,20 +1,3 @@
-apiVersion: policy/v1
-kind: PodSecurityAdmission
-metadata:
-  labels:
-    app: metallb
-  name: controller
-spec:
-  pod-security.kubernetes.io/enforce: restricted
----
-apiVersion: policy/v1
-kind: PodSecurityAdmission
-metadata:
-  labels:
-    app: metallb
-  name: speaker
-spec:
-  pod-security.kubernetes.io/enforce: restricted
 ---
 apiVersion: v1
 kind: ServiceAccount
