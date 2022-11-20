@@ -4,24 +4,9 @@ metadata:
     namespace: metallb-system
     name: config
 data:
-    config: ENC[AES256_GCM,data:3LZPfyjHfSyaS9eCioe2X/OyCMayoMnAlMklwNSKMDOr9qvJShYr6mvEXjxNqtp6a5mpbxW2HSZltR2txdItyMpLjPuFu3x/7n3azWpe1C+7lvCOrozl,iv:xE52IeYIOnczOXzuUYkxWs49GWRlCMIkWrMLnbb2PUI=,tag:cKjcL8yJ8FrT4nv2+WLnBA==,type:str]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBkSmI0eWpWbWdFZmY4MWxB
-            ZS9TUm9oblFlNm95U2hxVUF2RHNSUlptaTFjCkU5SjVtcklOVm90MWNRS3psUDB2
-            THBucGM2c2ZTZVk5dlpHMGI4djl0NHMKLS0tIHJ0aFpQOEd5NXhnclBBQnh4K25Q
-            Q05aUm5lV0FjR0t0T1JrSE8xWU1DYTAKNQn02XLU744CGtD/JBIgXeqtEhTUtCjV
-            CPRWj2F3JvP5U2kbeINlK3d8xiXoT93/NqO1YR+NJHJh7ikRp+8E8Q==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-11-19T23:48:25Z"
-    mac: ENC[AES256_GCM,data:ps03rklXO3jO8Jg7fbT7ePsQXNgjpLbMP3qKiLNMlyqts5H04vGFIrSow+gSFaW13r7vnIL8FoBp/qW6EZK9KBQMIsiMpafWPBiBC48wYFAQ2ThSkQodRaWBwiliWpU+lyS78cxM+P7FVn5Rz5ODdEU39qjI6bwibIhM7Z1yE5A=,iv:b0AuTJLFztkJv4aFLdfrYCYepDNsifXJOYfKtp11cwo=,tag:4a38TNb0buOl427GyvnJSg==,type:str]
-    pgp: []
-    encrypted_regex: ^(data|stringData)$
-    version: 3.7.3
+    config: |
+        address-pools:
+        - name: default
+          protocol: layer2
+          addresses:
+          - 10.0.0.40-10.0.0.50
