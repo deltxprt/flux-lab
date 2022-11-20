@@ -1,16 +1,13 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
+---
+apiVersion: v1
+kind: Service
 metadata:
-  annotations:
-    kubernetes.io/ingress.class: traefik-external
-  name: nginx-service
-  namespace: default
+  name: nginx
+  namespace: test
 spec:
-  entryPoints:
-    - websecure
-  routes:
-    - kind: Rule
-      match: Host(`test.lab.markaplay.net`)
-      services:
-        - name: nginx
-          port: 80
+  selector:
+    app: nginx
+  ports:
+  - name: http
+    targetPort: 80
+    port: 80
