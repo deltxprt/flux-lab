@@ -1,8 +1,10 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
   name: dns-volv-pvc
   namespace: dns
+  annotations:
+    pv.kubernetes.io/provisioned-by: rancher.io/local-path
 spec:
   accessModes:
     - ReadWriteOnce
