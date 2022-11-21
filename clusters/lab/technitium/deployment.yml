@@ -5,7 +5,7 @@ metadata:
   name: dns-server
   namespace: dns
 spec:
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
