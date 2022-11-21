@@ -1,0 +1,18 @@
+---
+    apiVersion: traefik.containo.us/v1alpha1
+    kind: IngressRoute
+    metadata:
+      name: dns-ingress
+      annotations: 
+        kubernetes.io/ingress.class: traefik-external
+    spec:
+      entryPoints:
+        - websecure
+      routes:
+        - match: Host(`dns.lab.markaplay.net`)
+          kind: Rule
+          services:
+            - name: dns-console
+              port: 80
+      tls:
+        secretName: dns-tls
