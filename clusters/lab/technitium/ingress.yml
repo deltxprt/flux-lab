@@ -3,6 +3,7 @@
     kind: IngressRoute
     metadata:
       name: dns-ingress
+      namespace: dns
       annotations: 
         kubernetes.io/ingress.class: traefik-external
     spec:
