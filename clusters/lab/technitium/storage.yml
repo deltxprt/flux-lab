@@ -1,11 +1,24 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: dns-volv-pvc
+  name: dns-volv-pv
   namespace: dns
-  annotations:
-    pv.kubernetes.io/provisioned-by: rancher.io/local-path
+  labels:
+    type: rook-ceph
 spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dns-volv-pvc
+spec:
+  storageClassName: rook-ceph
   accessModes:
     - ReadWriteOnce
   resources:
