@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkmk
+  namespace: monitoring
+  labels:
+    app: checkmk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: checkmk
+  template:
+    metadata:
+      labels:
+        app: checkmk
+    spec:
+      containers:
+      - name: checkmk
+        image: checkmk/check-mk-raw:2.1.0p16
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: checkmk-vol
+          mountPath: /omd/sites
+      volumes:
+      - name: checkmk-vol
+        persistentVolumeClaim:
+          claimName: checkmk-pvc
