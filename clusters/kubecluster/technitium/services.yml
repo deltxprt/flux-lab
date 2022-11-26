@@ -10,7 +10,8 @@ spec:
     port: 80
     targetPort: http
     protocol: TCP
-  type: ClusterIP
+  loadBalancerIP: 10.0.0.41
+  type: LoadBalancer
 ---
 apiVersion: v1
 kind: Service
