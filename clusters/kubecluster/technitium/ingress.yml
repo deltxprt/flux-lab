@@ -10,7 +10,7 @@
       entryPoints:
         - websecure
       routes:
-        - match: Host(`dns.lab.markaplay.net`)
+        - match: Host(`dns02.lab.markaplay.net`)
           kind: Rule
           services:
             - name: dns-console
