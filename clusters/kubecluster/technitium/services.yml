@@ -9,8 +9,8 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 80
-    targetPort: http
+    port: 5380
+    targetPort: 5380
     protocol: TCP
   loadBalancerIP: 10.0.0.41
   type: LoadBalancer
@@ -26,11 +26,11 @@ spec:
   ports:
   - name: dns-udp
     port: 53
-    targetPort: dns-udp
+    targetPort: 53
     protocol: UDP
   - name: dns-tcp
     port: 53
-    targetPort: dns-tcp
+    targetPort: 53
     protocol: TCP
   loadBalancerIP: 10.0.0.114
   type: LoadBalancer
