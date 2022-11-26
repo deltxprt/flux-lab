@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRelease
+metadata:
+  name: checkmk
+  namespace: monitoring
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: tribe29
+      sourceRef:
+        kind: HelmRepository
+        name: tribe29
+        namespace: flux-system
+      version: 1.1.0

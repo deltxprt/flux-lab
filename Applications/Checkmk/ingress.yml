@@ -1,0 +1,19 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: checkmk-ingress
+  namespace: monitoring
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`checkmk.lab.markaplay.net`)
+      kind: Rule
+      services:
+        - name: checkmk-dashboard
+          port: 8080
+  tls:
+    secretName: checkmk-tls
