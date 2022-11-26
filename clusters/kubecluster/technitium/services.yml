@@ -18,7 +18,7 @@ metadata:
   name: dns-service
   namespace: dns
   labels:
-    metallb.universe.tf/address-pool: Internal-pool
+    metallb.universe.tf/ipaddress-pool: Internal-pool
 spec:
   ports:
   - name: dns-udp
