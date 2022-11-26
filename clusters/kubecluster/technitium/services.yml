@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: dns-console
   namespace: dns
+  labels:
+    metallb.universe.tf/ipaddress-pool: Internal-pool
 spec:
   ports:
   - name: http
