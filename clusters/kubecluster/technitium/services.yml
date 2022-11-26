@@ -5,7 +5,7 @@ metadata:
   name: dns-console
   namespace: dns
   labels:
-    metallb.universe.tf/ipaddress-pool: Internal-pool
+    metallb.universe.tf/address-pool: Internal-pool
 spec:
   ports:
   - name: http
@@ -21,7 +21,7 @@ metadata:
   name: dns-service
   namespace: dns
   labels:
-    metallb.universe.tf/ipaddress-pool: Internal-pool
+    metallb.universe.tf/address-pool: Internal-pool
 spec:
   ports:
   - name: dns-udp
