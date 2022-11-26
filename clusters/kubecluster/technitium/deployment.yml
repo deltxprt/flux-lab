@@ -21,7 +21,14 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 53
+            name: dns-udp
+            protocol: UDP
+          - containerPort: 53
+            name: dns-tcp
+            protocol: TCP
           - containerPort: 5380
+            name: http
+            protocol: TCP
         volumeMounts:
           - name: config-volume
             mountPath: /etc/dns/config

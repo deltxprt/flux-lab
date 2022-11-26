@@ -6,7 +6,8 @@ metadata:
   namespace: dns
 spec:
   ports:
-  - port: 5380
+  - name: http
+    port: 5380
     targetPort: 5380
     protocol: TCP
   type: ClusterIP
@@ -20,10 +21,12 @@ metadata:
     metallb.universe.tf/ipaddress-pool: Internal-pool
 spec:
   ports:
-  - port: 53
+  - name: dns-udp
+    port: 53
     targetPort: 53
     protocol: UDP
-  - port: 53
+  - name: dns-tcp
+    port: 53
     targetPort: 53
     protocol: TCP
   loadBalancerIP: 10.0.0.114
