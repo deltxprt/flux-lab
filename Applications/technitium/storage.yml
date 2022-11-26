@@ -5,7 +5,8 @@ metadata:
   namespace: dns
 spec:
   accessModes:
-    - ReadWriteMany
+  - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
+  storageClassName: rook-cephfs

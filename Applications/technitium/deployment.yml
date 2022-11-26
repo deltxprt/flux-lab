@@ -3,8 +3,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dns-server
+  namespace: dns
 spec:
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -20,9 +21,14 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 53
-            name: dns
+            name: dns-udp
+            protocol: UDP
+          - containerPort: 53
+            name: dns-tcp
+            protocol: TCP
           - containerPort: 5380
-            name: web
+            name: http
+            protocol: TCP
         volumeMounts:
           - name: config-volume
             mountPath: /etc/dns/config
