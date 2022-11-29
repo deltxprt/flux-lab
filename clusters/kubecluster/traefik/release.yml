@@ -50,6 +50,10 @@ spec:
         allowExternalNameServices: true
         publishedService:
           enabled: false
+      docker:
+        enabled: true
+        watch: true
+        endpoint: "tcp://10.0.0.61:2375"
 
     rbac:
       enabled: true
