@@ -17,5 +17,5 @@ spec:
     loki:
     persistence:
         enabled: 'true'
-        storageClassName: 'nfs-client'
+        storageClassName: 'rook-cephfs'
         size: '5Gi'
