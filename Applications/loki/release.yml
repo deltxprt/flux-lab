@@ -14,6 +14,16 @@ spec:
         namespace: flux-system
       version: 2.8.7
   values:
+    grafana:
+      enabled: 'true'
+    prometheus:
+      enabled: 'true'
+      alertmanager:
+        persistentVolume:
+          enabled: 'false'
+      server:
+        persistentVolume:
+          enabled: 'false'
     loki:
       persistence:
           enabled: 'true'
