@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
-      version: 2.5.1
+      version: 3.4.3
   values:
     loki:
       persistence:
