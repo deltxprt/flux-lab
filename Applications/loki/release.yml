@@ -7,15 +7,15 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: grafana
+      chart: loki
       sourceRef:
         kind: HelmRepository
-        name: loki
+        name: grafana
         namespace: flux-system
-      version: 20.3.0
+      version: 2.5.1
   values:
     loki:
     persistence:
         enabled: 'true'
-        storageClassName: 'nfs-client'
-        size: '5Gi'
+        storageClassName: 'rook-cephfs'
+        size: '10Gi'
