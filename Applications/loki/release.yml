@@ -10,9 +10,9 @@ spec:
       chart: grafana
       sourceRef:
         kind: HelmRepository
-        name: loki
+        name: loki-stack
         namespace: flux-system
-      version: 3.4.3
+      version: 2.8.7
   values:
     loki:
       persistence:
