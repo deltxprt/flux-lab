@@ -7,10 +7,10 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: loki
+      chart: grafana
       sourceRef:
         kind: HelmRepository
-        name: grafana
+        name: loki
         namespace: flux-system
       version: 2.5.1
   values:
