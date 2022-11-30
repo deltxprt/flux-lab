@@ -7,13 +7,23 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: loki
+      chart: grafana
       sourceRef:
         kind: HelmRepository
-        name: grafana
+        name: loki-stack
         namespace: flux-system
-      version: 3.4.3
+      version: 2.8.7
   values:
+    grafana:
+      enabled: 'true'
+    prometheus:
+      enabled: 'true'
+      alertmanager:
+        persistentVolume:
+          enabled: 'false'
+      server:
+        persistentVolume:
+          enabled: 'false'
     loki:
       persistence:
           enabled: 'true'
