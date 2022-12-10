@@ -1,33 +1,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: loki
+  name: isito
   namespace: monitoring
 spec:
   interval: 1m
   chart:
     spec:
-      chart: grafana
+      chart: isito
       sourceRef:
         kind: HelmRepository
-        name: loki-stack
+        name: base
         namespace: flux-system
-      version: 2.8.7
+      version: 
   values:
-    grafana:
-      enabled: 'true'
-    prometheus:
-      enabled: 'true'
-      alertmanager:
-        persistentVolume:
-          enabled: 'false'
-      server:
-        persistentVolume:
-          enabled: 'false'
-    loki:
-      persistence:
-          enabled: 'true'
-          storageClassName: 'rook-cephfs'
-          size: '10Gi'
-      rbac:
-        pspEnabled: true
