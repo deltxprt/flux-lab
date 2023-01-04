@@ -16,7 +16,7 @@ spec:
         app: discord-bots
     spec:
       containers:
-      - image: vincdelta/mapbot:dev
+      - image: vincdelta/discordbot:dev
         name: discord-dev
         imagePullPolicy: Always
         envfrom:
