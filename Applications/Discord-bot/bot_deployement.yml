@@ -27,4 +27,4 @@ spec:
               memory: 500MiB
             requests:
               memory: 500MiB
-              cpu: "0.5"
+              cpu: 1
