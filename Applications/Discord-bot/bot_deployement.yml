@@ -19,9 +19,22 @@ spec:
       - image: vincdelta/discordbot:dev
         name: discord-dev
         imagePullPolicy: Always
-        envfrom:
-        - secretRef:
-            name: discord-secrets
+        env:
+        - name: BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: discord-secrets
+              key: BOT_TOKEN
+        - name: BOT_PREFIX
+          valueFrom:
+            secretKeyRef:
+              name: discord-secrets
+              key: BOT_PREFIX
+        - name: API_URL
+          valueFrom:
+            secretKeyRef:
+              name: discord-secrets
+              key: API_URL
         resources:
             limits:
               memory: 500Mi
