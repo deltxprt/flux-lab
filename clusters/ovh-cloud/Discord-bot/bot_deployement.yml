@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: discord-bots
+  namespace: discord
 spec:
   replicas: 1
   revisionHistoryLimit: 3
