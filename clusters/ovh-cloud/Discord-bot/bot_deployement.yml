@@ -24,7 +24,7 @@ spec:
             name: discord-secrets
         resources:
             limits:
-              memory: 500MiB
+              memory: 500Mi
             requests:
-              memory: 500MiB
+              memory: 500Mi
               cpu: 1
