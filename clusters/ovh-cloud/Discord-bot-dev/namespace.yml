@@ -4,3 +4,4 @@ metadata:
   name: discord
   labels:
     app: discord-bots
+    environment: dev

@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: discord-bots
+  environment: prod
   namespace: discord
 spec:
   replicas: 1
@@ -17,7 +18,7 @@ spec:
     spec:
       containers:
       - image: ghcr.io/deltxprt/mapbot:1.0.0
-        name: discord-dev
+        name: discord
         imagePullPolicy: Always
         env:
         - name: BOT_TOKEN
