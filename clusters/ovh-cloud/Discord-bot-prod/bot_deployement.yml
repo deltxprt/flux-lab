@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: discord-bots
   environment: prod
-  namespace: discord
+  namespace: discord-prod
 spec:
   replicas: 1
   revisionHistoryLimit: 3

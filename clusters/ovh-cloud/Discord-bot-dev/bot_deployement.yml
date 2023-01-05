@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: discord-bots
+  environment: dev
   namespace: discord
 spec:
   replicas: 1
@@ -10,10 +11,12 @@ spec:
   selector:
     matchLabels:
       app: discord-bots
+      environment: dev
   template:
     metadata:
       labels:
         app: discord-bots
+        environment: dev
     spec:
       containers:
       - image: ghcr.io/deltxprt/mapbot:1.0.0
