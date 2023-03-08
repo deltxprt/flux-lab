@@ -1,0 +1,19 @@
+---
+    apiVersion: traefik.containo.us/v1alpha1
+    kind: IngressRoute
+    metadata:
+      name: elkstack-ingress
+      namespace: elkstack
+      annotations: 
+        kubernetes.io/ingress.class: traefik-external
+    spec:
+      entryPoints:
+        - websecure
+      routes:
+        - match: Host(`elk.lab.markaplay.net`)
+          kind: Rule
+          services:
+            - name: kibana
+              port: 5601
+      tls:
+        secretName: elkstack-tls
