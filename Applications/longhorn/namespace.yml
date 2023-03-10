@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: elkstack
+  name: longhorn-system
   labels:
-    app: elkstack
+    app: longhorn-system
 
