@@ -13,7 +13,7 @@
         - match: Host(`elk.lab.markaplay.net`)
           kind: Rule
           services:
-            - name: opensearch-dashboard
-              port: 5601
+            - name: opensearch-cluster-master
+              port: 9200
       tls:
         secretName: elkstack-tls
