@@ -14,16 +14,29 @@ spec:
         name: opensearch
         namespace: flux-system
       version: 1.4.0
-    values:
-      persistence:
-        enabled: true
-        # Set to false to disable the `fsgroup-volume` initContainer that will update permissions on the persistent disk.
-        enableInitChown: true
-        storageClass: "longhorn"
-        accessModes:
-          - ReadWriteOnce
-        size: 15Gi
-        annotations: {}
+  values:
+    # Permit co-located instances for solitary minikube virtual machines.
+    antiAffinity: "soft"
+
+    # Shrink default JVM heap.
+    esJavaOpts: "-Xmx128m -Xms128m"
+
+    # Allocate smaller chunks of memory per pod.
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "512M"
+      limits:
+        cpu: "1000m"
+        memory: "512M"
+
+    # Request smaller persistent volumes.
+    volumeClaimTemplate:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "longhorn"
+      resources:
+        requests:
+          storage: 100M
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
