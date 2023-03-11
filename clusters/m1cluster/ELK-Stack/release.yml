@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: opensearch
         namespace: flux-system
-      version: 1.4.0
+      version: 2.6.0
   values:
     # Permit co-located instances for solitary minikube virtual machines.
     antiAffinity: "soft"
@@ -52,7 +52,7 @@ spec:
         kind: HelmRepository
         name: opensearch
         namespace: flux-system
-      version: 1.4.0
+      version: 2.6.0
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
