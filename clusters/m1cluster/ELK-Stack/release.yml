@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: opensearch
+  name: opensearch-master
   namespace: elkstack
 spec:
   interval: 1m
@@ -15,20 +15,19 @@ spec:
         namespace: flux-system
       version: 2.6.0
   values:
-    # Permit co-located instances for solitary minikube virtual machines.
-    antiAffinity: "soft"
+    clusterName: "opensearch-cluster"
 
-    # Shrink default JVM heap.
-    esJavaOpts: "-Xmx128m -Xms128m"
+    nodeGroup: "master"
 
-    # Allocate smaller chunks of memory per pod.
-    resources:
-      requests:
-        cpu: "100m"
-        memory: "512M"
-      limits:
-        cpu: "1000m"
-        memory: "512M"
+    masterService: "opensearch-cluster-master"
+
+    roles:
+      master: "true"
+      ingest: "false"
+      data: "false"
+      remote_cluster_client: "false"
+
+    replicas: 3
 
     # Request smaller persistent volumes.
     volumeClaimTemplate:
@@ -36,7 +35,83 @@ spec:
       storageClassName: "longhorn"
       resources:
         requests:
-          storage: 100M
+          storage: 2G
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: opensearch-data
+  namespace: elkstack
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: opensearch
+      sourceRef:
+        kind: HelmRepository
+        name: opensearch
+        namespace: flux-system
+      version: 2.6.0
+  values:
+    clusterName: "opensearch-cluster"
+
+    nodeGroup: "data"
+
+    masterService: "opensearch-cluster-master"
+
+    roles:
+      master: "false"
+      ingest: "true"
+      data: "true"
+      remote_cluster_client: "false"
+
+    replicas: 1
+
+    # Request smaller persistent volumes.
+    volumeClaimTemplate:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "longhorn"
+      resources:
+        requests:
+          storage: 20G
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: opensearch-client
+  namespace: elkstack
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: opensearch
+      sourceRef:
+        kind: HelmRepository
+        name: opensearch
+        namespace: flux-system
+      version: 2.6.0
+  values:
+    clusterName: "opensearch-cluster"
+
+    nodeGroup: "client"
+
+    masterService: "opensearch-cluster-master"
+
+    roles:
+      master: "false"
+      ingest: "false"
+      data: "false"
+      remote_cluster_client: "false"
+
+    replicas: 1
+
+    # Request smaller persistent volumes.
+    volumeClaimTemplate:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "longhorn"
+      resources:
+        requests:
+          storage: 1G
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
