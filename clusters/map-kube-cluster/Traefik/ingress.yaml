@@ -9,7 +9,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`traefik.lab.markaplay.net`)
+    - match: Host(`traefik.lke.markaplay.net`)
       kind: Rule
       middlewares:
         - name: traefik-dashboard-basicauth
