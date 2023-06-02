@@ -3,6 +3,7 @@ kind: HelmRelease
 metadata:
   name: searxng
   namespace: searxng
+replicaCount: 3
 spec:
   interval: 1m
   chart:
