@@ -1,0 +1,48 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+    name: netdata
+    namespace: monitoring
+spec:
+    interval: 1m
+    chart:
+        spec:
+            chart: netdata
+            sourceRef:
+                kind: HelmRepository
+                name: netdata
+                namespace: flux-system
+            version: 3.7.57
+    values:
+        image:
+            tag: stable
+        parent:
+            claiming:
+                enabled: true
+                token: ENC[AES256_GCM,data:TEjEfj0cQYPd8uz3S2tEoHVoExbPgi5zeun272dn3izV6NB1lsj6yFn9CqD96VjNT0fu+f00QRgu0Gj0Lm58OCMIeQKEPwcM700TBH0hj8lOsmbDQWgBw+dpX2K8o3+DyNRoSkEQ6CPsYgC/qe2sbfkTqCP9bW4o8egvPN4zVVHYTi8HGLC8,iv:/m6LLMtc9FtPltM90nRJ0/mGAWJ0uaXYl6pncgTnPaY=,tag:UVacKvh/3O7IM/tZshCejQ==,type:str]
+                rooms: ENC[AES256_GCM,data:r2QaUQl9oYdL+pC+Vvbj6LjvRnePk2KDYb0p43XsXXPQwCop,iv:HOgWXWZzJR0GEXmbrPiawDS1d4fYVUjVRzNuFV/6z/c=,tag:qqBBDGQr3IQnLpAA9yNq0A==,type:str]
+        child:
+            claiming:
+                enabled: true
+                token: ENC[AES256_GCM,data:NwNq1Bmq1t8sOGHcdx4x/Vjyp1dOs3cBSDz2AjXYwSWq4rCWIqQfq9Z1HXA63AYLd+M5lPOQdR50KmM1xK6UDDgLmsDPF5tCX9FpNQ4ef8QZlvDmNi2fYUFiqDXSIZZyUg7Ps5E+AouJCdzJpX5Ay/EX57BDiAzFJZogqGlxVad4M8b3tZiT,iv:F0g9maPBuMZGLDP+cKwisOS7tKoCEIn15QyJOghPFWo=,tag:aaBOT1yscuRjPrzrf2kT5Q==,type:str]
+                rooms: ENC[AES256_GCM,data:o/CEqC9I8UBFo8NXx6Elt4BAi2fKrX/t1Zs7i/ju2BIg/31V,iv:D1rTPZ8ob56XERsFfvAy13n1fxK7H+Wx59FuQgv1wL0=,tag:Gqb1RgdNWiENnOajbDmxTA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA2QXZMNkJDN2E0SDIvZHRw
+            RGhLNHRMZW1aKzlCMmxSTjB6dmF0TnZGYWprCmNkZ2owZ3hXY2drRU1SWU83L3BH
+            LytNZ29SeVEzLzJVcnpsaXY0RERwY00KLS0tIGJkOThmRlZjeXk2cTBxelU3NkFJ
+            NzlpMTJpcm91UU14dWN0UWdXSGM2ckkK/AZUhIr0PSF5aaioYLyrXbA/nG4A9uns
+            LUe08FrTCZVx/iRXlWqdaNZDtz1yRBjjxEaAuuqlOj5XxM1j/f9uFw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-06-02T01:17:58Z"
+    mac: ENC[AES256_GCM,data:Msn2A0dGOzBEn7x/lxuXgmAXPOhlWpt3bLsreey/aa/3M+N+WZd48GFZrMKITwvfSggBNI9tQWrI32TjWA4HEfAnhLfVYqRjKc6yugHgf0y2lyEPzNUaBF4WCaFz2c1LBqzbzeI0+yJ8f3slYZrg2+iUfHL+XtlPza2bb4PwpCM=,iv:ZFpy0LzPmqia3AUmbZoy9jrrnWioKQ7vsGbdjm48ffo=,tag:F2m8x1QEeqppz+eANoDbAA==,type:str]
+    pgp: []
+    encrypted_regex: ^(token|rooms)$
+    version: 3.7.3
