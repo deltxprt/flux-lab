@@ -5,6 +5,7 @@ metadata:
   namespace: searxng
 spec:
   interval: 1m
+  replicas: 3
   chart:
     spec:
       chart: searxng
@@ -14,7 +15,6 @@ spec:
         namespace: flux-system
       version: 1.0.0
   values:
-    replicaCount: 3
     env:
       INSTANCE_NAME: "MAP-LKE-searxng"
       BASE_URL: "https://search.cloud.markaplay.net"
