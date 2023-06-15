@@ -13,7 +13,7 @@ spec:
     - match: Host(`ts3.cloud.markaplay.net`)
       kind: Rule
       services:
-        - name: voice
+        - name: teamspeak-voice
           port: 9987
 
 ---
@@ -31,7 +31,7 @@ spec:
     - match: Host(`ts3.cloud.markaplay.net`)
       kind: Rule
       services:
-        - name: filetransfer
+        - name: teamspeak-filetransfer
           port: 30033
 
 ---
@@ -49,5 +49,5 @@ spec:
     - match: Host(`ts3.cloud.markaplay.net`)
       kind: Rule
       services:
-        - name: query
+        - name: teamspeak-query
           port: 10011
