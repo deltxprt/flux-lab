@@ -1,0 +1,8 @@
+# namespace named teamspeak
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: teamspeak
+  labels:
+    app: teamspeak
