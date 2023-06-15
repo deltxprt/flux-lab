@@ -34,21 +34,6 @@ spec:
       websecure:
         tls:
           enabled: true
-      teamspeak-voice:
-        exposedPort: 9987
-        exposedProtocol: UDP
-        port: 9987
-        protocol: UDP
-      teamspeak-filetransfer:
-        exposedPort: 30033
-        exposedProtocol: TCP
-        port: 30033
-        protocol: TCP
-      teamspeak-query:
-        exposedPort: 10011
-        exposedProtocol: TCP
-        port: 10011
-        protocol: TCP
     ingressRoute:
       dashboard:
         enabled: false
