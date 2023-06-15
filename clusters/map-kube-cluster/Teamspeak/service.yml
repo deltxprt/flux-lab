@@ -3,7 +3,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: teamspeak
+  name: teamspeak-voice
   labels:
     app: teamspeak
   namespace: teamspeak
@@ -15,10 +15,34 @@ spec:
     targetPort: 9987
     port: 9987
     protocol: UDP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: teamspeak-filetransfer
+  labels:
+    app: teamspeak
+  namespace: teamspeak
+spec:
+  selector:
+    app: teamspeak
+  ports:
   - name: filetransfer
     targetPort: 30033
     port: 30033
     protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: teamspeak-query
+  labels:
+    app: teamspeak
+  namespace: teamspeak
+spec:
+  selector:
+    app: teamspeak
+  ports:
   - name: query
     targetPort: 10011
     port: 10011
