@@ -21,6 +21,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: teamspeak-filetransfer
+  namespace: teamspeak
   annotations: 
     kubernetes.io/ingress.class: traefik-external
 spec:
@@ -38,6 +39,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: teamspeak-query
+  namespace: teamspeak
   annotations: 
     kubernetes.io/ingress.class: traefik-external
 spec:
