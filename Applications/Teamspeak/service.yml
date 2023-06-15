@@ -6,6 +6,7 @@ metadata:
   name: teamspeak
   labels:
     app: teamspeak
+  namespace: teamspeak
 spec:
   selector:
     app: teamspeak
