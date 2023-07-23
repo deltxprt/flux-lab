@@ -33,20 +33,20 @@ spec:
   tls:
     secretName: gitea-cert
 
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: gitea-ssh
-  namespace: gitea
-  annotations: 
-    kubernetes.io/ingress.class: traefik-external
-spec:
-  entryPoints:
-    - ssh
-  routes:
-    - match: Host(`git.lab.markaplay.net`)
-      kind: Rule
-      services:
-      - name: gitea-ssh
-        port: 22
+#---
+#apiVersion: traefik.containo.us/v1alpha1
+#kind: IngressRoute
+#metadata:
+#  name: gitea-ssh
+#  namespace: gitea
+#  annotations: 
+#    kubernetes.io/ingress.class: traefik-external
+#spec:
+#  entryPoints:
+#    - ssh
+#  routes:
+#    - match: Host(`git.lab.markaplay.net`)
+#      kind: Rule
+#      services:
+#      - name: gitea-ssh
+#        port: 22
