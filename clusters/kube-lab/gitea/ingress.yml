@@ -17,7 +17,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: gitea-dashboard
+  name: gitea-web
   namespace: gitea
   annotations: 
     kubernetes.io/ingress.class: traefik-external
@@ -37,7 +37,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: gitea-dashboard
+  name: gitea-ssh
   namespace: gitea
   annotations: 
     kubernetes.io/ingress.class: traefik-external
