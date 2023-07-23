@@ -14,3 +14,9 @@ spec:
         name: gitea
         namespace: flux-system
       version: 9.0.4
+  values:
+    gitea:
+      admin:
+        existingSecret: gitea-admin
+    redis-cluster:
+      enabled: false
