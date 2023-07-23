@@ -8,7 +8,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: gitea-charts
+      chart: gitea
       sourceRef:
         kind: HelmRepository
         name: gitea
