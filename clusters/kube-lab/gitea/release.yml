@@ -19,4 +19,4 @@ spec:
       admin:
         existingSecret: gitea-admin
     redis-cluster:
-      enabled: true
+      enabled: false
