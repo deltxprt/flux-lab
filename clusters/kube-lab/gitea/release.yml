@@ -13,10 +13,8 @@ spec:
         kind: HelmRepository
         name: gitea
         namespace: flux-system
-      version: 9.0.4
+      version: 8.3.0
   values:
     gitea:
       admin:
         existingSecret: gitea-admin
-    redis-cluster:
-      enabled: true
