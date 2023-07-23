@@ -1,0 +1,52 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: gitea-cert
+  namespace: gitea
+spec:
+  secretName: gitea-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "git.lab.markaplay.net"
+  dnsNames:
+  - "git.lab.markaplay.net"
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: gitea-web
+  namespace: gitea
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`git.lab.markaplay.net`)
+      kind: Rule
+      services:
+      - name: gitea-http
+        port: 3000
+  tls:
+    secretName: gitea-cert
+
+#---
+#apiVersion: traefik.containo.us/v1alpha1
+#kind: IngressRoute
+#metadata:
+#  name: gitea-ssh
+#  namespace: gitea
+#  annotations: 
+#    kubernetes.io/ingress.class: traefik-external
+#spec:
+#  entryPoints:
+#    - ssh
+#  routes:
+#    - match: Host(`git.lab.markaplay.net`)
+#      kind: Rule
+#      services:
+#      - name: gitea-ssh
+#        port: 22
