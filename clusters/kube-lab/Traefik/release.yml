@@ -35,8 +35,10 @@ spec:
         tls:
           enabled: true
       ssh:
-        address: ":1022"
-          
+        protocol: TCP
+        port: 22
+        exposedPort: 1022
+
     ingressRoute:
       dashboard:
         enabled: false
