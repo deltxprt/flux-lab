@@ -9,9 +9,9 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "git.lab.markaplay.net"
+  commonName: "*.lab.markaplay.net"
   dnsNames:
-  - "git.lab.markaplay.net"
+  - "*.lab.markaplay.net"
 
 ---
 apiVersion: traefik.containo.us/v1alpha1
