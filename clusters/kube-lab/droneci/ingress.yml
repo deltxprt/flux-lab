@@ -28,7 +28,7 @@ spec:
     - match: Host(`ci.lab.markaplay.net`)
       kind: Rule
       services:
-      - name: drone-http
-        port: 80
+      - name: drone
+        port: 8080
   tls:
     secretName: drone-cert
