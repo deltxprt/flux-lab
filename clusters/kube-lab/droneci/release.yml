@@ -1,0 +1,43 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+    name: drone
+    namespace: droneci
+spec:
+    interval: 1m
+    chart:
+        spec:
+            chart: drone
+            sourceRef:
+                kind: HelmRepository
+                name: drone
+                namespace: flux-system
+            version: 0.6.4
+    values:
+        env:
+            DRONE_SERVER_HOST: ENC[AES256_GCM,data:BuDrLJS3iBEEMoM4nTDzg5+1xC0=,iv:MYz1OdTZKElBYrDAm/hjNJoauapfHqq5c/wsXR+r0PY=,tag:0ZFe3Gu0rqK2MkM89NteAg==,type:str]
+            DRONE_SERVER_PROTO: ENC[AES256_GCM,data:Qjb+Eg==,iv:OTOw2Bdha3VDVJtq9iQLuKRj17fdepe+x7+xUQU1gPk=,tag:NQSuAe7wlZ5SSR1cvA5m8Q==,type:str]
+            DRONE_RPC_SECRET: ENC[AES256_GCM,data:rN2IHEPRmrvh7dP7pwmzCzBeLzlANPaGNXhd,iv:K36FQ4erVTHZo4wQV9Dj6QxGHZatxrK5FC6mvFNrrIA=,tag:LEsgI80H23upwFZ/wJ3eUQ==,type:str]
+            DRONE_GITEA_CLIENT_ID: ENC[AES256_GCM,data:X0cbdbWcHHDE54gh/04h8JGVheBJg3siqEemvVFkiuecTmGM,iv:jR+Bo64jGZD1DhwGn0mW1/N02kD4hLCh+I1kTE/PcZA=,tag:wOT8bltWFaZdnMndeihS9w==,type:str]
+            DRONE_GITEA_CLIENT_SECRET: ENC[AES256_GCM,data:yTxo//8BqCi2v5GrD67nLL8mTQjy25SzVVjWP6Xy9BtptLc7QwxijEtlPCPnELa704OvUUblF7M=,iv:Vhy5yAiwiL1+BgRi6oYz9/8Ro9671Ox+sUxEgcO6Cl0=,tag:MnFl+iCz6zN+7trlkgpBcQ==,type:str]
+            DRONE_GITEA_SERVER: ENC[AES256_GCM,data:1Ju5N/ywwS6d7v9tl7p/W07aOnHZe8UwnY08QPo=,iv:R9Qx/BQrN2kyWqzZ4suM5Q4L5EAdC9unCyTSHTXLeA8=,tag:A+hb7etGV5LnhKbj8Zdr2A==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3WXF0eDB0cCtkd2Q3a1hQ
+            SnhLWFdwTXVKaHM1RDdyUG5MZVQwZDd6MzNvCjFGK2NMVkdvMFJseHcvVGZXLzlH
+            SnNnbTdDUVpwU3RoaDdacVhVSTVDdEkKLS0tIEFUMzJ3Mk0yWnV4MlEzbGRpTmZZ
+            dUNTdUwyTU9Mc0Z3cFhyK1pDUHBHelUKJfsbGV9mHUYJigkjW/6wAlCSeLpqUGFs
+            Q60WiNMjsKyR5H+PICUluC5WRxTFur6hi7sMNYwmLuPGB/UJ6YUYqQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-07-24T00:35:11Z"
+    mac: ENC[AES256_GCM,data:IKOpRIMTo9mTpDQjFqbZ9cO4T0Mzlpc5P52qxb/yVttbnxbYyf+DAt9B99XmZPcuYW88uYitrKtCYreC4/MX0IerI0lf8FjLF7Jy2EW4rDl06Ja64SCeWDdUtWuLWV6+455itjsiySzmXjOhRKzSKSaeT5wJqxa1lzVQo0idAdU=,iv:M4VVO+u7NBoOGuToDGhtvgdoujndU/ixJpAU6ayhY7Y=,tag:Qj9CCfvUHFEARqdlBWCRvw==,type:str]
+    pgp: []
+    encrypted_regex: ^(env)$
+    version: 3.7.3
