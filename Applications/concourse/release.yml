@@ -1,0 +1,42 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+    name: concourse
+    namespace: concourse
+spec:
+    interval: 1m
+    chart:
+        spec:
+            chart: concourse
+            sourceRef:
+                kind: HelmRepository
+                name: concourse
+                namespace: flux-system
+            version: 17.1.1
+    values:
+        env:
+            DRONE_SERVER_HOST: ENC[AES256_GCM,data:BuDrLJS3iBEEMoM4nTDzg5+1xC0=,iv:MYz1OdTZKElBYrDAm/hjNJoauapfHqq5c/wsXR+r0PY=,tag:0ZFe3Gu0rqK2MkM89NteAg==,type:str]
+            DRONE_SERVER_PROTO: ENC[AES256_GCM,data:Qjb+Eg==,iv:OTOw2Bdha3VDVJtq9iQLuKRj17fdepe+x7+xUQU1gPk=,tag:NQSuAe7wlZ5SSR1cvA5m8Q==,type:str]
+            DRONE_RPC_SECRET: ENC[AES256_GCM,data:rN2IHEPRmrvh7dP7pwmzCzBeLzlANPaGNXhd,iv:K36FQ4erVTHZo4wQV9Dj6QxGHZatxrK5FC6mvFNrrIA=,tag:LEsgI80H23upwFZ/wJ3eUQ==,type:str]
+            DRONE_GITHUB_CLIENT_ID: ENC[AES256_GCM,data:Yk7kmysf5eZf6GRvqOnsYKMtEs4=,iv:afNAfHkD+QL9qg5exwdFx6Upz6TbyPt0NQ/k8rmdJN8=,tag:7gu12bcYlE6zHvEv9Nrj4w==,type:str]
+            DRONE_GITHUB_CLIENT_SECRET: ENC[AES256_GCM,data:/moG+GzMtZUbkEiqG+TGCa/Ouhr25+d8AE2tHyOPvVZ6tDbcaXJXRQ==,iv:R7qxieeFuVMINI4vZ2ryIpem2yM7CsYD26Wr1YUIKNs=,tag:FFgi7OlOpADJarmbGSlQSg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3WXF0eDB0cCtkd2Q3a1hQ
+            SnhLWFdwTXVKaHM1RDdyUG5MZVQwZDd6MzNvCjFGK2NMVkdvMFJseHcvVGZXLzlH
+            SnNnbTdDUVpwU3RoaDdacVhVSTVDdEkKLS0tIEFUMzJ3Mk0yWnV4MlEzbGRpTmZZ
+            dUNTdUwyTU9Mc0Z3cFhyK1pDUHBHelUKJfsbGV9mHUYJigkjW/6wAlCSeLpqUGFs
+            Q60WiNMjsKyR5H+PICUluC5WRxTFur6hi7sMNYwmLuPGB/UJ6YUYqQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-07-25T01:09:10Z"
+    mac: ENC[AES256_GCM,data:p8S/tRILWktde9Y+s2gkU8bcVrC8CsZ0BTxCKkRDGGNh6nlinPX9fjaVxONN3+Vqi4Ssp4heRnA09jtpPAyzOe03r3lj20txf9IOHtfPdXvHtxoA/2DeB6B/fhFi/Q7QJlI9NIfQ7d/loBWtkmlhqXVuAwhQKH0qanGgEAF3oxg=,iv:dEWycFu2YVLnnuFH2RPTq3Rq9TEN3/halvDgDrYX/Ws=,tag:IAYTfHdFhGuas4+GFVmLWw==,type:str]
+    pgp: []
+    encrypted_regex: ^(env)$
+    version: 3.7.3
