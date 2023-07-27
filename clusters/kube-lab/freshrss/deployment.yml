@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freshrss
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: freshrss
+  template:
+    metadata:
+      labels:
+        app: freshrss
+    spec:
+      containers:
+      - image: freshrss/freshrss:latest
+        name: freshrss
+        volumeMounts:
+          - name: freshrss_data
+            mountPath: /var/www/FreshRSS/data
+          - name: freshrss_extensions
+            mountPath: /var/www/FreshRSS/extensions
+        env:
+          - name: CRON_MIN
+            value: 1,31
+          - name: TZ
+            value: America/Toronto
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 1
+            memory: 500Mi
+          limits:
+            cpu: 1
+            memory: 500Mi
+      volumes:
+        - name: freshrss_data
+          persistentVolumeClaim:
+            claimName: freshrss-data-pvc
+        - name: freshrss_extensions
+          persistentVolumeClaim:
+            claimName: freshrss-extensions-pvc
