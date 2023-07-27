@@ -18,9 +18,9 @@ spec:
       - image: freshrss/freshrss:latest
         name: freshrss
         volumeMounts:
-          - name: freshrss_data
+          - name: freshrss-data
             mountPath: /var/www/FreshRSS/data
-          - name: freshrss_extensions
+          - name: freshrss-extensions
             mountPath: /var/www/FreshRSS/extensions
         env:
           - name: CRON_MIN
@@ -37,9 +37,9 @@ spec:
             cpu: 1
             memory: 500Mi
       volumes:
-        - name: freshrss_data
+        - name: freshrss-data
           persistentVolumeClaim:
             claimName: freshrss-data-pvc
-        - name: freshrss_extensions
+        - name: freshrss-extensions
           persistentVolumeClaim:
             claimName: freshrss-extensions-pvc
