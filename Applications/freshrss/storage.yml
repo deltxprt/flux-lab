@@ -8,7 +8,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: longhorn
-  replicas: 3
   resources:
     requests:
       storage: 15Gi
@@ -22,7 +21,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: longhorn
-  replicas: 3
   resources:
     requests:
       storage: 5Gi
