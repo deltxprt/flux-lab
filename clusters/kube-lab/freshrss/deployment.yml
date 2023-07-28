@@ -36,6 +36,21 @@ spec:
           limits:
             cpu: 1
             memory: 500Mi
+      initContainers:
+      - image: alpine:latest
+        name: init-extensions
+        command: [ "/bin/sh","-c" ]
+        args: [ "apk --update wget unzip; wget https://github.com/DevonHess/FreshRSS-Extensions/archive/refs/heads/main.zip -O rss-bridge.zip; unzip rss-bridge.zip -d /extensions; rm rss-bridge.zip " ]
+        volumes:
+        - name: freshrss-extensions
+          mountPath: /extensions
+        resources:
+          requests:
+            cpu: 1
+            memory: 500Mi
+          limits:
+            cpu: 1
+            memory: 500Mi
       volumes:
         - name: freshrss-data
           persistentVolumeClaim:
