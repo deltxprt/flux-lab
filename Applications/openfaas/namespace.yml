@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: openfaas
+  name: openfaas-fn
   labels:
     app: openfaas
 

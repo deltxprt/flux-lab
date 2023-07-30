@@ -3,7 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: openfaas-cert
-  namespace: openfaas
+  namespace: openfaas-fn
 spec:
   secretName: openfaas-cert
   issuerRef:
@@ -18,7 +18,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: openfaas-web
-  namespace: openfaas
+  namespace: openfaas-fn
   annotations: 
     kubernetes.io/ingress.class: traefik-external
 spec:
