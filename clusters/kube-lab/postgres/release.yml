@@ -19,9 +19,10 @@ spec:
             postgresql:
                 auth:
                     existingSecret: postgresql-db-secrets
-                    usernameKey: username
-                    passwordKey: password
-                    replicationPasswordKey: replicationPassword
+                    secretKeys:
+                        usernameKey: username
+                        passwordKey: password
+                        replicationPasswordKey: replicationPassword
                     database: semaphore
         tls:
             enabled: true
