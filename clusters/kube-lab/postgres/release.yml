@@ -7,7 +7,7 @@ spec:
     interval: 1m
     chart:
         spec:
-            chart: postgresql
+            chart: bitnami
             sourceRef:
                 kind: HelmRepository
                 name: postgresql
