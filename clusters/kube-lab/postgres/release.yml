@@ -7,10 +7,10 @@ spec:
     interval: 1m
     chart:
         spec:
-            chart: postgres
+            chart: postgresql
             sourceRef:
                 kind: HelmRepository
-                name: postgres
+                name: postgresql
                 namespace: flux-system
             version: 12.7.3
     values:
