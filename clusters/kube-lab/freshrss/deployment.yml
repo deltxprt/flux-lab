@@ -37,10 +37,10 @@ spec:
             cpu: 1
             memory: 500Mi
       initContainers:
-      - image: alpine:latest
+      - image: ghcr.io/deltxprt/freshrss-gofetch:0.0.6
         name: init-extensions
         command: [ "/bin/sh","-c" ]
-        args: [ "apk --update wget unzip; wget https://github.com/DevonHess/FreshRSS-Extensions/archive/refs/heads/main.zip -O rss-bridge.zip; unzip rss-bridge.zip -d /extensions; rm rss-bridge.zip " ]
+        args: [ "FreshRss-gofetch -url 'https://github.com/DevonHess/FreshRSS-Extensions.git' -path '/extensions/'" ]
         volumes:
         - name: freshrss-extensions
           mountPath: /extensions

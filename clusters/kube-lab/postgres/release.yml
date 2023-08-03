@@ -26,7 +26,10 @@ spec:
                     database: semaphore
         tls:
             enabled: true
-            certificateSecret: postgres-tls
-        service:
-            type: LoadBalancer
-            loadBalancerIP: 10.0.0.42
+            certificatesSecret: postgres-tls
+            certFilename: "tls.crt"
+            certKeyFilename: "tls.key"
+        primary:
+            service:
+                type: LoadBalancer
+                loadBalancerIP: 10.0.0.42
