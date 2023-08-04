@@ -39,8 +39,8 @@ spec:
       initContainers:
       - image: ghcr.io/deltxprt/freshrss-gofetch:0.0.6
         name: init-extensions
-        command: [ "/bin/sh","-c" ]
-        args: [ "FreshRss-gofetch -url 'https://github.com/DevonHess/FreshRSS-Extensions.git' -path '/extensions/'" ]
+        command: [ "FreshRss-gofetch","-url \"https://github.com/DevonHess/FreshRSS-Extensions.git\"", "-path \"/extensions/\"" ]
+#        args: [ "" ]
         volumes:
         - name: freshrss-extensions
           mountPath: /extensions
