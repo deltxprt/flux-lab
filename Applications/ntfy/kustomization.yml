@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ntfy-deployment.yml # deployment definition
+  - ntfy-svc.yml # service connecting pods to cluster network
+  - ntfy-pvc.yml # pvc used to store cache and attachment
+  - ntfy-ingressroute.yml
+configMapGenerator: # will parse config from raw config to configmap,it allows for dynamic reload of application if additional app is deployed ie https://github.com/stakater/Reloader
+    - name: server-config
+      files: 
+        - server.yml
+namespace: ntfy # select namespace for whole application 
