@@ -1,0 +1,35 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: homepage-cert
+  namespace: homepage
+spec:
+  secretName: homepage-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "homepage.lab.markaplay.net"
+  dnsNames:
+  - "homepage.lab.markaplay.net"
+  - "homepage.markaplay.net"
+
+#---
+#apiVersion: traefik.containo.us/v1alpha1
+#kind: IngressRoute
+#metadata:
+#  name: homepage-web
+#  namespace: homepage
+#  annotations: 
+#    kubernetes.io/ingress.class: traefik-external
+#spec:
+#  entryPoints:
+#    - websecure
+#  routes:
+#    - match: Host(`ci.lab.markaplay.net`)
+#      kind: Rule
+#      services:
+#      - name: homepage
+#        port: 8080
+#  tls:
+#    secretName: homepage-cert
