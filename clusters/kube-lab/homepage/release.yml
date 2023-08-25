@@ -24,7 +24,7 @@ spec:
                 - Storage-infra:
                     - truenas:
                         icon: https://styles.redditmedia.com/t5_zna4k/styles/communityIcon_anszrp6vc8w71.png
-                        href: https://tn02.lab.markaplay.net
+                        href: https://tn02.lab.markaplay.net/
                         description: truenas scale server
                         widget:
                             type: truenas
@@ -32,7 +32,7 @@ spec:
                             key: ENC[AES256_GCM,data:LKLYS+AjIxXrV/0TU2KHLV6ZO1tm+8VnVN5dZvOLTTfGyBGxf3ZFfKOUVrIJ1BOCTb3OnB85eFmOtAwYllRsnLIJ,iv:2iLidbBoITgZKBrOjdbCYzd2nD5kebMx8ONhBhmKpe0=,tag:WQutGLc12n5nXXWtPh32rA==,type:str]
                     - proxmox:
                         icon: https://www.weehooey.com/wp-content/uploads/2018/11/Proxmox-logo-stacked-840px.png
-                        href: https://epyc.lab.markaplay.net:8006
+                        href: https://epyc.lab.markaplay.net:8006/
                         description: proxmox cluster
                         widget:
                             type: proxmox
@@ -41,7 +41,7 @@ spec:
                             password: ENC[AES256_GCM,data:KW4PI3Uf7rhFutfZD1uvJXfelnbicaHx7a6b5CXTzQ1NJb0t,iv:zk4H/PCff1vyuh2g9ujlXZEZfVxxqkEzyDYYqBonBAA=,tag:jkcswmG/ZNkAkTEJufL9TA==,type:str]
                     - proxmox-backup:
                         icon: https://www.weehooey.com/wp-content/uploads/2018/11/Proxmox-logo-stacked-840px.png
-                        href: https://charlie.lab.markaplay.net:8007
+                        href: https://charlie.lab.markaplay.net:8007/
                         description: proxmox backup server
                         widget:
                             type: proxmoxbackupserver
@@ -50,7 +50,7 @@ spec:
                             password: ENC[AES256_GCM,data:qWLQsqUnnAC0iQrVyFlw35slePzBvS8+zyVSTTnlqeXFcNYq,iv:VUOkPXZo8D8zWAGSdjTKoQSFtPNMVSjVliPrVhQsW+o=,tag:uvrEqZfh9NpE3FfyHRnRgg==,type:str]
                     - nextcloud:
                         icon: https://docs.ftscloud.ch/bookstack/uploads/images/gallery/2019-05-May/scaled-840-0/Nextcloud-logo-round.png
-                        href: https://nextcloud.lab.markaplay.net
+                        href: https://nextcloud.lab.markaplay.net/
                         description: nextcloud server
                         widget:
                             type: nextcloud
@@ -59,7 +59,7 @@ spec:
                             password: ENC[AES256_GCM,data:7Y86dyhn5+fzqjIhJpZGEvCD43NCcrvp2KnpJ3A=,iv:QVX5ymIuTtUa2r31y+wPMqvJfUue+AF/lsu4g7JV8Ac=,tag:DAfCeLRp+t/9BB6TZ2izXQ==,type:str]
                     - grafana:
                         icon: https://1.bp.blogspot.com/-edrJnM1O7d4/XuuKLB9QkRI/AAAAAAAADbo/WMxBIK_fePAeVRq-EhA4_zslToI4i6veQCK4BGAsYHg/s1224/1200px-Grafana_logo.svg.png
-                        href: https://mon.miniomega.lab.markaplay.net:3000
+                        href: https://mon.miniomega.lab.markaplay.net:3000/
                         description: grafana stats dashboard thingy
                         widget:
                             type: grafana
@@ -87,7 +87,7 @@ spec:
                             key: ENC[AES256_GCM,data:XaSeIfOEF7J0WWWX9AEiayWKRoZgu/YGKu+UhEOxit6HI1c94OfJHw==,iv:pvuHKV49qkbLKbrtno0VOv/KVUB7l05b8BAd+y8Bhtg=,tag:I0y65KrzpeQ6f3wn2RXkZQ==,type:str]
                     - traefik:
                         icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
-                        href: https://traefik.lab.markaplay.net
+                        href: https://traefik.lab.markaplay.net/
                         description: traefik kubernetes instance proxy
                         widget:
                             type: traefik
@@ -96,7 +96,7 @@ spec:
                             password: ENC[AES256_GCM,data:bT5kWCL/OTczBbvrYQ==,iv:h83R8bGVUnJdhFUeVTY5ODxkKo2FmhKGH//EwvTwCFA=,tag:ncXs5ip8D6NqNe8uI6CxEA==,type:str]
                     - traefik-miniomega:
                         icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
-                        href: https://traefik.miniomega.lab.markaplay.net:8080
+                        href: https://traefik.miniomega.lab.markaplay.net:8080/
                         description: traefik kubernetes instance proxy
                         widget:
                             type: traefik
@@ -105,7 +105,7 @@ spec:
                             password: ENC[AES256_GCM,data:0IwqQJOLaTirIu0JVQ==,iv:cYf10qT9t/hj6EURT5SrU1vNVlywsWKRvY0+clycge0=,tag:/2Ew5J0tiluSiup7oUAoKg==,type:str]
                     - unifi:
                         icon: https://www.laub-home.de/images/9/97/UniFi-Logo.png
-                        href: https://192.168.1.3
+                        href: https://192.168.1.3/
                         description: unifi cloud instance
                         widget:
                             type: unifi
@@ -157,8 +157,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-25T00:23:24Z"
-    mac: ENC[AES256_GCM,data:BYXPVmRjSDi4m2Js9AORub+ku8FMuZ6sQXXQO7AwUx8n+i68S3Zf/9rtLNAkIHSefrYv7ddHB+jfDN10ssjHEEnFjvRS4AcEEbsUbeot8KBARgODoGiDdEW6u5LPTLOqnDScA3PjUd5DSIYHMgFH4A+uBL6uKMUfIjBOhVWHG38=,iv:RPz+v4b63Cd2629gawepUvFH/5tBAFq1mTsAimHW2F4=,tag:XmVMBt5dyHyhI+9flkEdFA==,type:str]
+    lastmodified: "2023-08-25T00:25:26Z"
+    mac: ENC[AES256_GCM,data:Z56VWrJl7ylpEK8lqXGR1GV3Hv1td88BuBHhGT5JzIQ0asiTH1ZKaoNNtEj57D3bstLSRTD3jru5hpjC+2aXfZdOcYby2mjPFQ6842jYsQvB/1AK01sWCAw87EuGytTGbW5ty/Hts8zfS+vbw4hLJwtIHjeEwyOYh9Ml7ejIqek=,iv:mSCGwaP/HZ54E0Ma7qRIuOJajFhfrXeuwlGZdsQhwXs=,tag:jDQyY2oPlEnP21B98cSIvg==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
