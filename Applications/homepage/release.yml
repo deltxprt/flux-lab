@@ -27,89 +27,89 @@ spec:
                   description: truenas scale server
                   widget:
                     type: truenas
-                    url: ENC[AES256_GCM,data:411r/T4t0UmuBB2sWythQbPs0QxoG+wqE7aOEHo=,iv:3tECi9BB8cBeSireSAH7DtE5xKEQLAZKfXAXbxNPWHw=,tag:xOuhvlXrovef02L4eZkj1Q==,type:str]
-                    key: ENC[AES256_GCM,data:ufbCioKE5BrLRsemWpIAKzE5IQQ+DVX5ul23OGlqZbSs2fBta4E/nuQRQP2PFSbzb1v2ew1ynrpUiD9lCzjpr80e,iv:cCOyGpa6nmgRLU0ajefZeK3eJy7ofUlGWfXzOI4ya94=,tag:/0fs185OEOjbqNH9r7qg8A==,type:str]
+                    url: ENC[AES256_GCM,data:9U+0W5XMAa3Dw9bi5QHqqeEWQcuVk1jfd7Qtbms=,iv:jmr5H7Q1gdo9xjXgY3h9fDwkaS3RLpFEJLtjrRr8OGQ=,tag:x6NUCqZEJtkrwoWTXb9ZyA==,type:str]
+                    key: ENC[AES256_GCM,data:bS7v1KEo2Gc5TPGGV8ar9y44ymtWjzQbgbllrUHIFcfvW8oBVJPMXx2rBdOKPHj57NjEZBhw9WHAb5dxRVVuunQk,iv:V13sj2e40KwO7qXW7EnTix08GQ3vhJlipq/sV17si/Q=,tag:V6Q/VYXEV3Sovj05gMHjSA==,type:str]
                 - proxmox: null
                   icon: https://www.weehooey.com/wp-content/uploads/2018/11/Proxmox-logo-stacked-840px.png
                   href: https://epyc.lab.markaplay.net:8006
                   description: proxmox cluster
                   widget:
                     type: proxmox
-                    url: ENC[AES256_GCM,data:YYdjNYvavo5kmqmSQUNeyWKE34gczkyiJ6/K+d4zVXYv6QA=,iv:Qvj9ZQox8wsCrSIRoRxX1iR4+pqBF5nXBQMfmZrClHE=,tag:4QW0Sypnc/t1GZ+Jzw6yrQ==,type:str]
-                    username: ENC[AES256_GCM,data:bjjB1sV3Ejij6enFatTm7XPMEE0paRw=,iv:l1nQV0e10de6+AJbXgSCknhGJN54AivfY2/7y5OBs/E=,tag:YAqIOY33/ah+Rana15fA3w==,type:str]
-                    password: ENC[AES256_GCM,data:3smF+A6spZhCEhPcBvUh5m4DAeM/a7otanlpymCvwEHnAVX+,iv:CD3YvtV8Yxluwbmno63OFGL7xGvfKcAQCUwYHym9244=,tag:RobXUzq4hqYusb5ogg5CqA==,type:str]
+                    url: ENC[AES256_GCM,data:SnLHa1xWeqx+L2D8eUvXygW36q9FdI6htYqZpuEH/AqajVA=,iv:TbPEyHlWszI7I7x/iyOwfmw2gSKvo2e9eRdCAOBoQpM=,tag:8W7qUqRo1TI3sxIW7zlkQg==,type:str]
+                    username: ENC[AES256_GCM,data:slX5pr1PTdCSDlmH6k5bF0rIEHbR0WE=,iv:M6fIhVTr1ktCV080628QTEoxXGkyXqeYutpy8u1CZy4=,tag:QMFnwYLYir0qI0uy2NdPZA==,type:str]
+                    password: ENC[AES256_GCM,data:qKC1y59m25njnV8MCbnbIq1TkqlyuiKbZwkqIWgR5FAfPNJa,iv:E+hhrbzBKMbHFLCGsdgc9Bq0T7tWNdWwga8nBjFUvOQ=,tag:x9qlscLxXxi/pFYwfL2m9A==,type:str]
                 - cloudflare: null
                   icon: https://logos-marques.com/wp-content/uploads/2021/03/Cloudflare-Logo.png
                   href: https://dash.cloudflare.com/
                   description: cloudflare dashboard
                   widget:
                     type: cloudflared
-                    accountid: ENC[AES256_GCM,data:CpHwRBUMtbqGf2EuPkgKJEt96jcsJE6CeQ72zgXYDlE=,iv:W8F31LXawmjz5yR84u49WhPgT1txHOjRDDHXmH/7sGg=,tag:AhJa7BF23oidBuFkQvic2g==,type:str]
-                    tunnelid: ENC[AES256_GCM,data:aeg2+gyYczSLBzOz1Ckw8s8cqM6eKwcDB+7jq8N/p3W7JJ67,iv:By9gM8fJ+c21SN9PRRPt7qFuxLjkUFSc/p8aUpI0Gto=,tag:Faub3oFmPj3httOtax2ZHA==,type:str]
-                    key: ENC[AES256_GCM,data:LP3MUXaPTb63sx0MA9VBCBCG+H4xwE0d2Yd1cc37GNjyDCYB7asJBw==,iv:7/f7VDghvAoTj7HlgPEbgwblYkR4osIA5GcQCDdwths=,tag:Nbvzc3aN2wLuocLHMzgV4w==,type:str]
+                    accountid: ENC[AES256_GCM,data:Tb4oY6ZRbDBpIEvANeLl7iaMMgIg6Wb2qRIak97PasA=,iv:Tte6TaX0diaWXvG9QhCS/3ur+6k55iGpkm5ZFiqxHtY=,tag:DWAmcvDTOl0zDAygiVZu8Q==,type:str]
+                    tunnelid: ENC[AES256_GCM,data:pMw5f8srGeHCyi20xhmg5FQLX2hKwYv1KGWrKDViT/YH8IfB,iv:7S0wh2alaYXTrmNoUp59/3an3GO36AK+PPuzErLWBdM=,tag:CrbLWTUj5wcWgVn6A8UkBQ==,type:str]
+                    key: ENC[AES256_GCM,data:ggVyQHjA1TWXsrKocm3BSRzaZcSZGZYfmRuADPsz+j8ASJEzliqrWg==,iv:OzwXy6Vy6Pd1CbIehZ4jJXqKK2h91fHRZz/ZrI/7tGc=,tag:r8iJwCTf+I1X0SJffQBiKQ==,type:str]
                 - nextcloud: null
                   icon: https://docs.ftscloud.ch/bookstack/uploads/images/gallery/2019-05-May/scaled-840-0/Nextcloud-logo-round.png
                   href: https://nextcloud.lab.markaplay.net
                   description: nextcloud server
                   widget:
                     type: nextcloud
-                    url: ENC[AES256_GCM,data:DWsBTRVuySJUH2XOYjgy4I7GlTIsy10PzLjsy9GhSH2LK00=,iv:qmUhwN91pU9QTWS+MSPLnKw3fVWqicxEH0dpBSGfOOI=,tag:TbIlJNu6LD0NrGiuXR804g==,type:str]
-                    username: ENC[AES256_GCM,data:5xygMNg=,iv:3Us4kjIDm0uuGuddJf20k6ZmsMyuV2F3Ah+n0p6r3lg=,tag:uvUTeh4mgl2+7lPQ2i9oGw==,type:str]
-                    password: ENC[AES256_GCM,data:dG70l13AQVM0KG2DVcquDSKglQd91d5zR1UxYNg=,iv:qp4jZ30fjMDk10kCBgA/oTXtfBL2YQNZaep2OtAHiHs=,tag:Fgcz/PZUYoIXyyCOSOYefQ==,type:str]
+                    url: ENC[AES256_GCM,data:ywNSwYLP7gPd9djCxurBN/FsrNB0l5Q2MmJaD2AvXZd1nS0=,iv:DpGxfdeaVjBRjPYs6zXkZAxCCBwZMUi9bg+0hxLW0UI=,tag:/lJLTZaA4croYhzGPOIPaQ==,type:str]
+                    username: ENC[AES256_GCM,data:miQUDc4=,iv:UPzkJkEvuK/h9st8jEGKvVAZA6FreJCwsMKgBd0klXs=,tag:EIjnW9/xYtZOq190okNpdg==,type:str]
+                    password: ENC[AES256_GCM,data:7GuftC5FhK/Kk0ICFkUfWZUsmnodvOCH4zGEpAU=,iv:gBkhLE9x44YzqNA8A99DFeWmNGvqcztuFFjnAqZBkGs=,tag:povbOfXfu+e43mXmtl/T8Q==,type:str]
                 - traefik: null
                   icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
                   href: https://traefik.lab.markaplay.net
                   description: traefik kubernetes instance proxy
                   widget:
                     type: traefik
-                    url: ENC[AES256_GCM,data:LQKkhYG/ePEJ53Prn7m77dLAd2MklzqF3KmwGka9nnvt,iv:8EG/LCFVIt8FSnFDlM4FTRak7HxUiFC1e3Q63humT90=,tag:J7wyCTR4YkDAX3YqyX7nQw==,type:str]
-                    username: ENC[AES256_GCM,data:VJEkHSU=,iv:U89HrLKbWI+8JzjK8eOfQGdmX0Os1Sye7RdRB6YHGJw=,tag:UYgf527sIrvTJEuF40bSXg==,type:str]
-                    password: ENC[AES256_GCM,data:v/9m2IVraWt5CBzjuA==,iv:P7P0i96e45cfq1bpHUOT0wQzDpIPPUuaZ28PPdLECuA=,tag:4FsbCfvL33y6H9Qh26hRLw==,type:str]
+                    url: ENC[AES256_GCM,data:1DB3buPid+Ws+WltD+hEk7s0PhAVl/rRdZQqqHrQ8w3W,iv:jf49gR9jO5ezR9uiVXxjgXbYxMzx7abtEyANe/3iFSE=,tag:rFTAnveqWB3xuzusnu+HkQ==,type:str]
+                    username: ENC[AES256_GCM,data:Oy9wXZU=,iv:uDkdxVEPbJRcKBq1sTHtZfXGOcwmeU15DJr/NAkpBRg=,tag:sDEadbvrVR7s2JGkRy72ag==,type:str]
+                    password: ENC[AES256_GCM,data:7qdG0v54siPdagvZXw==,iv:8Dm3U0IXtzUu8EXI5chCgHWmTgevG4S6tjYVsXP5iJI=,tag:CYZY3cjOE8z3q9PQzsYoew==,type:str]
                 - traefik-miniomega: null
                   icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
                   href: https://traefik.miniomega.lab.markaplay.net:8080
                   description: traefik kubernetes instance proxy
                   widget:
                     type: traefik
-                    url: ENC[AES256_GCM,data:eziKConF8lYNKCkDd3JnX2fQW8w9UqmHcDVjyjrmmdkX7SaFsEwjxmuigVEJ5PW1,iv:hOmznZqS0Ly9eGpzheMWeNFV/9E6jDmXn2xxbv6uOYk=,tag:nXmrwLLOGJBnazkuhjxOhQ==,type:str]
-                    username: ENC[AES256_GCM,data:Qy6n0YE=,iv:CAE+gr67ivSgEa/C/k9S8KmgCUUfyhv0S3FKwl67EjE=,tag:Fz9W/pErOgUJ6Am5TcWw9g==,type:str]
-                    password: ENC[AES256_GCM,data:JtYfUxSIh4LPxSvP0A==,iv:KP7anNY9SOHHKgQVcgQ0+KEmG1JZY3XyyDS1jpH1La0=,tag:1n2JrMRRa4SERHNrWdJlpg==,type:str]
+                    url: ENC[AES256_GCM,data:kmAbFmWiMPqBwwwV4u2o+/D4gRNPb2YRniC4z4S9Int6ZbFQlDrQZ3VT7wAcPHoC,iv:jUj2SVN+C7PremhvCtWlh0zj3bqF8Emzir1pwRdhS1w=,tag:KKXUng7GPQfCN5ylXHFyPA==,type:str]
+                    username: ENC[AES256_GCM,data:NInsPII=,iv:4XSS4DI1ck+nD1XUHcv1OiaLMm2ja7od/ebDTp4ShB8=,tag:yCrEsh6nnSAX8CON7iCmGw==,type:str]
+                    password: ENC[AES256_GCM,data:2IvTo4xVdkxoKucayQ==,iv:zqQDrwZFE4xj1cKUiBbWce2JlH6hCspesPhA/1AAOaA=,tag:zMMnWHIQ9uI2BPENX/wDpA==,type:str]
                 - grafana: null
                   icon: https://1.bp.blogspot.com/-edrJnM1O7d4/XuuKLB9QkRI/AAAAAAAADbo/WMxBIK_fePAeVRq-EhA4_zslToI4i6veQCK4BGAsYHg/s1224/1200px-Grafana_logo.svg.png
                   href: https://mon.miniomega.lab.markaplay.net:3000
                   description: grafana stats dashboard thingy
                   widget:
                     type: grafana
-                    url: ENC[AES256_GCM,data:dlqk2WCnW069IKaXRz2GL+ZFyY1gAYyaO5t7HPunraJdTzae4yPFMw/qJMU=,iv:V9O3g1GL8n253ynKObLOaHOXGhvMV+bbQjyVAYUHego=,tag:VpXDQCEqv3zIYRyfi7c8XQ==,type:str]
-                    username: ENC[AES256_GCM,data:H7giDraIUiiNIT0=,iv:EZLIeZnhVU5bhzg8ed2m/+AXzRrf476uiEJ+C1JhFsk=,tag:ItUKPjeSkMTTc94des1nUg==,type:str]
-                    password: ENC[AES256_GCM,data:D85kMUhGRgu/kroGUzY0UFWu3Omb6zA9w9wmPjlbPo+dpsojtsqokhEPpH02Uw==,iv:CutFneBGtfZD/aAF02cI2kzTGIqN1gIJFu1JXX2hT7s=,tag:xBvtYTwm4Jr+vL0kfKkmkQ==,type:str]
+                    url: ENC[AES256_GCM,data:rLUaeTry+0qLkaQLNnfyQma581AxVYCL6iTegifdQkzObgEvSe/bBiThmwM=,iv:B4JiTfeJW0PmNrpLNFyD+tm6eo4Yv5rkShBuO8sPOQM=,tag:B80GNMUmnqgVX4izecL4zw==,type:str]
+                    username: ENC[AES256_GCM,data:7hwk7+dLFaf9PTQ=,iv:zZAJbwIsmYePmdJZj9K/WRknw4zUTUYCQsjqq/tXG2g=,tag:vPDfz9qrxqe6Zql4IIRFHw==,type:str]
+                    password: ENC[AES256_GCM,data:0JNBbTfgm++jt3L1DM8/dqy3JeGQhxra+OmS4tUEu8LYhL1kHCL3AGX4rbQpww==,iv:IJDMjkxx6kpfQEryhuNaljJ2QZe521vROsBmnE30pzg=,tag:K6iLOc6ZrLsAhFVXY0V0Sg==,type:str]
                 - proxmox-backup: null
                   icon: https://www.weehooey.com/wp-content/uploads/2018/11/Proxmox-logo-stacked-840px.png
                   href: https://charlie.lab.markaplay.net:8007
                   description: proxmox backup server
                   widget:
                     type: proxmoxbackupserver
-                    url: ENC[AES256_GCM,data:kdm/5QjRFxJ/To+4FwVmAC7T6aDpGhixcfzI5MK6xp2rWSI5ouM=,iv:vWMdqzVhOTVRu/egOGaF5+Dx3LjfbIl68iRSo8pe4jM=,tag:HM/YfeZgA8sd2hgs77ezMw==,type:str]
-                    username: ENC[AES256_GCM,data:kCO8L4mQ0DyMnn4KhkoPg6/ab4TWhGtp4kc=,iv:DR6eFiV9rmFb0C1pD1Utf9Gsq1gr+cWiYfKMjB1jywk=,tag:Mr4DOLy6UGcibyJm3p5KVA==,type:str]
-                    password: ENC[AES256_GCM,data:8073WM4p+avcYFoRXxovmu25hZiTabREdrkFo5c6kixDRuR0,iv:+UuN/LBZWRwZR8Tr7NGyxIwbMaF4FwOES4OzOirjKSE=,tag:r3zpjHhMqptKHeGY8jDgkA==,type:str]
+                    url: ENC[AES256_GCM,data:9J89hGzxphxNVu/z9KP19ihhhSbtdhfwJ8kXjV7jQQyoUF5Dx3o=,iv:bIAmsFiRSQQ5phYtGfrnki9Jep9WnzQQ3PeTYOlcws8=,tag:yDR70EKgG8XayYeTaPRbPA==,type:str]
+                    username: ENC[AES256_GCM,data:F9aBU/n+UbtQx/CAyXHO8Ix/XXB6kN/FhZs=,iv:AEAxcPBNJ7ap1y22Ac3n9szrwQ3wR6fFRkReUK975Z8=,tag:fgqMjfywZXykp9vs03SV3g==,type:str]
+                    password: ENC[AES256_GCM,data:0LaaJL0margIWymZn+TUDEJ+h77ycnQ8qm17rAyZuxoNCv2T,iv:fQosw1LNznZt/o9Ft5kQM3YHlN0fZKtqUoYqRDE+BQE=,tag:lCm/6D+ZBbw6d1AYTZ9heg==,type:str]
                 - portainer: null
                   icon: https://autoize.com/wp-content/uploads/2017/02/Portainer-logo.png
                   href: https://portainer.lab.markaplay.net
                   description: portainer container administration service
                   widget:
                     type: portainer
-                    url: ENC[AES256_GCM,data:a+YgOtK+wkaFvtvx2qm78LnoBTYlhhnTJB7zLJyioo7lDTI=,iv:fzZhcop/YXefa/YlkNdlMfiHv0bjnJQL9LeqDx/LSG0=,tag:V4LMsNghxqqj16Xfiz8a8g==,type:str]
+                    url: ENC[AES256_GCM,data:Tnct/G9FbI3Nb26Zy6viG3N3/YAC3s2P3fq/XuYLEImKsZs=,iv:MIyTtb7FmgtHB4WY4xhiBJrQzSuALbZY9l4rUlwdvs0=,tag:YDBfW81hFZxx7kqprokKDg==,type:str]
                     env: 2
-                    key: ENC[AES256_GCM,data:bRmzgXBo0t/Lm+xbDlRmrfpvYIy+fLAcexr2ezHL8pfigpL5zo3StYs9JBk9YlvB,iv:nLLsw7XlkNJUceaFVWr/CC5bQHWYGFCGLPrPEmTvlBM=,tag:J6PxbuJYEoQ01ZYGy25kZQ==,type:str]
+                    key: ENC[AES256_GCM,data:zFvlRavx2cCJcGGGyqSKwQd/ipQ0CmeMfgZV4dDEIzRloNRu7ZBDNE7Cd4BaCutq,iv:uSNk3HbFFPT/uqhTLGskRK14Ge9C1h/bZJdXTw3RgUg=,tag:FKmxlEp5tEwrFZt2bt4jyA==,type:str]
                 - unifi: null
                   icon: https://www.laub-home.de/images/9/97/UniFi-Logo.png
                   href: https://192.168.1.3
                   description: unifi cloud instance
                   widget:
                     type: unifi
-                    url: ENC[AES256_GCM,data:5BK2DaN1c8qQBug2QPPs7sAExg==,iv:hfHdALLQ514/CyIICrF2CpxObEp5yk5TO713ltmuiDs=,tag:uRQ354hpTSeYbeM0SjPuzQ==,type:str]
-                    username: ENC[AES256_GCM,data:+3JnP0Ao9TQVBWRx,iv:RUQNwpV3GtEpC0EWncjMdqR2cSWXvuJRMydu/LAv9FA=,tag:yVoRPD3VgfGIrfQyr9CNqw==,type:str]
-                    password: ENC[AES256_GCM,data:GhvE4fZbgWHpyObxe9XqU0q9syfgg58oFg==,iv:PtMygjKz90FqBBHHri0kbnKPlSEg6b7P3Tdmutgam4E=,tag:pUnj85TkWOgb0GLyL3dF4A==,type:str]
+                    url: ENC[AES256_GCM,data:Zd811RGU+xWWTNn/y4/2m4tfVQ==,iv:JdJrtLBMhuH9SwR0eKjXT1v2fM0rrZHqC09tmpARvL4=,tag:LyHGYRJlmqe35WWXaOgeQg==,type:str]
+                    username: ENC[AES256_GCM,data:jCQrggp/l8iGl5wo,iv:41Aa70h+W7aB5oam1zAKjQSGW3Z6KZ8pEVyaw+rEcZE=,tag:ssra4EuD+6NCXWwyIBAXKQ==,type:str]
+                    password: ENC[AES256_GCM,data:XEwirBY9UdQTn/PqgNMkLk4Rkq8r+qsYDA==,iv:ke2DF800BOjVdi4bfp4rgaew+1q2p4fo7ptQjtIA810=,tag:YN8mVO6vaCTefvjWQUMf/g==,type:str]
             widgets:
                 # show the kubernetes widget, with the cluster summary and individual nodes
                 - kubernetes:
@@ -126,7 +126,7 @@ spec:
                         showLabel: true
                 - search:
                     provider: custom
-                    url: ENC[AES256_GCM,data:Mp2bKLoyL1wPC/dvffJEMBG5WJwkrHomXK0=,iv:L6sj8p53D8aN3zLF7HhTTBixsE4FUjGyQ1Ej66r2T9Y=,tag:2jVLXSaiOo6EKaTfQXukUA==,type:str]
+                    url: ENC[AES256_GCM,data:q2+bTPhsvgSJ43zPI/kb6A0laobXjKq1cC4=,iv:rnEdtGxrCCwSdIyD/Hkx2iFrrdyYwKLJkQp7l0lKcts=,tag:wleCkRAjd4XrfE6GZBYc6w==,type:str]
                     target: _blank
             kubernetes:
                 mode: cluster
@@ -149,14 +149,14 @@ sops:
         - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBIZDA0VUUrMmlWVGhJNDl4
-            dEtMSEptcGk3Mit1OHE2NXNJZ0haZEhqWlFvCnRTZncvNUVuMnFkZDgzbVVMUnMr
-            aDY5QnUyU3RaVlpkTytZSWhnSTZnbGsKLS0tIHFnZCtXV1hrWlFkNVJXeS84NUVt
-            RWNpakxZVkFWcUcya2JUcDd5cTEyK2MKHbCQ7ExzAlgt0HBT7sn4vrqU0iHRHLJA
-            0Wo/vonOMg+lFD1Bo68uszYHllhyC6kjjNVOKc5PwMTMzF1c4Y2Ipw==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBDU2sxZXFDWUcvR3N1dWZB
+            NTJiQ3NFSkw3K0hwMEQvUmZha3g0SDcvUFFVCkIza1FFYVk1NCtHRzRHUlM5N0oz
+            c1hkV1BJZGN2b1JvOENyTGxEK0tQNGcKLS0tIGJPZzNkaXRFRlR1b1FLcTUwNUVm
+            NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
+            IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-24T23:53:13Z"
-    mac: ENC[AES256_GCM,data:BT1a4TSItJPnNJ5aASVnUhJ5cUPyC7+sEJMq7WWoflwzSW3RtTKyGnvfZrnWABXsT3UvjtNT0co0h/XQOGA1qIuK9MFjwhEnwXSP1LcZCU3GGqGRqJAcgNecCrRHdVlDPM4RR8WiFtRM5rm6LI+Fss7BGkfXC7dySGu/VNFJej0=,iv:Zl5ykmjPtMJ0Dn8KpH3p25bQGwmby5HxZkgbAiPuXvU=,tag:fOC8m88JzmwgcVtT1ANVFA==,type:str]
+    lastmodified: "2023-08-25T00:11:10Z"
+    mac: ENC[AES256_GCM,data:qx3hOYIq0ReRre83VMuVh1adzQk5tDqNpIgEJWl1Y4rJvkSEVPP044Ms5f38+8shlYKTR+rLRcJ0OLx80CSDA2BgGXLsK+Llll4xUFvysHRbmM+8DR+f9DuY4PZ4oKsthxmAwiHzHvYhgkpOdDJxEmqbU0Y33KT+Bsya0RTiCaQ=,iv:iW9x+s/ZzrqHud4j2vKtcat+YeD66WlfTVDv2UJUKcM=,tag:Z2Z1P6HLzXKjsdDMfx2vsw==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
