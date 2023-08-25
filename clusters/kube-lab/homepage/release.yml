@@ -28,7 +28,7 @@ spec:
                         description: truenas scale server
                         widget:
                             type: truenas
-                            url: ENC[AES256_GCM,data:D0Jv7S6ZbsSE/BfcurxSWdnZn6ydNcYeP4Hl6SA=,iv:uqlJO65SgvVx1C6EtJN58Z5AezgCQISCScKGCCpZ6Cw=,tag:AFm5Tfqd1oSx3LUbZHpssw==,type:str]
+                            url: ENC[AES256_GCM,data:Uky69vZn6ra6Kyd/JmGokc0MeVvf0BROpw1ZzhBM,iv:ClVSrdgVQck/xD4NQX8XiyUa3N42VLX0Z5+5Zu0OqO8=,tag:c7RJsZgjzEGczQpnjcZhEw==,type:str]
                             key: ENC[AES256_GCM,data:LKLYS+AjIxXrV/0TU2KHLV6ZO1tm+8VnVN5dZvOLTTfGyBGxf3ZFfKOUVrIJ1BOCTb3OnB85eFmOtAwYllRsnLIJ,iv:2iLidbBoITgZKBrOjdbCYzd2nD5kebMx8ONhBhmKpe0=,tag:WQutGLc12n5nXXWtPh32rA==,type:str]
                     - proxmox:
                         icon: https://www.weehooey.com/wp-content/uploads/2018/11/Proxmox-logo-stacked-840px.png
@@ -59,11 +59,11 @@ spec:
                             password: ENC[AES256_GCM,data:7Y86dyhn5+fzqjIhJpZGEvCD43NCcrvp2KnpJ3A=,iv:QVX5ymIuTtUa2r31y+wPMqvJfUue+AF/lsu4g7JV8Ac=,tag:DAfCeLRp+t/9BB6TZ2izXQ==,type:str]
                     - grafana:
                         icon: https://1.bp.blogspot.com/-edrJnM1O7d4/XuuKLB9QkRI/AAAAAAAADbo/WMxBIK_fePAeVRq-EhA4_zslToI4i6veQCK4BGAsYHg/s1224/1200px-Grafana_logo.svg.png
-                        href: https://mon.miniomega.lab.markaplay.net:3000/
+                        href: https://mon.lab.markaplay.net:3000/
                         description: grafana stats dashboard thingy
                         widget:
                             type: grafana
-                            url: ENC[AES256_GCM,data:ZrakREcd6VmQEBgpn7wOmlb1aJiw2D7XXGcg5oxfl18yrY7kFuIw6ji2hHM=,iv:4FqqkzmN0AYV0xMUusJE+UYcUWSVAUW+DrIJkzZVChs=,tag:kWEsiuaDQTMtdF+jsrZDbw==,type:str]
+                            url: ENC[AES256_GCM,data:C+B2+9yHH7hO68OGUTIus8SIq4nd2jMKdPlM1teHd5PZDA==,iv:x2ArF2VRwd0M/BePwSwwS4QxIe+jttOHi0PLloYAHY8=,tag:JRU0JbUW2/+9cdyJbhoAkw==,type:str]
                             username: ENC[AES256_GCM,data:DVbN0FFF4V6EDkc=,iv:sZK/dwfZ/bsS0AgFIVrAtu36nIOU7M2zCnH9zBM//18=,tag:7jZC3/e/hWtsmXuFCdV4mw==,type:str]
                             password: ENC[AES256_GCM,data:lfuhHbNfuiveEGDxd60WV7eNcmPseTbRNlJWSMPBcyosHLbWD9w9InxSJZqYFQ==,iv:xAyg9pxA3fEjyO7Vh/JLVWOE19Ha1roa9/EN+eHt4mw=,tag:W3QddptIE+v4czbV9kfiyg==,type:str]
                     - portainer:
@@ -73,7 +73,7 @@ spec:
                         widget:
                             type: portainer
                             url: ENC[AES256_GCM,data:3Kn3AVsNDAk9LWQWjXRq93oAlc6Tv1I/03a6G3USrqzNiS0=,iv:QNtjmcQJR5/mlzvsUmdczxN/RLHR2wAyEzgdux79QvM=,tag:3qMLOeVOoSoRXvfAzwo5jw==,type:str]
-                            env: 2
+                            env: 1
                             key: ENC[AES256_GCM,data:Ij3FaWeOKQebYb3UF9PdH5HtPmKL1hzHVZsuTvkwut9v63mwtqE70Gf/F4DPfJX+,iv:QCu5TJNLCnczysUHYBFwNayXGGa15gWY7rXgleTcHD8=,tag:vaB4tPhwSL11/C9GfMuXtA==,type:str]
                 - network:
                     - cloudflare:
@@ -93,7 +93,7 @@ spec:
                             type: traefik
                             url: ENC[AES256_GCM,data:PPykEJvoW76pAz93sRzLbBtXu/6m781SXUK2aeUNzzp9,iv:yc4fCoYpzh46RR3MYsLG9D7ab2Ve+3lucN/QTLBZjCQ=,tag:uFph9MtdiFMyjhAmytB2+g==,type:str]
                             username: ENC[AES256_GCM,data:7ET9JJE=,iv:CfysI/j+F8Fq44d6lokfk3LNfVRu48xgp9VjagteKqg=,tag:4Z1qvN89aaGM5GczPqN6DA==,type:str]
-                            password: ENC[AES256_GCM,data:bT5kWCL/OTczBbvrYQ==,iv:h83R8bGVUnJdhFUeVTY5ODxkKo2FmhKGH//EwvTwCFA=,tag:ncXs5ip8D6NqNe8uI6CxEA==,type:str]
+                            password: ENC[AES256_GCM,data:dxU+kgMcC9hT3ing0uA=,iv:1iPwQjm7H16JKwTzXWQ46INQ3seLqjAX4tdFrOblofQ=,tag:0FjOhcb+lCBvYMCr27mJtA==,type:str]
                     - traefik-miniomega:
                         icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
                         href: https://traefik.miniomega.lab.markaplay.net:8080/
@@ -157,8 +157,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-25T00:25:26Z"
-    mac: ENC[AES256_GCM,data:Z56VWrJl7ylpEK8lqXGR1GV3Hv1td88BuBHhGT5JzIQ0asiTH1ZKaoNNtEj57D3bstLSRTD3jru5hpjC+2aXfZdOcYby2mjPFQ6842jYsQvB/1AK01sWCAw87EuGytTGbW5ty/Hts8zfS+vbw4hLJwtIHjeEwyOYh9Ml7ejIqek=,iv:mSCGwaP/HZ54E0Ma7qRIuOJajFhfrXeuwlGZdsQhwXs=,tag:jDQyY2oPlEnP21B98cSIvg==,type:str]
+    lastmodified: "2023-08-25T00:30:06Z"
+    mac: ENC[AES256_GCM,data:bVIWMa7MOn+w1Zqpl2U6tsHLvqEYXkBn8AWUqvy3CDqU9OCdphoMeK2v5sgArO4rTwVRoiCE3YD/EqKha//ixhWWDnIGIbd7wex6Slf1mzSDZ3GFRS3u5A6euPaJSKKuxeqUKFoY8vMuY5uh8VD4OgIYcMwEWh0roJyPjxFMBJA=,iv:bmSBgVVLhI/BDPCNC1iesRz+F60wCIVsxMwhHUUyBZo=,tag:6IJMnnFwPSwXincnqI36IA==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
