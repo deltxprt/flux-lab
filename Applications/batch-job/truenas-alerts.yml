@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: truenas-ntfy-alerts-job
+  namespace: batch-job
+spec:
+  schedule: "@hourly"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: truenas-alerts
+            image: ghcr.io/deltxprt/truenas-alerts-ntfy:0.0.2
+            imagePullPolicy: IfNotPresent
+            env:
+            - name: TRUENASURL
+              valueFrom:
+                secretKeyRef:
+                  name: truenas-alerts-ntfy-secret
+                  key: truenasurl
+            - name: APIKEY
+              valueFrom:
+                secretKeyRef:
+                  name: truenas-alerts-ntfy-secret
+                  key: apikey
+            - name: NTFYURL
+              valueFrom:
+                secretKeyRef:
+                  name: truenas-alerts-ntfy-secret
+                  key: ntfyurl
+            - name: TOPIC
+              valueFrom:
+                secretKeyRef:
+                  name: truenas-alerts-ntfy-secret
+                  key: topic
+          restartPolicy: OnFailure
