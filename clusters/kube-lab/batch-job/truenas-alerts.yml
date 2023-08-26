@@ -4,7 +4,7 @@ metadata:
   name: truenas-ntfy-alerts-job
   namespace: batch-job
 spec:
-  schedule: "@hourly"
+  schedule: "*/10 * * * *"
   jobTemplate:
     spec:
       template:
