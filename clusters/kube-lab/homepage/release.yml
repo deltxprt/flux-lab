@@ -130,6 +130,20 @@ spec:
                     provider: custom
                     url: ENC[AES256_GCM,data:q2+bTPhsvgSJ43zPI/kb6A0laobXjKq1cC4=,iv:rnEdtGxrCCwSdIyD/Hkx2iFrrdyYwKLJkQp7l0lKcts=,tag:wleCkRAjd4XrfE6GZBYc6w==,type:str]
                     target: _blank
+                - openmeteo:
+                    # optional
+                    label: Montreal
+                    latitude: 45.508888
+                    longitude: -73.561668
+                    # optional
+                    timezone: America/Toronto
+                    # or imperial
+                    units: metric
+                    cache: 5
+                - datatime:
+                    format: null
+                    dateStyle: long
+                    timeStyle: long
             kubernetes:
                 mode: cluster
             settings: null
@@ -157,8 +171,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-25T00:30:06Z"
-    mac: ENC[AES256_GCM,data:bVIWMa7MOn+w1Zqpl2U6tsHLvqEYXkBn8AWUqvy3CDqU9OCdphoMeK2v5sgArO4rTwVRoiCE3YD/EqKha//ixhWWDnIGIbd7wex6Slf1mzSDZ3GFRS3u5A6euPaJSKKuxeqUKFoY8vMuY5uh8VD4OgIYcMwEWh0roJyPjxFMBJA=,iv:bmSBgVVLhI/BDPCNC1iesRz+F60wCIVsxMwhHUUyBZo=,tag:6IJMnnFwPSwXincnqI36IA==,type:str]
+    lastmodified: "2023-08-26T01:41:51Z"
+    mac: ENC[AES256_GCM,data:8qAXfOEcj8/plC3X3OpyTvWMwFiYC+pk/AqkNvrnB4zWdvQ9KrgaCr0CQrj46QbQUXKsZEd3GKCRj7xCjCof+CeyaoiTew7nJEEIrpq4YBw5JGz09MmkKEdeZhRtnTHDCBXQv5N8qNJ0Mllhhiax9QBSXOBXfMMgh/nf9AM4YPo=,iv:r0Vrr3CMpHPgZBMm9LD0hTf6rfoWkRDkzBOXvltmh5k=,tag:C28hPJxy3+EPJg9FY/R2Yw==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
