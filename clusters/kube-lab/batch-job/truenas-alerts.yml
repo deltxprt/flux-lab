@@ -34,4 +34,9 @@ spec:
                 secretKeyRef:
                   name: truenas-alerts-ntfy-secret
                   key: topic
+            - name: INTERVAL
+              valueFrom:
+                secretKeyRef:
+                  name: truenas-alerts-ntfy-secret
+                  key: intervals
           restartPolicy: OnFailure
