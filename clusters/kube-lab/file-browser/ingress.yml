@@ -2,33 +2,34 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: drone-cert
-  namespace: drone
+  name: filebrowser-cert
+  namespace: filebrowser
 spec:
-  secretName: drone-cert
+  secretName: filebrowser-cert
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "ci.lab.markaplay.net"
+  commonName: "file.lab.markaplay.net"
   dnsNames:
-  - "ci.lab.markaplay.net"
+  - "file.lab.markaplay.net"
+  - "file.markaplay.net"
 
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: drone-web
-  namespace: drone
+  name: filebrowser-web
+  namespace: filebrowser
   annotations: 
     kubernetes.io/ingress.class: traefik-external
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`ci.lab.markaplay.net`)
+    - match: Host(`file.lab.markaplay.net`)
       kind: Rule
       services:
-      - name: drone
-        port: 8080
+      - name: file-browser
+        port: 80
   tls:
-    secretName: drone-cert
+    secretName: filebrowser-cert
