@@ -175,7 +175,15 @@ spec:
                     cache: 5
             kubernetes:
                 mode: cluster
-            settings: null
+            settings:
+                title: Markaplay homepage
+                background: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
+                cardBlur: sm
+                layout: null
+                Media:
+                    style: row
+                    columns: 4
+                base: https://homepage.lab.markaplay.net
         # The service account is necessary to allow discovery of other services
         serviceAccount:
             create: true
@@ -200,8 +208,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-27T17:46:04Z"
-    mac: ENC[AES256_GCM,data:e0iAx5G6EucRyl3XEWVgtt3oLVsVSD35XRmgI9QnnCNDHj42fjlvy4j43mxoonjP9IDWhHPRYlcwvGhfnAikX3/+jY3P/HgDK4B7PJZ//WbbysVTabiqK/WbfYeU0nv3zPJQqOlzF9qQWSKbjkmOkH5iNFyo6reopekIYi3sOi0=,iv:HMGodgRmmViFAxTs6N0n9T4NcFlBLtcqU8VXJ52VkTw=,tag:k6j7k+czsuLAerICUT9qbw==,type:str]
+    lastmodified: "2023-08-27T18:08:46Z"
+    mac: ENC[AES256_GCM,data:lYGNyYxEMmOcfPUaFsm/c0v8H07yEaRS5KgBSmRhaMeLTlMT/omylee/xludT8mJc0yRIjv49+XfjUZzFRUGmls1hJIDTj0T+bKTojvCrhEQoPDCnS2VdQ+ssEuHwo+vCE3TSVh8wPKq0w2ipoBbeN2mrHoMuiErOVZEYCGW05E=,iv:12EMa9tfW5MkHDwcI7Vx76Oh83wbzSYd311shTb9K9E=,tag:9Yua/sbnqS4m8GkftAASBg==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
