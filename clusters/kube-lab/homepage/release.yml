@@ -43,10 +43,10 @@ spec:
                           href: https://zabbix.lab.markaplay.net/
                     - ntfy:
                         - abbr: NTF
-                      href: https://ntfy.lab.markaplay.net/
+                          href: https://ntfy.lab.markaplay.net/
                     - kasm:
                         - abbr: KASM
-                      href: https://kasm01.lab.markaplay.net/
+                          href: https://kasm01.lab.markaplay.net/
                     - openfaas:
                         - abbr: OF
                           href: https://openfaas.lab.markaplay.net/
@@ -200,8 +200,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-27T16:32:25Z"
-    mac: ENC[AES256_GCM,data:UB32ab89KI6a/PgCvW/mQWxU1AxnX0lfZbQ0ifjdwGAAjcSAol9+0Of9vTVVrHEmDMidPRf+05n46HdEtAssQH1sjLo/6Ii++AiDpnSuYS1TOu6oCyhE2nK7kQM8dy/VM4SWQxjB22TaoLpxs1+fOS4qutv4xLkIrjqtfYipH+4=,iv:0j5l3JVnb/kbij4AjA6cR8ZDkbRImxbCJwj1/QlZeu4=,tag:sMjgqYD6QfmE7cz3rXFpHw==,type:str]
+    lastmodified: "2023-08-27T17:44:21Z"
+    mac: ENC[AES256_GCM,data:zi+75ELJPAf76lFPYeSK+pZH003wF2xZxd5472HfW23JyvyDmf8qhL/xhaUg+53YWrOeiQ2QQnVX7/75WG2tKyk3r+c4/6hkvEYGtirUUJmIcwPkkhoc/EYa/wPYOat1LIHD1hGC6N35oAtlHQ/HColMwL7ha8oLgqMMh9wOvCA=,iv:/UL2gHh2ElgZ+ZhfyjDoJSgY77MlDTjb+Re3E/U7cAA=,tag:Vm7zsWxOo6GkULja/E2rzg==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
