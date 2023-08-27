@@ -10,7 +10,7 @@ spec:
       chart: rancher
       sourceRef:
         kind: HelmRepository
-        name: rancher-latest
+        name: rancher
         namespace: flux-system
       version: 2.7.5
   values:
