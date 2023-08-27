@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: traefik
         namespace: flux-system
-      version: 23.1.0
+      version: 20.3.0
   values:
     globalArguments:
       - "--global.sendanonymoususage=false"
