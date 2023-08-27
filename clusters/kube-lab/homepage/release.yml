@@ -16,10 +16,43 @@ spec:
     values:
         config:
             bookmarks:
-                - Developer:
+                - Dev Stuff:
                     - Github:
                         - abbr: GH
-                          href: https://github.com/
+                          href: https://github.com/deltxprt
+                    - devto:
+                        - abbr: DT
+                          href: https://dev.to/
+                - r/:
+                    - homelab:
+                        - abbr: HL
+                          href: https://reddit.com/r/homelab
+                - Docs:
+                    - Alpine:
+                        - abbr: AL
+                          href: https://wiki.alpinelinux.org/
+                    - Nixos:
+                        - abbr: NIX
+                          href: https://nixos.wiki/
+                - Endpoints:
+                    - Wazuh:
+                        - abbr: WAZ
+                          href: https://wazuh.lab.markaplay.net/
+                    - Zabbix:
+                        - abbr: ZBX
+                          href: https://zabbix.lab.markaplay.net/
+                    - ntfy:
+                        - abbr: NTF
+                      href: https://ntfy.lab.markaplay.net/
+                    - kasm:
+                        - abbr: KASM
+                      href: https://kasm01.lab.markaplay.net/
+                    - openfaas:
+                        - abbr: OF
+                          href: https://openfaas.lab.markaplay.net/
+                    - vault:
+                        - abbr: HV
+                          href: https://vault.lab.markaplay.net/
             services:
                 - Storage-infra:
                     - truenas:
@@ -167,8 +200,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-26T01:45:42Z"
-    mac: ENC[AES256_GCM,data:SRnmT6/FnuTpKk9x6lZcb91yKhiuMGnArMKA8tAkvK5G8ZCptZ1PoKdGYpRhuEOM3w8rVspHEdoAN8c98bDgsm9yeCgyXvOyR1wPqYif3oipyNqhpb4c1SnpQ0tfFzkXlDNABINObCrdS4d3tUBI/5pmszXO9w8iTnFXCMxVAWI=,iv:6H4dun5lyyf0LcpOAUXLRApsp3CaFpbdyspvFpCk9h4=,tag:/GWmwD9+eyYj/Zi4gatXRw==,type:str]
+    lastmodified: "2023-08-27T16:32:25Z"
+    mac: ENC[AES256_GCM,data:UB32ab89KI6a/PgCvW/mQWxU1AxnX0lfZbQ0ifjdwGAAjcSAol9+0Of9vTVVrHEmDMidPRf+05n46HdEtAssQH1sjLo/6Ii++AiDpnSuYS1TOu6oCyhE2nK7kQM8dy/VM4SWQxjB22TaoLpxs1+fOS4qutv4xLkIrjqtfYipH+4=,iv:0j5l3JVnb/kbij4AjA6cR8ZDkbRImxbCJwj1/QlZeu4=,tag:sMjgqYD6QfmE7cz3rXFpHw==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
