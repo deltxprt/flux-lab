@@ -177,8 +177,7 @@ spec:
                 mode: cluster
             settings:
                 title: Markaplay homepage
-                background:
-                    image: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
+                background: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
                 cardBlur: md
                 color: neutral
                 layout:
@@ -215,8 +214,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-29T20:29:23Z"
-    mac: ENC[AES256_GCM,data:/FqKwS1Mn8bISDg7DsH3bkyjRaxS7jg7ZFtb6irRuQ35E6aP7iTHS4uFDc1Ug83uw3lMU86wg9M04cP/rABKjONS2dN5rlXk2LVg6Bu56gIGLD2lpiuOlEyrES1RWyB0VJEniL0WAu2+0Yq5WpaiK4X0KwuSq6J4D91GS7+ngGA=,iv:gncpDmlJucdY9cyU5xMDR2MNygx+fLHt11QAeQGveXg=,tag:aJvOLQ1yl33mN/m9WcTQgA==,type:str]
+    lastmodified: "2023-08-29T20:30:19Z"
+    mac: ENC[AES256_GCM,data:QpDYtmL072edg/iyWzP9sF9/fpE9fTmQVq6gHGj8dDXsYR8CKBaxNW7SQ4MZbt6J0vyF27Wr/SbXyKLT0r533RWOpkjahnw6XEDNWLGdHxP1JUfbAfFSnwtYRUK+gLXfeNImUAHUzJsVPGW0m7MrwoCXLRI/EYRPC+yl9eolPSg=,iv:/oSlpRG8iiScQSq++OvEVyvg/VQ8x8b0SMtzbK42ZkE=,tag:r+uHbF86tZYDH2EIH0C3/A==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
