@@ -177,14 +177,22 @@ spec:
                 mode: cluster
             settings:
                 title: Markaplay homepage
-                background: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
+                background:
+                    image: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
+                    blur: sm
+                    opacity: 50
                 cardBlur: md
-                color: purple
+                color: neutral
                 layout:
                     Media:
                         style: row
                         columns: 4
+                hideErrors: true
                 base: https://homepage.lab.markaplay.net
+                quicklaunch:
+                    searchDescriptions: true
+                    hideInternetSearch: true
+                    hideVisitURL: true
         # The service account is necessary to allow discovery of other services
         serviceAccount:
             create: true
@@ -209,8 +217,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-29T20:17:34Z"
-    mac: ENC[AES256_GCM,data:PWbWde3qu8O7MyPjlSD8hVsMWQB6FpjREXm6Tg3dhHzWqIKoVhlWkO4fgmCb1lxM4zznrFBSuyhaYWcsJg5Rt9Xe3KvaXXz5/LHURzjhEyW/Z2F5JfdZyNorJ3w1BONGg2xEdI0q+uzWFI1Dmr7Q7C2+0zrkCe86GILFhmB7nJE=,iv:og+TsvTCRmth4Ns/0rDFta+JAr+F1a85M2fvmCJQ4hM=,tag:OLw1+tGZPpR/X/VE6bSuoA==,type:str]
+    lastmodified: "2023-08-29T20:23:46Z"
+    mac: ENC[AES256_GCM,data:Vl/XMfwgkzUzQsQ4e3NjWJNrEZEax/85hIZUcwNSo5ctcmO52RWoIX6IHv/lqa/eR821+uCi5CinIub6TBfjlQD1Vv2qFpIffu7zNFUoYAcAJGts1d4QqYuWYjeBo3g1E91lY1zd4/MgafPojzjktU3fsfrmqECn2omUrYdzx6s=,iv:lUqcvbehXJ4FTnK9bhZX2waFWgTH78r/c20dhGMjswY=,tag:IWWnZHEcjW9uMztxNksY+A==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
