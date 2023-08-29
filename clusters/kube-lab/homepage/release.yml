@@ -180,7 +180,6 @@ spec:
                 background:
                     image: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
                     blur: sm
-                    opacity: 10
                 cardBlur: md
                 color: neutral
                 layout:
@@ -217,8 +216,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-29T20:27:11Z"
-    mac: ENC[AES256_GCM,data:KtmEtCibz3UQtfJfs/OTEB5E9t1MAApiJItzX0EFeYycTLktcJ2isWnlMuJrLAAgT70j2PmmdIeXQ0VEn0VSPd1lfCBQyKKpANQJBZexJBa2Ml7VvCaI9QjrxQ2AM+YzTLSYi0l+lNNPhTi4IIw7EImZ2jCsK8dhRSQ2I97H22w=,iv:JYlDExidw5pVLprHew+FIE5Rc5LbRyFlZ30pWurnvaw=,tag:7VPgDpMX3WL07WZAbLfeSA==,type:str]
+    lastmodified: "2023-08-29T20:28:45Z"
+    mac: ENC[AES256_GCM,data:x9Sj6Gre0bbe9f/YbWpgezNIhj3WHVhgo9I4gNuFT/MACQjz6zc+n5KZfmF7E8mmX2mtRmVCo5m10rgbs9t7fJ8wqDWdHP/SH3Nyj5LtAJR1Quka6rqQuBFAdiAyt1wAsvSmPoMBlRhCnAu4BLsUxl5jccfUppBR9ozxEIRb3zM=,iv:hqZmvy9Xc46juqvqMqLOQP4skdzeWEUKVpQHWNTogDY=,tag:IIcuR+XIFjXGeBisCaJhig==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
