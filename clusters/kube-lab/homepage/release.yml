@@ -19,39 +19,50 @@ spec:
                 - Dev Stuff:
                     - Github:
                         - abbr: GH
+                          icon: https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png
                           href: https://github.com/deltxprt
                     - devto:
                         - abbr: DT
+                          icon: https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png
                           href: https://dev.to/
                 - r/:
                     - homelab:
                         - abbr: HL
+                          icon: https://b.thumbs.redditmedia.com/Flac-ySmslzY0SE583PNA42rFbcYxLt7hqgCeUrC11s.png
                           href: https://reddit.com/r/homelab
                 - Docs:
                     - Alpine:
                         - abbr: AL
+                          icon: https://pic2.zhimg.com/50/v2-2d38ff7770d2697097adcbc840977a0d_720w.jpg?source=54b3c3a5
                           href: https://wiki.alpinelinux.org/
                     - Nixos:
                         - abbr: NIX
+                          icon: https://files.artturin.com/files/nixoscolorful.svg
                           href: https://nixos.wiki/
                 - Endpoints:
                     - Wazuh:
                         - abbr: WAZ
+                          icon: https://wazuh.com/uploads/2018/12/cropped-wazuh_blue_iso_big-1-180x180.png
                           href: https://wazuh.lab.markaplay.net/
                     - Zabbix:
                         - abbr: ZBX
+                          icon: https://www.it-como-hobby.com/wp-content/uploads/2017/06/zabbix-150x150-1.png
                           href: https://zabbix.lab.markaplay.net/
                     - ntfy:
                         - abbr: NTF
+                          icon: https://ntfy.sh/_next/static/media/logo.077f6a13.svg
                           href: https://ntfy.lab.markaplay.net/
                     - kasm:
                         - abbr: KASM
+                          icon: https://static.crozdesk.com/web_app_library/providers/logos/000/018/813/original/kasm-workspaces-1669222068-logo.png
                           href: https://kasm01.lab.markaplay.net/
                     - openfaas:
                         - abbr: OFunc
+                          icon: https://www.openfaas.com/images/openfaas/whale.png
                           href: https://openfaas.lab.markaplay.net/
                     - vault:
                         - abbr: HV
+                          icon: https://www.hashicorp.com/_next/static/media/colorwhite.c5723175.svg
                           href: https://vault.lab.markaplay.net/
             services:
                 - Storage-infra:
@@ -177,7 +188,7 @@ spec:
                 mode: cluster
             settings:
                 title: Markaplay homepage
-                background: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/c3Ktrx3ciJ6tMEx?file=/&fileId=246&x=5120&y=1440&a=true&etag=f3be92d0ef7c759f83f9b67fe3aedf9a
+                background: https://nextcloud.lab.markaplay.net/apps/files_sharing/publicpreview/72XMZLg4QNx4wrs?file=/&fileId=362&x=2301&y=1326&a=true&etag=f530f3f7c752612a90c2100cb47515b3
                 cardBlur: md
                 color: neutral
                 layout:
@@ -214,8 +225,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-29T20:30:19Z"
-    mac: ENC[AES256_GCM,data:QpDYtmL072edg/iyWzP9sF9/fpE9fTmQVq6gHGj8dDXsYR8CKBaxNW7SQ4MZbt6J0vyF27Wr/SbXyKLT0r533RWOpkjahnw6XEDNWLGdHxP1JUfbAfFSnwtYRUK+gLXfeNImUAHUzJsVPGW0m7MrwoCXLRI/EYRPC+yl9eolPSg=,iv:/oSlpRG8iiScQSq++OvEVyvg/VQ8x8b0SMtzbK42ZkE=,tag:r+uHbF86tZYDH2EIH0C3/A==,type:str]
+    lastmodified: "2023-08-29T20:46:35Z"
+    mac: ENC[AES256_GCM,data:0ejppwbzXeVSeeD5nFmCzzg9fr9uXvq2qY777BhLqilhsEO1OF+SFZ5FKJeeOIpKTQFiRvHLhurhp7/zs3ryCUKtJaz0+TfU/1oCO0zVGZeHl+jxxmTudyTAaHqzK/scsIt0Itk4vxzYsMV8s3LZrqCWHcajdiksDRo1oIo8y3w=,iv:b6XRUTlmmqEu6ZoH/jgNwqWQXE9urhcp985TPYTYVu0=,tag:1kXlGf8vHe5o4kaDOgajuA==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
