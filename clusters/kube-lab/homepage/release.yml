@@ -75,8 +75,12 @@ spec:
                           href: https://openfaas.lab.markaplay.net/
                     - vault:
                         - abbr: HV
-                          icon: https://www.hashicorp.com/_next/static/media/colorwhite.c5723175.svg
+                          icon: https://assets.stickpng.com/images/62e12eca7fe3599fdd46ecad.png
                           href: https://vault.lab.markaplay.net/
+                    - Rancher:
+                        - abbr: RCHR
+                          icon: https://cdn.icon-icons.com/icons2/2699/PNG/512/rancher_logo_icon_169808.png
+                          href: https://rancher.lab.markaplay.net/
             services:
                 - Storage-infra:
                     - truenas:
@@ -238,8 +242,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-31T12:43:02Z"
-    mac: ENC[AES256_GCM,data:V0fIqLeTlbyOo3OAMmGlB9g38JIj/uy35AUWyyrvayh2jCwCxFSc856hZlQhUTe2iIPoDBNrXSitBAICijQtbZ2+0EZzawNN+p75taO2ak4fZHQqQXkX7W9sWYzjr7CNogV2dOxh+evauXxX0Al68Gs6oQdRdk9warTTgQhMt1E=,iv:fnvaV9QsYOyg7Fdjk1W5JVt6bpufc/Mw/ABgd/ligWU=,tag:ee2Ki5pC6rpcqUNnoNOnkA==,type:str]
+    lastmodified: "2023-08-31T12:45:58Z"
+    mac: ENC[AES256_GCM,data:7isaLDK+tqm1hBKl4l+HgpxhoybDp+n/FiUmfxp9cyLVR8BWFsJ13lSKa6pWoyTS/TlW0iKALe3yZ+qQpICoz/nQahlid9U0e6tGYfk6W7T0VBUI/hfAbcKRnUahm7oVN04ptLb2anZ332FCF1ZO3wJQleCxDTA4vtzekMOOOWY=,iv:lmsiYi4Ave0CiRdX59zw+58+kn83TgIDIL0HcaxLLcg=,tag:kuczV+tMDLc+bHjX4DnZTQ==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
