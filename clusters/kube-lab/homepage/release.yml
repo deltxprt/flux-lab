@@ -39,7 +39,7 @@ spec:
                         - abbr: NIX
                           icon: https://files.artturin.com/files/nixoscolorful.svg
                           href: https://nixos.wiki/
-                - External Tools:
+                - Clouds:
                     - Azure:
                         - abbr: AZ
                           icon: https://logos-world.net/wp-content/uploads/2021/02/Microsoft-Azure-Emblem.png
@@ -52,6 +52,14 @@ spec:
                         - abbr: GCP
                           icon: https://www.vlrtraining.in/wp-content/uploads/2020/11/logo-gcp.png
                           href: https://console.cloud.google.com/
+                    - DigitalOcean:
+                        - abbr: DO
+                          icon: https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg
+                          href: https://www.digitalocean.com/
+                    - Akamai/linode:
+                        - abbr: AL
+                          icon: https://assets.linode.com/akamai-logo.svg
+                          href: https://www.linode.com/
                 - Internal  Tools:
                     - Wazuh:
                         - abbr: WAZ
@@ -75,7 +83,7 @@ spec:
                           href: https://openfaas.lab.markaplay.net/
                     - vault:
                         - abbr: HV
-                          icon: https://assets.stickpng.com/images/62e12eca7fe3599fdd46ecad.png
+                          icon: https://www.cloudfoundry.org/wp-content/uploads/2017/11/aae024c8ad8c-Vault_VerticalLogo_FullColor.png
                           href: https://vault.lab.markaplay.net/
                     - Rancher:
                         - abbr: RCHR
@@ -242,8 +250,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-31T12:45:58Z"
-    mac: ENC[AES256_GCM,data:7isaLDK+tqm1hBKl4l+HgpxhoybDp+n/FiUmfxp9cyLVR8BWFsJ13lSKa6pWoyTS/TlW0iKALe3yZ+qQpICoz/nQahlid9U0e6tGYfk6W7T0VBUI/hfAbcKRnUahm7oVN04ptLb2anZ332FCF1ZO3wJQleCxDTA4vtzekMOOOWY=,iv:lmsiYi4Ave0CiRdX59zw+58+kn83TgIDIL0HcaxLLcg=,tag:kuczV+tMDLc+bHjX4DnZTQ==,type:str]
+    lastmodified: "2023-09-01T15:56:39Z"
+    mac: ENC[AES256_GCM,data:CpFZalqn2fKSIDXq0jxjJSkUbexoNEbXbhO3qdbQQkbODF6lbomhoCWOpL2Z4YHTXrHCYGBP6wn82uwM7UmtVcP97D2K6VV/A2cLjiY6bAJwwVA9XcMAWfVPH7D77dxCuUZWCsvgY5cugeeOI0nOST+oBwcX88eeCQU5NnRlSSY=,iv:h42dyCSNqBUAr4dRvArZx/5pQ2ryZtRIdIfv471ia7c=,tag:hVGpbkk7ymMbERT9fJ/o4w==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
