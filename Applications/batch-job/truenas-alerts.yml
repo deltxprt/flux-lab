@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: truenas-alerts
-            image: ghcr.io/deltxprt/truenas-alerts-ntfy:0.0.2
+            image: ghcr.io/deltxprt/truenas-alerts-ntfy:0.0.3
             imagePullPolicy: IfNotPresent
             env:
             - name: TRUENASURL
@@ -34,4 +34,9 @@ spec:
                 secretKeyRef:
                   name: truenas-alerts-ntfy-secret
                   key: topic
+            - name: INTERVAL
+              valueFrom:
+                secretKeyRef:
+                  name: truenas-alerts-ntfy-secret
+                  key: intervals
           restartPolicy: OnFailure
