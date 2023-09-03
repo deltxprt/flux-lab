@@ -89,6 +89,10 @@ spec:
                         - abbr: RCHR
                           icon: https://cdn.icon-icons.com/icons2/2699/PNG/512/rancher_logo_icon_169808.png
                           href: https://rancher.lab.markaplay.net/
+                    - Influx:
+                        - abbr: INFLX
+                          icon: https://d7umqicpi7263.cloudfront.net/img/product/83e3ab8e-540e-4391-b603-f65174ac0275/d8b75e2b-1a01-45f5-85a2-2919c461c36c.png
+                          href: http://mon.lab.markaplay.net:8086
             services:
                 - Storage-infra:
                     - truenas:
@@ -250,8 +254,8 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-09-01T15:56:39Z"
-    mac: ENC[AES256_GCM,data:CpFZalqn2fKSIDXq0jxjJSkUbexoNEbXbhO3qdbQQkbODF6lbomhoCWOpL2Z4YHTXrHCYGBP6wn82uwM7UmtVcP97D2K6VV/A2cLjiY6bAJwwVA9XcMAWfVPH7D77dxCuUZWCsvgY5cugeeOI0nOST+oBwcX88eeCQU5NnRlSSY=,iv:h42dyCSNqBUAr4dRvArZx/5pQ2ryZtRIdIfv471ia7c=,tag:hVGpbkk7ymMbERT9fJ/o4w==,type:str]
+    lastmodified: "2023-09-03T15:35:24Z"
+    mac: ENC[AES256_GCM,data:g+ZfU/KxobIHGwPCOE61S27HxL6TkuDJisMpL6TeB2ik323oiumBr8fWiIGMJTUnqJTSQBCf9quhXZOBDehfvHjuuEHXAet2Ns3t1iWTf9cCYwFrrUAGqZKmcX9GVhdsIRk7UOjlU+SA0Lm7cKE3u6kWjqHd5Gmcsj5Ue1pQlho=,iv:ztAoXi6T1XP0544nVjYixZ9afwPpZtF0Hz5h50GqZnM=,tag:EmHvKg3fixLOlgw9vTt/pA==,type:str]
     pgp: []
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
     version: 3.7.3
