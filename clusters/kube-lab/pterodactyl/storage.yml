@@ -2,6 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pterodactyl-app-claim
+  namespace: pterodactyl
 spec:
   storageClassName: longhorn
   accessModes:
@@ -15,6 +16,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pterodactyl-nginx-claim
+  namespace: pterodactyl
 spec:
   storageClassName: longhorn
   accessModes:
@@ -28,6 +30,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pterodactyl-logs-claim
+  namespace: pterodactyl
 spec:
   storageClassName: longhorn
   accessModes:

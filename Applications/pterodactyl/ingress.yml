@@ -17,6 +17,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: pterodactyl-ingress
+  namespace: pterodactyl
   annotations: 
     kubernetes.io/ingress.class: traefik-external # uncomment if you use annotations
 spec:
