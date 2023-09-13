@@ -1,0 +1,34 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dashy-cert
+  namespace: dashy
+spec:
+  secretName: dashy-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "dashy.lab.markaplay.net"
+  dnsNames:
+  - "dashy.lab.markaplay.net"
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashy
+  namespace: dashy
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`dashy.lab.markaplay.net`)
+      kind: Rule
+      services:
+      - name: dashy-service
+        port: 8080
+  tls:
+    secretName: dashy-cert
