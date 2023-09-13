@@ -29,6 +29,6 @@ spec:
       kind: Rule
       services:
       - name: dashy-service
-        port: 8080
+        port: 80
   tls:
     secretName: dashy-cert
