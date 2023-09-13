@@ -6,7 +6,7 @@ metadata:
   namespace: dashboard
 spec:
   selector:
-    app: dashboard
+    app: dashy
   ports:
   - name: http
     targetPort: 80
