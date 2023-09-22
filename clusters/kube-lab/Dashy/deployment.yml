@@ -19,11 +19,19 @@ spec:
       - image: lissy93/dashy:2.1.1
         name: dashy
         imagePullPolicy: Always
-#        resources:
-#            limits:
-#              memory: 500Mi
-#            requests:
-#              memory: 500Mi
-#              cpu: 1
+        livenessProbe:
+          exec:
+            command:
+            - CMD
+            - node
+            - /app/services/healthcheck
+          initialDelaySeconds: 40
+          periodSeconds: 90
+        resources:
+            limits:
+              memory: 500Mi
+            requests:
+              memory: 500Mi
+              cpu: 1
         ports:
         - containerPort: 80

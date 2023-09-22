@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: agones
+  namespace: agones-system
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: agones
+      sourceRef:
+        kind: HelmRepository
+        name: agones
+        namespace: flux-system
+      version: 1.34.0
+  values:
+    gameservers:
+      namespaces:
+        - game-servers
