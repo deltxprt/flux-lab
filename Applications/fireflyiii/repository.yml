@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: homepage
+  name: firefly-iii
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://jameswynn.github.io/helm-charts
+  url: "https://firefly-iii.github.io/kubernetes"
