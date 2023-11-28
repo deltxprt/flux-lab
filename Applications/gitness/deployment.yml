@@ -36,7 +36,7 @@ spec:
         app: gitness
     spec:
       containers:
-      - image: harness/gitness
+      - image: harness/gitness:latest
         name: gitness
         imagePullPolicy: Always
         ports:
