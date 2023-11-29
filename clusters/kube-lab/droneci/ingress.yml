@@ -29,6 +29,6 @@ spec:
       kind: Rule
       services:
       - name: drone
-        port: 80
+        port: 8080
   tls:
     secretName: drone-cert
