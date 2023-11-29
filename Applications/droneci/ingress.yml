@@ -3,7 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: drone-cert
-  namespace: drone
+  namespace: droneci
 spec:
   secretName: drone-cert
   issuerRef:
@@ -18,7 +18,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: drone-web
-  namespace: drone
+  namespace: droneci
   annotations: 
     kubernetes.io/ingress.class: traefik-external
 spec:
