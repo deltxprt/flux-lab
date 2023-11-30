@@ -36,7 +36,7 @@ spec:
         app: gotify
     spec:
       containers:
-      - image: harness/gitness:latest
+      - image: gotify/server:latest
         name: gotify-pod
         imagePullPolicy: Always
         ports:
