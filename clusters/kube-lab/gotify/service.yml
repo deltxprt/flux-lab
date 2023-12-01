@@ -25,6 +25,7 @@ spec:
   commonName: "gotify.lab.markaplay.net"
   dnsNames:
   - "gotify.lab.markaplay.net"
+  - "gotify.markaplay.net"
 
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -38,7 +39,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`gotify.lab.markaplay.net`)
+    - match: Host(`gotify.lab.markaplay.net`) || Host(`gotify.markaplay.net`)
       kind: Rule
       services:
       - name: gotify-service
