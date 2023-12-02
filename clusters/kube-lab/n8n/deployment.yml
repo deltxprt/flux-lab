@@ -26,6 +26,9 @@ spec:
       - image: docker.n8n.io/n8nio/n8n:latest
         name: n8n-pod
         imagePullPolicy: Always
+        env:
+          - name: "N8N_EDITOR_BASE_URL"
+            value: "https://n8n.lab.markaplay.net"
         ports:
           - containerPort: 5678
             name: http
