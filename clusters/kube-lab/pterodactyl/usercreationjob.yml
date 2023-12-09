@@ -1,0 +1,46 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: create-user-job
+  namespace: pterodactyl
+spec:
+  template:
+    spec:
+      containers:
+      - name: create-user-container
+        image: ghcr.io/pterodactyl/panel:v1.11.5
+        command: ["php", "artisan", "p:user:make","--no-interaction", "--email admin@example.com", "--username admin", "--admin", "--password admin", "--name-first admin", "--name-last admin"] # Command to execute user creation
+        args: ["your-arguments-if-any"]
+        env:
+        - name: DB_PASSWORD
+          valueFrom: 
+            secretKeyRef: 
+              key: MARIADB_PASSWORD
+              name: pterodactyl-panel
+        envFrom:
+        - secretRef:
+            name: pterodactyl-panel-s3
+        - secretRef:
+            name: pterodactyl-panel-email
+        - configMapRef:
+            name: pterodactyl-config
+        volumeMounts:
+        - mountPath: /app/var/
+          name: pterodactyl-app-content
+        - mountPath: /etc/nginx/http.d/
+          name: pterodactyl-nginx-content
+        - mountPath: /app/storage/logs
+          name: pterodactyl-logs-content
+      volumes:
+      - name: pterodactyl-app-content
+        persistentVolumeClaim:
+          claimName:  pterodactyl-app-claim
+      - name: pterodactyl-nginx-content
+        persistentVolumeClaim:
+          claimName:  pterodactyl-nginx-claim
+      - name: pterodactyl-logs-content
+        persistentVolumeClaim:
+          claimName:  pterodactyl-logs-claim
+      restartPolicy: Never
+
+      
