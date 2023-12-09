@@ -53,16 +53,16 @@ spec:
       volumes:
         - name: data-volume
           persistentVolumeClaim:
-            claimName: n8n-vol-pvc
+            claimName: n8n-volv-pvc
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: n8n-vol-pvc
+  name: n8n-volv-pvc
   namespace: n8n
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
