@@ -27,7 +27,7 @@ spec:
     - match: Host(`pterodactyl.lab.markaplay.net`) # ip of your game panel
       kind: Rule
       services:
-        - name: pterodactyl
+        - name: panel
           port: 80
   tls:
     secretName: pterodactyl-cert
