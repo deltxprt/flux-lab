@@ -53,17 +53,17 @@ spec:
       volumes:
         - name: data-volume
           persistentVolumeClaim:
-            claimName: n8n-volv-pvc
+            claimName: n8n-vol-pvc
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: n8n-volv-pvc
+  name: n8n-vol-pvc
   namespace: n8n
 spec:
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 3Gi
+      storage: 5Gi
   storageClassName: longhorn
