@@ -1,0 +1,33 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: pterodactyl-cert
+  namespace: pterodactyl
+spec:
+  secretName: pterodactyl-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "pterodactyl.lab.markaplay.net"
+  dnsNames:
+  - "pterodactyl.lab.markaplay.net"
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: pterodactyl-ingress
+  namespace: pterodactyl
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external # uncomment if you use annotations
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`pterodactyl.lab.markaplay.net`) # ip of your game panel
+      kind: Rule
+      services:
+        - name: pterodactyl
+          port: 80
+  tls:
+    secretName: pterodactyl-cert
