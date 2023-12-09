@@ -18,47 +18,6 @@ spec:
         app: pterodactyl
     spec:
       containers:
-      - name: mariadb
-        image: mariadb:10.5
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "300m"
-          limits: 
-            memory: "256Mi"
-            cpu: "500m" 
-        ports: 
-          - containerPort: 3306
-        env:
-        - name: MARIADB_ROOT_PASSWORD
-          valueFrom: 
-            secretKeyRef: 
-              key: MARIADB_ROOT_PASSWORD
-              name: pterodactyl-rootdbpassword
-        - name: MARIADB_DATABASE
-          value: "pterodactyl_panel"
-        - name: MARIADB_USER
-          value: "pterodactyl"
-        - name: MARIADB_PASSWORD
-          valueFrom: 
-            secretKeyRef: 
-              key: MARIADB_PASSWORD
-              name: pterodactyl-panel
-        volumeMounts:
-        - mountPath: /var/lib/MARIADB
-          name: pterodactyl-db
-      - name: redis
-        image: redis:alpine
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "300m"
-          limits: 
-            memory: "256Mi"
-            cpu: "500m" 
-        ports: 
-          - containerPort: 6379
-        restart: always
       - name: panel
         image: ghcr.io/pterodactyl/panel:v1.11.5
         resources:
@@ -100,6 +59,94 @@ spec:
       - name: pterodactyl-logs-content
         persistentVolumeClaim:
           claimName:  pterodactyl-logs-claim
+
+---
+#caching server
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: caching
+  namespace: pterodactyl
+spec:
+  selector:
+    matchLabels:
+      app: caching
+  replicas: 1
+  progressDeadlineSeconds: 600
+  revisionHistoryLimit: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: caching
+    spec:
+      containers:
+      - name: redis
+        image: redis:alpine
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "300m"
+          limits: 
+            memory: "256Mi"
+            cpu: "500m" 
+        ports: 
+          - containerPort: 6379
+        restart: always
+
+---
+#Database
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mariadb
+  namespace: pterodactyl
+spec:
+  selector:
+    matchLabels:
+      app: mariadb
+  replicas: 1
+  progressDeadlineSeconds: 600
+  revisionHistoryLimit: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      containers:
+      - name: mariadb
+        image: mariadb:10.5
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "300m"
+          limits: 
+            memory: "256Mi"
+            cpu: "500m" 
+        ports: 
+          - containerPort: 3306
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          valueFrom: 
+            secretKeyRef: 
+              key: MARIADB_ROOT_PASSWORD
+              name: pterodactyl-rootdbpassword
+        - name: MARIADB_DATABASE
+          value: "pterodactyl_panel"
+        - name: MARIADB_USER
+          value: "pterodactyl"
+        - name: MARIADB_PASSWORD
+          valueFrom: 
+            secretKeyRef: 
+              key: MARIADB_PASSWORD
+              name: pterodactyl-panel
+        volumeMounts:
+        - mountPath: /var/lib/MARIADB
+          name: pterodactyl-db
+      volumes:
       - name: pterodactyl-db
         persistentVolumeClaim:
           claimName:  pterodactyl-db

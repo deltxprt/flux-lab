@@ -10,7 +10,7 @@ data:
   CACHE_DRIVER: "redis"
   SESSION_DRIVER: "redis"
   QUEUE_DRIVER: "redis"
-  REDIS_HOST: "redis"
+  REDIS_HOST: "caching"
   DB_HOST: "mariadb"
   DB_PORT: "3306"
   TRUSTED_PROXIES: "*"
