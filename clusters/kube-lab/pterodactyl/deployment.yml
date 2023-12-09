@@ -133,7 +133,7 @@ spec:
           valueFrom: 
             secretKeyRef: 
               key: MARIADB_ROOT_PASSWORD
-              name: pterodactyl-rootdbpassword
+              name: pterodactyl-panel
         - name: MARIADB_DATABASE
           value: "pterodactyl_panel"
         - name: MARIADB_USER
