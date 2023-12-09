@@ -1,64 +1,64 @@
-#apiVersion: apps/v1
-#kind: Deployment
-#metadata:
-#  name: pterodactyl
-#  namespace: pterodactyl
-#spec:
-#  selector:
-#    matchLabels:
-#      app: pterodactyl
-#  replicas: 1
-#  progressDeadlineSeconds: 600
-#  revisionHistoryLimit: 2
-#  strategy:
-#    type: Recreate
-#  template:
-#    metadata:
-#      labels:
-#        app: pterodactyl
-#    spec:
-#      containers:
-#      - name: panel
-#        image: ghcr.io/pterodactyl/panel:v1.11.5
-#        resources:
-#          requests:
-#            memory: "128Mi"
-#            cpu: "300m"
-#          limits: 
-#            memory: "256Mi"
-#            cpu: "500m" 
-#        ports: 
-#          - containerPort: 80
-#        env:
-#        - name: DB_PASSWORD
-#          valueFrom: 
-#            secretKeyRef: 
-#              key: MARIADB_PASSWORD
-#              name: pterodactyl-panel
-#        envFrom:
-#        - secretRef:
-#            name: pterodactyl-panel-s3
-#        - secretRef:
-#            name: pterodactyl-panel-email
-#        - configMapRef:
-#            name: pterodactyl-config
-#        volumeMounts:
-#        - mountPath: /app/var/
-#          name: pterodactyl-app-content
-#        - mountPath: /etc/nginx/http.d/
-#          name: pterodactyl-nginx-content
-#        - mountPath: /app/storage/logs
-#          name: pterodactyl-logs-content
-#      volumes:
-#      - name: pterodactyl-app-content
-#        persistentVolumeClaim:
-#          claimName:  pterodactyl-app-claim
-#      - name: pterodactyl-nginx-content
-#        persistentVolumeClaim:
-#          claimName:  pterodactyl-nginx-claim
-#      - name: pterodactyl-logs-content
-#        persistentVolumeClaim:
-#          claimName:  pterodactyl-logs-claim
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pterodactyl
+  namespace: pterodactyl
+spec:
+  selector:
+    matchLabels:
+      app: pterodactyl
+  replicas: 1
+  progressDeadlineSeconds: 600
+  revisionHistoryLimit: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pterodactyl
+    spec:
+      containers:
+      - name: panel
+        image: ghcr.io/pterodactyl/panel:v1.11.5
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "300m"
+          limits: 
+            memory: "256Mi"
+            cpu: "500m" 
+        ports: 
+          - containerPort: 80
+        env:
+        - name: DB_PASSWORD
+          valueFrom: 
+            secretKeyRef: 
+              key: MARIADB_PASSWORD
+              name: pterodactyl-panel
+        envFrom:
+        - secretRef:
+            name: pterodactyl-panel-s3
+        - secretRef:
+            name: pterodactyl-panel-email
+        - configMapRef:
+            name: pterodactyl-config
+        volumeMounts:
+        - mountPath: /app/var/
+          name: pterodactyl-app-content
+        - mountPath: /etc/nginx/http.d/
+          name: pterodactyl-nginx-content
+        - mountPath: /app/storage/logs
+          name: pterodactyl-logs-content
+      volumes:
+      - name: pterodactyl-app-content
+        persistentVolumeClaim:
+          claimName:  pterodactyl-app-claim
+      - name: pterodactyl-nginx-content
+        persistentVolumeClaim:
+          claimName:  pterodactyl-nginx-claim
+      - name: pterodactyl-logs-content
+        persistentVolumeClaim:
+          claimName:  pterodactyl-logs-claim
 
 ---
 #caching server

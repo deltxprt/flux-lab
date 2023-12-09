@@ -1,43 +1,43 @@
-#kind: PersistentVolumeClaim
-#apiVersion: v1
-#metadata:
-#  name: pterodactyl-app-claim
-#  namespace: pterodactyl
-#spec:
-#  storageClassName: longhorn
-#  accessModes:
-#    - ReadWriteMany
-#  resources:
-#    requests:
-#      storage: 5Gi
-#
-#---
-#kind: PersistentVolumeClaim
-#apiVersion: v1
-#metadata:
-#  name: pterodactyl-nginx-claim
-#  namespace: pterodactyl
-#spec:
-#  storageClassName: longhorn
-#  accessModes:
-#    - ReadWriteMany
-#  resources:
-#    requests:
-#      storage: 500Mi
-#
-#---
-#kind: PersistentVolumeClaim
-#apiVersion: v1
-#metadata:
-#  name: pterodactyl-logs-claim
-#  namespace: pterodactyl
-#spec:
-#  storageClassName: longhorn
-#  accessModes:
-#    - ReadWriteMany
-#  resources:
-#    requests:
-#      storage: 1Gi
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pterodactyl-app-claim
+  namespace: pterodactyl
+spec:
+  storageClassName: longhorn
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pterodactyl-nginx-claim
+  namespace: pterodactyl
+spec:
+  storageClassName: longhorn
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 500Mi
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pterodactyl-logs-claim
+  namespace: pterodactyl
+spec:
+  storageClassName: longhorn
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
 
 ---
 kind: PersistentVolumeClaim
