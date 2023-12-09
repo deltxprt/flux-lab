@@ -149,4 +149,4 @@ spec:
       volumes:
       - name: pterodactyl-db
         persistentVolumeClaim:
-          claimName:  pterodactyl-db
+          claimName:  pterodactyl-db-claim
