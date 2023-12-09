@@ -41,7 +41,7 @@ spec:
         - secretRef:
             name: pterodactyl-panel-email
         - configMapRef:
-            name: pterodactyl-general-config
+            name: pterodactyl-config
         volumeMounts:
         - mountPath: /app/var/
           name: pterodactyl-app-content
