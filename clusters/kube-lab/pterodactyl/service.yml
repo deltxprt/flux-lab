@@ -15,7 +15,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pterodactyl
+  name: caching
   namespace: pterodactyl
 spec:
   selector:
@@ -28,7 +28,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pterodactyl
+  name: mariadb
   namespace: pterodactyl
 spec:
   selector:
