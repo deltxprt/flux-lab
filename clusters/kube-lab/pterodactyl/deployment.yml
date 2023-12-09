@@ -52,13 +52,13 @@ spec:
       volumes:
       - name: pterodactyl-app-content
         persistentVolumeClaim:
-          claimName:  pterodactyl-app-claim
+          claimName:  pterodactyl-panel-app-claim
       - name: pterodactyl-nginx-content
         persistentVolumeClaim:
-          claimName:  pterodactyl-nginx-claim
+          claimName:  pterodactyl-panel-nginx-claim
       - name: pterodactyl-logs-content
         persistentVolumeClaim:
-          claimName:  pterodactyl-logs-claim
+          claimName:  pterodactyl-panel-logs-claim
 
 ---
 #caching server
