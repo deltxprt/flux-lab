@@ -4,7 +4,7 @@ metadata:
   name: pterodactyl-config
   namespace: pterodactyl
 data:
-  DB_DATABASE: "mariadb"
+  DB_DATABASE: "pterodactyl_panel"
   APP_ENV: "production"
   APP_ENVIRONMENT_ONLY: "false"
   CACHE_DRIVER: "redis"
