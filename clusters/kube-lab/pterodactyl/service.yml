@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pterodactyl
+  name: panel
   namespace: pterodactyl
 spec:
   selector:
@@ -11,3 +11,29 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pterodactyl
+  namespace: pterodactyl
+spec:
+  selector:
+    app: caching
+  ports:
+    - protocol: TCP
+      port: 6379
+      targetPort: 6379
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pterodactyl
+  namespace: pterodactyl
+spec:
+  selector:
+    app: mariadb
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
