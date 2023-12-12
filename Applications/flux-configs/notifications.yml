@@ -1,0 +1,8 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: gotify
+  namespace: flux-system
+spec:
+  type: generic
+  address: https://n8n.lab.markaplay.net/webhook/1d1bdb6d-9af1-43c5-a3a0-5a51a9732c0f
