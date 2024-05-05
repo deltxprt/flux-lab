@@ -14,17 +14,6 @@ spec:
         namespace: flux-system
       version: 20.3.0
   values:
-    podAnotations:
-      vault.hashicorp.com/agent-inject: "true"
-      vault.hashicorp.com/role: "kube-traefik-sa"
-      vault.hashicorp.com/agent-inject-secret-traefik-credential.txt: "secret/data/kube-secrets/traefik"
-      vault.hashicorp.com/agent-inject-template-traefik-credential.txt: |
-        {{- with secret "secret/data/kube-secrets/traefik" -}}
-        {{ .Data.data.user }}
-        {{- end -}}
-    serviceAccount:
-      create: true
-      name: traefik-service
     globalArguments:
       - "--global.sendanonymoususage=false"
       - "--global.checknewversion=false"
