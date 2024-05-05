@@ -15,7 +15,7 @@ spec:
             email: admin@markaplay.net
             apiTokenSecretRef:
               name: cloudflare-token
-              key: cloudflare-token.txt
+              key: cloudflare-token
         selector:
           dnsZones:
             - "markaplay.net"
