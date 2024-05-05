@@ -17,10 +17,10 @@ spec:
     podAnotations:
       vault.hashicorp.com/agent-inject: "true"
       vault.hashicorp.com/role: "kube-traefik-sa"
-      vault.hashicorp.com/agent-inject-secret-cloudflare-token.txt: "secret/data/kube-secrets/traefik"
-      vault.hashicorp.com/agent-inject-template-cloudflare-token.txt: |
-        {{- with secret "secret/data/kube-secrets/cloudflare-token-secret" -}}
-        {{ .Data.data.cloudflare-token }}
+      vault.hashicorp.com/agent-inject-secret-traefik-credential.txt: "secret/data/kube-secrets/traefik"
+      vault.hashicorp.com/agent-inject-template-traefik-credential.txt: |
+        {{- with secret "secret/data/kube-secrets/traefik" -}}
+        {{ .Data.data.user }}
         {{- end -}}
     serviceAccount:
       create: true
@@ -70,6 +70,6 @@ spec:
       annotations: {}
       labels: {}
       spec:
-        loadBalancerIP: 10.0.0.50 # this should be an IP in the MetalLB range
+        loadBalancerIP: 10.0.50.50 # this should be an IP in the MetalLB range
       loadBalancerSourceRanges: []
       externalIPs: []
