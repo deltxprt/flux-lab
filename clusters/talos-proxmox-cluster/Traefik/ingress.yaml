@@ -9,10 +9,10 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`traefik.lab.markaplay.net`)
+    - match: Host(`traefik.kube.lab.markaplay.net`)
       kind: Rule
       middlewares:
-        - name: traefik-dashboard-basicauth
+        - name: traefik-dashboard-forwardauth
           namespace: traefik
       services:
         - name: api@internal
