@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: cert-manager
+      sourceRef:
+        kind: HelmRepository
+        name: cert-manager
+        namespace: flux-system
+      version: v1.14.5
+  values:
+    podAnotations:
+      vault.hashicorp.com/agent-inject: "true"
+      vault.hashicorp.com/role: "cert-manager"
+      vault.hashicorp.com/agent-inject-secret-cloudflare-token.txt: "secret/data/kube-secrets/cloudflare-token-secret"
+      vault.hashicorp.com/agent-inject-template-cloudflare-token.txt: |
+        {{- with secret "secret/data/kube-secrets/cloudflare-token-secret" -}}
+        {{ .Data.data.cloudflare-token }}
+        {{- end -}}
+    serviceAccount:
+      create: true
+      name: cert-manager-service
+    
