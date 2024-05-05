@@ -18,10 +18,6 @@ spec:
       vault.hashicorp.com/agent-inject: "true"
       vault.hashicorp.com/role: "cert-manager"
       vault.hashicorp.com/agent-inject-secret-cloudflare-token: "secret/data/kube-secrets/cloudflare-token-secret"
-      vault.hashicorp.com/agent-inject-template-cloudflare-token: |
-        {{- with secret "secret/data/kube-secrets/cloudflare-token-secret" -}}
-        {{ .Data.data.cloudflare-token }}
-        {{- end -}}
     serviceAccount:
       create: true
       name: cert-manager-service
