@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: openfaas
+  namespace: openfaas-fn
+spec:
+  interval: 1m
+  dependsOn:
+    - name: traefik
+  chart:
+    spec:
+      chart: openfaas
+      sourceRef:
+        kind: HelmRepository
+        name: openfaas
+        namespace: flux-system
+      version: 14.0.6
