@@ -5,8 +5,6 @@ metadata:
   namespace: openfaas-fn
 spec:
   interval: 1m
-  dependsOn:
-    - name: traefik
   chart:
     spec:
       chart: openfaas
