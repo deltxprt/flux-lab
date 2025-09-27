@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: traefik
         namespace: flux-system
-      version: 20.3.0
+      version: 37.1.1
   values:
     globalArguments:
       - "--global.sendanonymoususage=false"
@@ -52,13 +52,3 @@ spec:
 
     rbac:
       enabled: true
-
-    service:
-      enabled: true
-      type: LoadBalancer
-      annotations: {}
-      labels: {}
-      spec:
-        loadBalancerIP: 10.0.0.45 # this should be an IP in the MetalLB range
-      loadBalancerSourceRanges: []
-      externalIPs: []
