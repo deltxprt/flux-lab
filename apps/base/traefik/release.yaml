@@ -14,41 +14,58 @@ spec:
         namespace: flux-system
       version: 37.1.1
   values:
-    globalArguments:
-      - "--global.sendanonymoususage=false"
-      - "--global.checknewversion=false"
-    additionalArguments:
-      - "--serversTransport.insecureSkipVerify=true"
-      - "--log.level=INFO"
-    deployment:
-      enabled: true
-      replicas: 3
-      annotations: {}
-      podAnnotations: {}
-      additionalContainers: []
-      initContainers: []
-
     ports:
+      # Defines the HTTP entry point named 'web'
       web:
-        redirectTo: websecure
+        port: 80
+        nodePort: 30000
+        # Instructs this entry point to redirect all traffic to the 'websecure' entry point
+        redirections:
+          entryPoint:
+            to: websecure
+            scheme: https
+            permanent: true
+
+      # Defines the HTTPS entry point named 'websecure'
       websecure:
+        port: 443
+        nodePort: 30001
         tls:
           enabled: true
-          
-    ingressRoute:
-      dashboard:
-        enabled: false
+
+    ingressClass:
+      enabled: false
 
     providers:
-      kubernetesCRD:
-        enabled: true
-        ingressClass: traefik-external
-        allowExternalNameServices: true
       kubernetesIngress:
+        enabled: false
+      kubernetesGateway:
         enabled: true
-        allowExternalNameServices: true
-        publishedService:
-          enabled: false
+    
+    gateway:
+      listeners:
+        web:           # HTTP listener that matches entryPoint `web`
+          port: 80
+          protocol: HTTP
+          namespacePolicy:
+            from: All
 
+        websecure:         # HTTPS listener that matches entryPoint `websecure`
+          port: 443
+          protocol: HTTPS  # TLS terminates inside Traefik
+          namespacePolicy:
+            from: All
+          mode: Terminate
+          certificateRefs:    
+            - kind: Secret
+              name: local-selfsigned-tls  # the Secret we created before the installation
+              group: ""
+    # Enable Observability
+    logs:
+      general:
+        level: INFO
+      # This enables access logs, outputting them to Traefik's standard output by default. The [Access Logs Documentation](https://doc.traefik.io/traefik/observability/access-logs/) covers formatting, filtering, and output options.
+      access:
+        enabled: true
     rbac:
       enabled: true
