@@ -2,6 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: traefik
 resources:
+  - default-headers.yaml
+  - middleware.yaml
   - traefik-cert.yaml
   - ingress.yaml
   - secret-dashboard.yaml
