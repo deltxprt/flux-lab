@@ -9,7 +9,7 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "*.lab.markaplay.net"
+  commonName: "*.cloud.markaplay.net"
   dnsNames:
-  - "lab.markaplay.net"
-  - "*.lab.markaplay.net"
+  - "cloud.markaplay.net"
+  - "*.cloud.markaplay.net"
