@@ -7,9 +7,9 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: metallb
+      chart: metallb/metallb
       sourceRef:
         kind: HelmRepository
-        name: metallb/metallb
+        name: metallb
         namespace: flux-system
       version: 0.15.x

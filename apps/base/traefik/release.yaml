@@ -7,12 +7,12 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: traefik
+      chart: traefik/traefik
       sourceRef:
         kind: HelmRepository
         name: traefik
         namespace: flux-system
-      version: 20.3.0
+      version: 20.3.x
   values:
     globalArguments:
       - "--global.sendanonymoususage=false"
