@@ -13,10 +13,4 @@ spec:
         kind: HelmRepository
         name: cert-manager
         namespace: flux-system
-      version: 1.12.x
-  values:
-    gitea:
-      admin:
-        existingSecret: gitea-admin
-    redis-cluster:
-      enabled: false
+      version: 1.18.x
