@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: firefly
+  name: traefik
   labels:
-    app: firefly
+    app: traefik
+
