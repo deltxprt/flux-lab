@@ -1,0 +1,11 @@
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: hubble1-pool-advertisement
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - hubble1-pool
+  nodeSelectors:
+  - matchLabels:
+      kubernetes.io/hostname: talos-qsm-608
