@@ -10,7 +10,7 @@ spec:
       chart: traefik
       sourceRef:
         kind: HelmRepository
-        name: traefik
+        name: traefik/traefik
         namespace: flux-system
       version: 37.1.1
   values:
