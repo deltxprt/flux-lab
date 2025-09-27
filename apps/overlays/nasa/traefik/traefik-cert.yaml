@@ -9,7 +9,6 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "*.cloud.markaplay.net"
+  commonName: "traefik.cloud.markaplay.net"
   dnsNames:
-  - "cloud.markaplay.net"
-  - "*.cloud.markaplay.net"
+  - "traefik.cloud.markaplay.net"
