@@ -1,8 +1,8 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: traefik-management
-  namespace: traefik
+  name: ntfy-ingress
+  namespace: ntfy
 spec:
   entryPoints:
     - websecure
