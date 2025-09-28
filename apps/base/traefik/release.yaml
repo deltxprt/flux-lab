@@ -13,3 +13,7 @@ spec:
         name: traefik
         namespace: traefik
       version: 20.3.x
+  valuesFrom:
+    - kind: ConfigMap
+      name: traefik-values
+      valuesKey: values.yaml
