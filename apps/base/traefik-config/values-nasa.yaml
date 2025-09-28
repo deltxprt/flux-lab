@@ -13,6 +13,10 @@ ports:
   websecure:
     tls:
       enabled: true
+
+ping:
+  enabled: true
+  entryPoint: websecure
 providers:
   kubernetesCRD:
     enabled: true
