@@ -9,7 +9,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`nasa.markaplay.net`) Path(`/traefik/dashboard`)
+    - match: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/api`) || PathPrefix(`/traefik/dashboard`))
       kind: Rule
       middlewares:
         - name: traefik-dashboard-basicauth
