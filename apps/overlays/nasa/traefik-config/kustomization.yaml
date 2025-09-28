@@ -1,3 +1,4 @@
+namespace: traefik
 # Generate a ConfigMap with your values file (changes trigger HR upgrade)
 configMapGenerator:
   - name: traefik-values
