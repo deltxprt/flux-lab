@@ -30,14 +30,6 @@ spec:
         tls:
           enabled: true
 
-    ping:
-      enabled: true
-      manualRouting: true
-
-    dashboard:
-      enabled: true
-      manualRouting: true
-
     providers:
       kubernetesGateway:
         enabled: true
