@@ -13,3 +13,5 @@ spec:
         - name: ntfy-svc
           kind: Service
           port: 80
+  tls:
+    secretName: ntfy-cert

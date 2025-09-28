@@ -9,10 +9,9 @@ spec:
   routes:
     - match: Host(`longhorn.nasa.markaplay.net`)
       kind: Rule
-      middlewares:
-        - name: traefik-dashboard-basicauth
-          namespace: traefik
       services:
         - name: longhorn-frontend
           kind: Service
           port: 80
+  tls:
+    secretName: longhorn-cert
