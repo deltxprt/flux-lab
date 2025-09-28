@@ -6,4 +6,4 @@ resources:
   - middleware.yaml
   - ingress.yaml
   - secret-dashboard.yaml
-#  - traefik-cert.yaml
+  - traefik-cert.yaml
