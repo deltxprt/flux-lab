@@ -28,13 +28,11 @@ spec:
     ingressRoute:
       dashboard:
         enabled: true
-        matchRule: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/dashboard`) || PathPrefix(`/traefik/api`))
+        matchRule: Host(`traefik.nasa.markaplay.net`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
         entryPoints:
           - websecure
         middlewares:
           - name: traefik-dashboard-basicauth
-            namespace: traefik
-          - name: strip-traefik-prefix
             namespace: traefik
 
     providers:
