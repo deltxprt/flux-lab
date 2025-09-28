@@ -28,7 +28,7 @@ spec:
     ingressRoute:
       dashboard:
         enabled: true
-        matchRule: Host(`nasa.markaplay.net`) && PathPrefix(`/traefik/dashboard`)
+        matchRule: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/dashboard`) || PathPrefix(`/traefik/api`))
         entryPoints:
           - websecure
         middlewares:
@@ -36,21 +36,6 @@ spec:
             namespace: traefik
           - name: strip-traefik-prefix
             namespace: traefik
-      api:
-        enabled: true
-        matchRule: Host(`nasa.markaplay.net`) && PathPrefix(`/traefik/api`)
-        entryPoints:
-          - websecure
-        middlewares:
-          - name: traefik-dashboard-basicauth
-            namespace: traefik
-          - name: strip-traefik-prefix
-            namespace: traefik
-      ping:
-        enabled: true
-        matchRule: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/ping`) || Path(`/traefik/ping`))
-        entryPoints:
-          - websecure
 
     providers:
       kubernetesGateway:
