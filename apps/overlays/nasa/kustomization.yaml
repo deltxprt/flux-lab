@@ -5,6 +5,6 @@ resources:
   - ../../base/metallb
   - ../../base/traefik
   - flux-configs
-  - cert-manager
+  #- cert-manager
   - metallb
   - traefik
