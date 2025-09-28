@@ -14,12 +14,6 @@ spec:
         namespace: traefik
       version: 20.3.x
   values:
-    globalArguments:
-      - "--global.sendanonymoususage=false"
-      - "--global.checknewversion=false"
-    additionalArguments:
-      - "--serversTransport.insecureSkipVerify=true"
-      - "--log.level=INFO"
     deployment:
       enabled: true
       replicas: 3
@@ -29,6 +23,24 @@ spec:
       websecure:
         tls:
           enabled: true
+
+
+    ingressRoute:
+      dashboard:
+        enabled: true
+        matchRule: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/dashboard`) || Path(`/traefik/api`))
+        entryPoints:
+          - websecure
+        middlewares:
+          - name: traefik-dashboard-basicauth
+            namespace: traefik
+          - name: strip-traefik-prefix
+            namespace: traefik
+      ping:
+        enabled: true
+        matchRule: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/ping`) || Path(`/traefik/ping`))
+        entryPoints:
+          - websecure
 
     providers:
       kubernetesGateway:
