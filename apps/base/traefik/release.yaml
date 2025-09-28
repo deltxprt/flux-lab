@@ -7,7 +7,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: traefik/traefik
+      chart: traefik
       sourceRef:
         kind: HelmRepository
         name: traefik
