@@ -16,12 +16,10 @@ ports:
 
 ping:
   enabled: true
-  entryPoint: websecure
   manualRouting: true
 
 dashboard:
   enabled: true
-  entryPoint: websecure
   manualRouting: true
 
 providers:
