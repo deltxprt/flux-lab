@@ -8,5 +8,5 @@ resources:
   - cert-manager
   - metallb
   - traefik
-  - traefik-config
+#  - traefik-config
   - homepage
