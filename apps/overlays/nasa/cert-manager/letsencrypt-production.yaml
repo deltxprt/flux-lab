@@ -1,12 +1,13 @@
 ---
 apiVersion: cert-manager.io/v1
-kind: Issuer
+kind: ClusterIssuer
 metadata:
   name: letsencrypt-production
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: admin@markaplay.net
+    profile: tlsserver
     privateKeySecretRef:
       name: letsencrypt-production
     solvers:
@@ -15,7 +16,7 @@ spec:
             email: admin@markaplay.net
             apiTokenSecretRef:
               name: cloudflare-token-secret
-              key: cloudflare-token
+              key: api-token
         selector:
           dnsZones:
             - "markaplay.net"
