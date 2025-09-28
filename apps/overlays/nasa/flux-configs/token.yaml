@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: bearer-token
+    name: bearer-auth
     namespace: flux-system
 type: Opaque
 stringData:
@@ -17,7 +17,7 @@ sops:
             UEg2ejJTY3RySWkxZHZOeWdzSDgrMGMKqVr0g1Jm+9HSIiKpXDVwE35O9YPuzi0M
             8lj2eUtDxhMLm+Ts361DIobQnW7QUHp7KE1pYPHSWgBY1ghekPf9lA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-27T22:33:10Z"
-    mac: ENC[AES256_GCM,data:U46knoAXP6Du4gKKknRF52LRsFSk9zm9t9wuJMiFWfD0b6nSG5GmsVMS5I/ykEJMPEzB2y9AdPlh5z1kxiLVH71+h7g/r4yNztGIsnsZLHg8+yYFZmpVC4dfwlbHF90D+kUzZPqRSM566IgKRbmnU+e+k1QKnRm5M5hXVXf8aJE=,iv:/1sKvUrL/5+S8RVBrtSclBkj4G9awpkIXDVt2aHjgQ8=,tag:zSd/cUPKHFWHA0evA5TTfg==,type:str]
+    lastmodified: "2025-09-28T00:58:50Z"
+    mac: ENC[AES256_GCM,data:DB4ADSOFsJlSp/Qsr1RSTswARa9yxg3DWXC6bOHSzDWweTQ8ElX5uaTgmCYHnDk5d7Q0lc2oG3x4BeWB61SqfVWDh83b6KjR9GpfrAXCfzrbwHi8j+J0ECLjqPc9VOoIltPaOBTBQnb+Fz1yL5l6zp3I/59kAqIK6FtewvDG0Ro=,iv:RWFbT1mZsPP46NDn/6l9/BsGzX4yueDV5B9mrh+ez+I=,tag:0ahQ46ARMFi5trxaN5ncDg==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
