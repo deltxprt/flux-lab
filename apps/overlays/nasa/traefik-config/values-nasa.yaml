@@ -19,6 +19,11 @@ ping:
   entryPoint: websecure
   manualRouting: true
 
+dashboard:
+  enabled: true
+  entryPoint: websecure
+  manualRouting: true
+
 providers:
   kubernetesCRD:
     enabled: true
