@@ -14,3 +14,10 @@ spec:
         name: cert-manager
         namespace: flux-system
       version: 1.18.x
+  install:
+    crds: Create
+  upgrade:
+    crds: CreateReplace
+  values:
+    crds:
+      enabled: true     
