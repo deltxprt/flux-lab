@@ -1,8 +1,8 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
-namespace: traefik
 metadata:
   name: traefik-management
+  namespace: traefik
   annotations: 
     kubernetes.io/ingress.class: traefik-external
 spec:
