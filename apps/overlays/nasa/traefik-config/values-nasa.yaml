@@ -16,11 +16,9 @@ ports:
 
 ping:
   enabled: true
-  manualRouting: true
 
 dashboard:
   enabled: true
-  manualRouting: true
 
 providers:
   kubernetesCRD:
