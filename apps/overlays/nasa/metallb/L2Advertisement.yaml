@@ -19,7 +19,6 @@ metadata:
 spec:
   ipAddressPools:
   - hubble1-pool-internal
-  interface: wg0
   nodeSelectors:
   - matchLabels:
       kubernetes.io/hostname: talos-qsm-608
