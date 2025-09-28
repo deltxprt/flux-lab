@@ -13,10 +13,15 @@ ports:
   websecure:
     tls:
       enabled: true
+  traefik:
+    port: 9000
+    tls:
+      enabled: true
 
 ping:
   enabled: true
-  entryPoint: websecure
+  entryPoint: traefik
+
 providers:
   kubernetesCRD:
     enabled: true
