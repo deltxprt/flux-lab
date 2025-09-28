@@ -4,6 +4,7 @@ resources:
   - ../../base/cert-manager
   - ../../base/metallb
   - ../../base/traefik
+  - ../../infra/longhorn
   - flux-configs
   - cert-manager
   - metallb
