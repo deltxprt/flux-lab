@@ -7,3 +7,4 @@ resources:
   - flux-configs
   - cert-manager
   - metallb
+  - traefik
