@@ -9,4 +9,3 @@ resources:
   - metallb
   - traefik
 #  - traefik-config
-  - homepage
