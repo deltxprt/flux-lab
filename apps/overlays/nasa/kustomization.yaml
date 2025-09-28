@@ -9,5 +9,5 @@ resources:
   - cert-manager
   - metallb
   - traefik
-#  - ntfy
+  - ntfy
 #  - traefik-config
