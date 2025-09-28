@@ -9,10 +9,9 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "homepage.lab.markaplay.net"
+  commonName: "nasa.markaplay.net"
   dnsNames:
-  - "homepage.lab.markaplay.net"
-  - "homepage.markaplay.net"
+  - "nasa.markaplay.net"
 
 ---
 apiVersion: traefik.containo.us/v1alpha1
