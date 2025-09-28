@@ -4,6 +4,6 @@ namespace: traefik
 resources:
   - default-headers.yaml
   - middleware.yaml
-  #- ingress.yaml
+  - ingress.yaml
   - secret-dashboard.yaml
   - traefik-cert.yaml
