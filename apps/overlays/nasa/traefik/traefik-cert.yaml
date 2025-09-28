@@ -12,3 +12,4 @@ spec:
   commonName: "traefik.nasa.markaplay.net"
   dnsNames:
   - "traefik.nasa.markaplay.net"
+  - "traefik.ovh.markaplay.net"
