@@ -1,3 +1,4 @@
+---
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
@@ -6,3 +7,12 @@ metadata:
 spec:
     addresses:
         - 51.222.28.107-51.222.28.107
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+    name: hubble1-pool-internal
+    namespace: metallb-system
+spec:
+    addresses:
+        - 10.8.0.3-10.8.0.3

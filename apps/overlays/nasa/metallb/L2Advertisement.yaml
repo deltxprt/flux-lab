@@ -6,6 +6,7 @@ metadata:
 spec:
   ipAddressPools:
   - hubble1-pool
+  - hubble1-pool-internal
   nodeSelectors:
   - matchLabels:
       kubernetes.io/hostname: talos-qsm-608
