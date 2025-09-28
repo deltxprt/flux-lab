@@ -17,6 +17,7 @@ ports:
 ping:
   enabled: true
   entryPoint: websecure
+  manualRouting: true
 
 providers:
   kubernetesCRD:

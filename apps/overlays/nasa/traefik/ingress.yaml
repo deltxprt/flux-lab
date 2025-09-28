@@ -15,5 +15,5 @@ spec:
         - name: strip-traefik-prefix
           namespace: traefik
       services:
-        - name: api@internal
+        - name: ping@internal
           kind: TraefikService
