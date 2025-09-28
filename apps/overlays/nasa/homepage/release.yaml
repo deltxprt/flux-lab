@@ -12,7 +12,7 @@ spec:
                 kind: HelmRepository
                 name: homepage
                 namespace: flux-system
-            version: 1.2.0
+            version: 4.2.x
     values:
         config:
             bookmarks:
@@ -54,7 +54,7 @@ spec:
                   widget:
                     type: nextcloud
                     url: ENC[AES256_GCM,data:ywNSwYLP7gPd9djCxurBN/FsrNB0l5Q2MmJaD2AvXZd1nS0=,iv:DpGxfdeaVjBRjPYs6zXkZAxCCBwZMUi9bg+0hxLW0UI=,tag:/lJLTZaA4croYhzGPOIPaQ==,type:str]
-                    username: ENC[AES256_GCM,data:miQUDc4=,iv:UPzkJkEvuK/h9st8jEGKvVAZA6FreJCwsMKgBd0klXs=,tag:EIjnW9/xYtZOq190okNpdg==,type:str]
+                    username: ENC[AES256_GCM,data:NInsPII=,iv:4XSS4DI1ck+nD1XUHcv1OiaLMm2ja7od/ebDTp4ShB8=,tag:yCrEsh6nnSAX8CON7iCmGw==,type:str]
                     password: ENC[AES256_GCM,data:7GuftC5FhK/Kk0ICFkUfWZUsmnodvOCH4zGEpAU=,iv:gBkhLE9x44YzqNA8A99DFeWmNGvqcztuFFjnAqZBkGs=,tag:povbOfXfu+e43mXmtl/T8Q==,type:str]
                 - traefik: null
                   icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
@@ -63,8 +63,8 @@ spec:
                   widget:
                     type: traefik
                     url: ENC[AES256_GCM,data:1DB3buPid+Ws+WltD+hEk7s0PhAVl/rRdZQqqHrQ8w3W,iv:jf49gR9jO5ezR9uiVXxjgXbYxMzx7abtEyANe/3iFSE=,tag:rFTAnveqWB3xuzusnu+HkQ==,type:str]
-                    username: ENC[AES256_GCM,data:Oy9wXZU=,iv:uDkdxVEPbJRcKBq1sTHtZfXGOcwmeU15DJr/NAkpBRg=,tag:sDEadbvrVR7s2JGkRy72ag==,type:str]
-                    password: ENC[AES256_GCM,data:7qdG0v54siPdagvZXw==,iv:8Dm3U0IXtzUu8EXI5chCgHWmTgevG4S6tjYVsXP5iJI=,tag:CYZY3cjOE8z3q9PQzsYoew==,type:str]
+                    username: ENC[AES256_GCM,data:NInsPII=,iv:4XSS4DI1ck+nD1XUHcv1OiaLMm2ja7od/ebDTp4ShB8=,tag:yCrEsh6nnSAX8CON7iCmGw==,type:str]
+                    password: ENC[AES256_GCM,data:2IvTo4xVdkxoKucayQ==,iv:zqQDrwZFE4xj1cKUiBbWce2JlH6hCspesPhA/1AAOaA=,tag:zMMnWHIQ9uI2BPENX/wDpA==,type:str]
                 - traefik-miniomega: null
                   icon: https://mwunderling.com/images/traefik_2/traefikproxy-vertical-logo-color.png
                   href: https://traefik.miniomega.lab.markaplay.net:8080
@@ -141,10 +141,6 @@ spec:
             main:
                 enabled: false
 sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
     age:
         - recipient: age19fv794lyehmnq5urum5sauj04ukdkec6vk0p36dpmf07kczkvapswrpvs5
           enc: |
@@ -155,8 +151,7 @@ sops:
             NTRPdEtxZXl2ZWhObXFLRGhndW5QWUUKGaX2KBp2V71kpyXdbL+Inj4dCswHzjMT
             IaxyYJLmGg3uON5NHkhyuAV0e+2i42+rl4uKpdkMb3uLA3RV3M+tpg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-25T00:11:10Z"
-    mac: ENC[AES256_GCM,data:qx3hOYIq0ReRre83VMuVh1adzQk5tDqNpIgEJWl1Y4rJvkSEVPP044Ms5f38+8shlYKTR+rLRcJ0OLx80CSDA2BgGXLsK+Llll4xUFvysHRbmM+8DR+f9DuY4PZ4oKsthxmAwiHzHvYhgkpOdDJxEmqbU0Y33KT+Bsya0RTiCaQ=,iv:iW9x+s/ZzrqHud4j2vKtcat+YeD66WlfTVDv2UJUKcM=,tag:Z2Z1P6HLzXKjsdDMfx2vsw==,type:str]
-    pgp: []
+    lastmodified: "2025-09-28T14:53:15Z"
+    mac: ENC[AES256_GCM,data:oxiQDS30hLhNok7tSRjthuIEeAwKbJK0LyaroSLlUNYNEfcX3PiD3cflgnwzE6CM22JpjX7bW5FN4A8+iw/oOBs9kABzP4g/y7THPIqGyZrNj++r4pS/xAArCKJoFAJtW7iDKNWF18klyaTkkecLuLlyC+2apMZgLZOki6O22ak=,iv:SXEP2mAgsF9r4dhs46RhY6/nxL6S+vDkeXCsG9aGmmk=,tag:PWUwjGbYWNdT3BeQD4y7lQ==,type:str]
     encrypted_regex: ^(key|username|password|accountid|tunnelid|url)$
-    version: 3.7.3
+    version: 3.10.2

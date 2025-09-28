@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: homepage
-  namespace: flux-system
+  namespace: homepage
 spec:
   interval: 1m
   url: https://jameswynn.github.io/helm-charts
