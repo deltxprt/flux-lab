@@ -4,7 +4,7 @@ resources:
   - ../../base/cert-manager
   - ../../base/metallb
   - ../../base/traefik
-  - flux-config.yaml
+  - flux-config
   - cert-manager
   - metallb
   - traefik

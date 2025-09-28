@@ -4,3 +4,4 @@ namespace: flux-system
 resources:
   - notifications.yaml
   - token.yaml
+  - alerts-config.yaml
