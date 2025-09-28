@@ -1,5 +1,6 @@
 nameReference:
 - kind: ConfigMap
+  namespace: traefik
   version: v1
   fieldSpecs:
   - path: spec/valuesFrom/name
