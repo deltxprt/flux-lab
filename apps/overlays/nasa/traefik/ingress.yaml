@@ -9,7 +9,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/ping`)
+    - match: Host(`nasa.markaplay.net`) && Path(`/traefik/ping`)
       kind: Rule
       middlewares:
         - name: strip-traefik-prefix
@@ -17,7 +17,7 @@ spec:
       services:
         - name: ping@internal
           kind: TraefikService
-    - match: Host(`nasa.markaplay.net`) && (PathPrefix(`/traefik/dashboard`)
+    - match: Host(`nasa.markaplay.net`) && PathPrefix(`/traefik/dashboard`)
       kind: Rule
       middlewares:
         - name: strip-traefik-prefix
