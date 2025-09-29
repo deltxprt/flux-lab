@@ -1,0 +1,22 @@
+deployment:
+  enabled: true
+  replicas: 3
+ports:
+  web:
+    redirectTo: websecure
+  websecure:
+    tls:
+      enabled: true
+providers:
+  kubernetesGateway:
+    enabled: true
+gateway:
+  listeners:
+    web:
+      namespacePolicy:
+        from: All
+    websecure:
+      namespacePolicy:
+        from: All
+rbac:
+  enabled: true

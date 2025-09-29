@@ -6,7 +6,7 @@ resources:
 
 configMapGenerator:
   - name: traefik-values
-    behavior: create
+    behavior: merge
     namespace: traefik
     files:
       - values.yaml=values-huston.yaml

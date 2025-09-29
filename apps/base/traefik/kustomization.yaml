@@ -5,3 +5,16 @@ resources:
   - namespace.yaml
   - repository.yaml
   - release.yaml
+configMapGenerator:
+  - name: traefik-values
+    behavior: create
+    namespace: traefik
+    files:
+      - values.yaml=values.yaml
+generatorOptions:
+  # keep the hash so Flux upgrades when contents change
+  disableNameSuffixHash: false
+
+# Let kustomize rewrite the name hash inside HelmRelease.spec.valuesFrom
+configurations:
+  - kustomizeconfig.yaml
