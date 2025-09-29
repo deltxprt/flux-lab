@@ -8,3 +8,17 @@ resources:
   - ingress.yaml
   - secret-dashboard.yaml
   - traefik-cert.yaml
+
+configMapGenerator:
+  - name: traefik-values
+    behavior: merge
+    namespace: traefik
+    files:
+      - values.yaml=values-huston.yaml
+generatorOptions:
+  # keep the hash so Flux upgrades when contents change
+  disableNameSuffixHash: false
+
+# Let kustomize rewrite the name hash inside HelmRelease.spec.valuesFrom
+configurations:
+  - kustomizeconfig.yaml
