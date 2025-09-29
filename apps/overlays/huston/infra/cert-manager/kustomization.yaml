@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: cert-manager
 resources:
   - ../../../../base/cert-manager
-  - letsencrypt-production.yaml
-  - secret-cf-token.yaml
-  - issuer.yaml
+  #- letsencrypt-production.yaml
+  #- secret-cf-token.yaml
+  #- issuer.yaml
