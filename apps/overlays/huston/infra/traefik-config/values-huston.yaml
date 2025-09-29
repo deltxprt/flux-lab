@@ -1,9 +1,4 @@
-globalArguments:
-  - "--global.sendanonymoususage=false"
-  - "--global.checknewversion=false"
-additionalArguments:
-  - "--serversTransport.insecureSkipVerify=true"
-  - "--log.level=INFO"
+
 deployment:
   enabled: true
   replicas: 3
@@ -14,26 +9,32 @@ ports:
     tls:
       enabled: true
 
-ping:
-  enabled: true
 
-dashboard:
-  enabled: true
+ingressRoute:
+  dashboard:
+    enabled: true
+    matchRule: Host(`traefik.nasa.markaplay.net`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+    entryPoints:
+      - websecure
+    middlewares:
+      - name: traefik-dashboard-basicauth
+        namespace: traefik
 
 providers:
-  kubernetesCRD:
+  kubernetesGateway:
     enabled: true
-    ingressClass: traefik-external
-    allowExternalNameServices: true
-  kubernetesIngress:
-    enabled: true
-    allowExternalNameServices: true
-    publishedService:
-      enabled: false
+gateway:
+  listeners:
+    web:
+      namespacePolicy:
+        from: All
+    websecure:
+      namespacePolicy:
+        from: All
 rbac:
   enabled: true
 service:
   enabled: true
   type: LoadBalancer
   spec:
-    loadBalancerIP: 51.222.28.107
+    loadBalancerIP: 10.0.50.10
