@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 3m
-  path: ./apps/overlays/nasa/infra
+  path: ./apps/overlays/huston/infra
   prune: true
   sourceRef:
     kind: GitRepository
