@@ -12,7 +12,7 @@ configMapGenerator:
       - values.yaml=values-huston.yaml
 generatorOptions:
   # keep the hash so Flux upgrades when contents change
-  disableNameSuffixHash: false
+  disableNameSuffixHash: true
 
 # Let kustomize rewrite the name hash inside HelmRelease.spec.valuesFrom
 configurations:
