@@ -6,4 +6,3 @@ resources:
   - cert-manager
   - metallb
   - traefik
-  - traefik-config
