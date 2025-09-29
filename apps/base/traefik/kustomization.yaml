@@ -10,9 +10,6 @@ configMapGenerator:
     behavior: create
     files:
       - values.yaml=values.yaml
-generatorOptions:
-  # keep the hash so Flux upgrades when contents change
-  disableNameSuffixHash: false
 
 # Let kustomize rewrite the name hash inside HelmRelease.spec.valuesFrom
 configurations:
