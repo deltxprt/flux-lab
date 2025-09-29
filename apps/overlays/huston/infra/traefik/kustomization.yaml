@@ -26,6 +26,13 @@ patchesJson6902:
       name: traefik
       namespace: traefik
     path: patch-helmrelease-traefik.yaml
+  - target:
+      group: helm.toolkit.fluxcd.io
+      version: v2beta1
+      kind: HelmRelease
+      name: traefik
+      namespace: traefik
+    path: patch-helmrelease-valuesfrom.yaml
 
 # Let kustomize rewrite the name hash inside HelmRelease.spec.valuesFrom
 configurations:
