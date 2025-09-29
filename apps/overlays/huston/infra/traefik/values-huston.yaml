@@ -12,4 +12,4 @@ service:
   enabled: true
   type: LoadBalancer
   spec:
-    loadBalancerIP: 10.0.50.10
+    loadBalancerIP: 10.0.50.210
