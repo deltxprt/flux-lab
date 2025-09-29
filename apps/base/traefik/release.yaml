@@ -16,3 +16,5 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: traefik-values
+    - kind: ConfigMap
+      name: traefik-overlay-values

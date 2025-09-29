@@ -10,29 +10,13 @@ resources:
   - traefik-cert.yaml
 
 configMapGenerator:
-  - name: traefik-values
-    behavior: merge
+  - name: traefik-overlay-values
+    behavior: create
     namespace: traefik
     files:
-      - values-overlay.yaml=values-huston.yaml
+      - value.yaml=values-huston.yaml
 generatorOptions:
   disableNameSuffixHash: false
-
-patchesJson6902:
-  - target:
-      group: helm.toolkit.fluxcd.io
-      version: v2beta1
-      kind: HelmRelease
-      name: traefik
-      namespace: traefik
-    path: patch-helmrelease-traefik.yaml
-  - target:
-      group: helm.toolkit.fluxcd.io
-      version: v2beta1
-      kind: HelmRelease
-      name: traefik
-      namespace: traefik
-    path: patch-helmrelease-valuesfrom.yaml
 
 # Let kustomize rewrite the name hash inside HelmRelease.spec.valuesFrom
 configurations:
