@@ -5,5 +5,5 @@ resources:
   - flux-configs
   - cert-manager
   - metallb
-  - traefik
-  - traefik-config
+#  - traefik
+#  - traefik-config
