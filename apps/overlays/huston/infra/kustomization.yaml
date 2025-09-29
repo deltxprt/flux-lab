@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - longhorn-config
   - flux-configs
-#  - cert-manager
+  - cert-manager
   - metallb
 #  - traefik
 #  - traefik-config
