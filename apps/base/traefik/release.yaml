@@ -52,4 +52,4 @@ spec:
       enabled: true
       type: LoadBalancer
       spec:
-        loadBalancerIP: 51.222.28.107
+        loadBalancerIP: 10.8.0.10
