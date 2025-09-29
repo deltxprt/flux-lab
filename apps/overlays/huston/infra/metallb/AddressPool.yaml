@@ -1,0 +1,9 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+    name: nasa-pool
+    namespace: metallb-system
+spec:
+    addresses:
+        - 10.8.0.10/32

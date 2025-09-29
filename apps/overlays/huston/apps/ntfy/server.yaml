@@ -1,0 +1,22 @@
+base-url: ENC[AES256_GCM,data:0KWymnzJlStUrWvG6rV4BkEfZowI9XgRMA97pOp+9Q==,iv:oG62owzFj77YZhNBnFvd/4VPaFHH3n4hwaY/FZ5YSlw=,tag:2vXro4yVITsi1CcpSbEUSg==,type:str]
+cache-file: /var/cache/ntfy/cache.db
+attachment-cache-dir: /var/cache/ntfy/attachments
+auth-default-access: deny-all
+auth-user: ENC[AES256_GCM,data:0j/3ydo1tI2Trl6z6ZOO4O4VSsw/OLFC8R4mA0AgZ7HCyEOS+8mjubUmVTPj54xlm2Q2vgN9pJ1++jeslDL0hocz1LtG0e2EP5qkrnA=,iv:HtmzF5cB5qSzRTK/+oSGf4iVBKcFPscR2YZ+lEfhlng=,tag:p107nGMKnistD7IJ4hI6Ng==,type:str]
+behind-proxy: true
+enable-login: true
+sops:
+    age:
+        - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB5WmZYakJibXVKM1FRTUtL
+            VmZLcGNrOTRJdWJHR0l5dkhvYUhCdWY4OWdvCkFlSmVpOFZMS3hRcHBQcnArR0Fk
+            UFppUmsyK0Fxb01HVDcxVDVMZ2ZXbm8KLS0tIEZGNEwxd3Y5dkZjQXJYNHlVaGFF
+            dFdmV09NSHUrSXNnQ2tJNU5VWHJtczgKSVDg+yldy/FbqK/tTTYN0QQEg6AfruPV
+            OCU40xVXfTYEfpKfJpJwhh30kW17Klul7A5i+zMNSUM7/9JUArT+ng==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-28T16:58:33Z"
+    mac: ENC[AES256_GCM,data:QUJKYlaOuhP5g8izR+J6wliahSBCT80SHnQ4V2j8JkCiDrjcbHwqlJ+a4+SqaE0qx44y7HA+Flry5mmBymzbsQ4rQKNQINqZCcpfnnhP+NxdLxSrGCzyvJ7S/cq0Ylbk2fuHDefpDqH+u+MzQl7HhKKz0+Mt0E/lW+rq/+HYxFg=,iv:Z6TZSRCVqLKsy+6W2dA9gtq7lr3wnFna7MdbGIZwP68=,tag:3/kNxFXlRUOCXrRgOFBlqQ==,type:str]
+    encrypted_regex: ^(auth-user|base-url)$
+    version: 3.10.2

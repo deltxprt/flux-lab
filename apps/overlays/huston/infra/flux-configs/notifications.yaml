@@ -1,0 +1,10 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: ntfy
+  namespace: flux-system
+spec:
+  type: generic
+  address: https://ntfy.ovh.markaplay.net/nasa-cluster-alerts
+  secretRef:
+    name: bearer-auth

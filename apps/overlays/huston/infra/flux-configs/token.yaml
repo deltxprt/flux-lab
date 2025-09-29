@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: bearer-auth
+    namespace: flux-system
+type: Opaque
+stringData:
+    headers: ENC[AES256_GCM,data:tPG+msosYf0FBq6Zskqf8ximlvdrxQk8jDEXc63avb+6OcnGcDOL4DrN4gHrjoHeDFNmcL52Qtckr07lFuRP3ZYrMNfZIZYum2L/ko04,iv:ByTSb0uwIx/Gu9BZBabjKmyK6cmxUdN4tGE1+FxjGvY=,tag:qAYCOBAT1uH1jqUEeNODBg==,type:str]
+sops:
+    age:
+        - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB0ZFc1ZmJDbldXbWJBY1V0
+            Q2syTXNOWmc4ZENROUxNS200Zk41ZkhudUdBCnh1ekZyT1dyN3Y0cE00b21hZVV3
+            czlaV09BMjNzb3c2VHI4dytNczZJZmsKLS0tIDBCRzBZTEtSZGhhL3VaYjlLKzV3
+            UEg2ejJTY3RySWkxZHZOeWdzSDgrMGMKqVr0g1Jm+9HSIiKpXDVwE35O9YPuzi0M
+            8lj2eUtDxhMLm+Ts361DIobQnW7QUHp7KE1pYPHSWgBY1ghekPf9lA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-28T02:59:00Z"
+    mac: ENC[AES256_GCM,data:LcsO9Zm8op3iaknQDcNxMFUR5qz6a/SHtvx0jR6iR2NfApvTmnGyAazgD5dX2/TgIggncd4TY1weL0Mwrg9V1z77+Jh+fcD2NkBcxb8XMhTyU6ov0w+5tJVi8X+ZOiDHEtXdwlFMoPuWBayACpRGMapg8EEqZsxzw3UsfU0E7gM=,iv:OxLeLt66AM0j/Qaer0bjI4mDO3GfQoNi1DYg0dpYVC4=,tag:yWLqoqjvk4QJgBxFeIpGFQ==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.10.2
