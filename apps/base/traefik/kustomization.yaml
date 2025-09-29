@@ -8,7 +8,6 @@ resources:
 configMapGenerator:
   - name: traefik-values
     behavior: create
-    namespace: traefik
     files:
       - values.yaml=values.yaml
 generatorOptions:
