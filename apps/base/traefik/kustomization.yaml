@@ -9,7 +9,7 @@ resources:
 configMapGenerator:
   - name: traefik-values
     namespace: traefik
-    behavior: merge
+    behavior: create
     files:
       - values.yaml=values.yaml
 
