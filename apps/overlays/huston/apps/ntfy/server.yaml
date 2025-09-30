@@ -1,4 +1,4 @@
-base-url: ENC[AES256_GCM,data:0KWymnzJlStUrWvG6rV4BkEfZowI9XgRMA97pOp+9Q==,iv:oG62owzFj77YZhNBnFvd/4VPaFHH3n4hwaY/FZ5YSlw=,tag:2vXro4yVITsi1CcpSbEUSg==,type:str]
+base-url: ENC[AES256_GCM,data:Wp3Cwb/kPuFLL0A4gyUvg4x/ohymy9Zch+ETOFc8,iv:oAzYcd/T9PIKi83lsjfVk4wJDQ3iH9psoMwIknPBuVs=,tag:iDgJIy+CkEKTvb2yfXBWCg==,type:str]
 cache-file: /var/cache/ntfy/cache.db
 attachment-cache-dir: /var/cache/ntfy/attachments
 auth-default-access: deny-all
@@ -16,7 +16,7 @@ sops:
             dFdmV09NSHUrSXNnQ2tJNU5VWHJtczgKSVDg+yldy/FbqK/tTTYN0QQEg6AfruPV
             OCU40xVXfTYEfpKfJpJwhh30kW17Klul7A5i+zMNSUM7/9JUArT+ng==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-28T16:58:33Z"
-    mac: ENC[AES256_GCM,data:QUJKYlaOuhP5g8izR+J6wliahSBCT80SHnQ4V2j8JkCiDrjcbHwqlJ+a4+SqaE0qx44y7HA+Flry5mmBymzbsQ4rQKNQINqZCcpfnnhP+NxdLxSrGCzyvJ7S/cq0Ylbk2fuHDefpDqH+u+MzQl7HhKKz0+Mt0E/lW+rq/+HYxFg=,iv:Z6TZSRCVqLKsy+6W2dA9gtq7lr3wnFna7MdbGIZwP68=,tag:3/kNxFXlRUOCXrRgOFBlqQ==,type:str]
+    lastmodified: "2025-09-30T01:09:47Z"
+    mac: ENC[AES256_GCM,data:b7gqjAc+iFG46HCCrFTRd8hROdCTI2AYt6lN3sq7n06QlfbTVzSnrwtkQS2xrGhHyP/qQy9rRTaOYQf10rreVcPSr52TGQZ9u1aq/0Ah3hlfGwSVG59jNQ90zGb6+WJZFrhvpNRfB8ov3IVTMt8aCoTiisT6q0j5HeCzYlGNh6Y=,iv:IqXuCPixmh5QpTNhKCOIgd9Gj4g/PFZPjPvzatitqoQ=,tag:luyxirV6vYqLrKm9CSUW9A==,type:str]
     encrypted_regex: ^(auth-user|base-url)$
     version: 3.10.2

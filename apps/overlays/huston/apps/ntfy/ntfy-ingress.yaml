@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`ntfy.nasa.markaplay.net`)
+    - match: Host(`ntfy.ovh.markaplay.net`) || Host(`ntfy.lab.markaplay.net`)
       kind: Rule
       services:
         - name: ntfy-svc

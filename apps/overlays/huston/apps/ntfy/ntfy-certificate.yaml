@@ -9,6 +9,7 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "ntfy.nasa.markaplay.net"
+  commonName: "ntfy.ovh.markaplay.net"
   dnsNames:
-  - "ntfy.nasa.markaplay.net"
+  - "ntfy.ovh.markaplay.net"
+  - "ntfy.lab.markaplay.net"

@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - namespace.yaml
-  - ./apps/workloads/ntfy
+  - ../../../../workloads/ntfy
   - ntfy-ingress.yaml
   - ntfy-certificate.yaml
 namespace: ntfy

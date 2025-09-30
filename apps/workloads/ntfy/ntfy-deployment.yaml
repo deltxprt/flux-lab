@@ -51,7 +51,7 @@ spec:
             name: server-config
         - name: template1-volume
           configMap:  # uses configmap generator to parse flux-alerts.yaml to configmap
-            name: server-config
+            name: template1-volume
         - name: cache-volume
           persistentVolumeClaim: # stores /cache/ntfy in defined pv
             claimName: ntfy-pvc
