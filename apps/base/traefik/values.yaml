@@ -4,6 +4,8 @@ deployment:
 ports:
   web:
     redirectTo: websecure
+    proxyProtocol:
+      trustedIPs: ["10.8.0.2/32","10.0.50.250/32"]
   websecure:
     proxyProtocol:
       trustedIPs: ["10.8.0.2/32","10.0.50.250/32"]
