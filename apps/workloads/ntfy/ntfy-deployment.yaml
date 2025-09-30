@@ -38,8 +38,8 @@ spec:
                   memory: 150Mi
           volumeMounts:
               - mountPath: /etc/ntfy
-                subPath: server.yml
-                name: config-volume # generated vie configMapGenerator from kustomization file
+                subPath: server.yaml
+                name: config-volume
 #              - mountPath: /etc/ntfy/templates
 #                subPath: flux-alerts.yaml
 #                name: template1-volume
