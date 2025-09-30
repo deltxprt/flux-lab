@@ -9,6 +9,6 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "longhorn.nasa.markaplay.net"
+  commonName: "longhorn.lab.markaplay.net"
   dnsNames:
-  - "longhorn.nasa.markaplay.net"
+  - "longhorn.lab.markaplay.net"

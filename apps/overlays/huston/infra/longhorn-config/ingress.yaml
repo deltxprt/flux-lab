@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`longhorn.nasa.markaplay.net`)
+    - match: Host(`longhorn.lab.markaplay.net`)
       kind: Rule
       middlewares:
         - name: traefik-dashboard-basicauth
