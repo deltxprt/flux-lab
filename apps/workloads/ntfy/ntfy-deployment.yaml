@@ -48,7 +48,7 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: server-config
+            name: ntfy-server-config
 #        - name: template1-volume
 #          configMap:
 #            name: template1-config
