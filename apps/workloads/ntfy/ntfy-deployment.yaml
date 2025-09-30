@@ -40,18 +40,18 @@ spec:
               - mountPath: /etc/ntfy
                 subPath: server.yml
                 name: config-volume # generated vie configMapGenerator from kustomization file
-              - mountPath: /etc/ntfy/templates
-                subPath: flux-alerts.yaml
-                name: template1-volume
+#              - mountPath: /etc/ntfy/templates
+#                subPath: flux-alerts.yaml
+#                name: template1-volume
               - mountPath: /var/cache/ntfy
                 name: cache-volume #cache volume mounted to persistent volume
       volumes:
         - name: config-volume
           configMap:
             name: server-config
-        - name: template1-volume
-          configMap:
-            name: template1-config
+#        - name: template1-volume
+#          configMap:
+#            name: template1-config
         - name: cache-volume
           persistentVolumeClaim:
             claimName: ntfy-pvc
