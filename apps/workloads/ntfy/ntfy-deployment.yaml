@@ -5,6 +5,7 @@ metadata:
   labels:
     app: ntfy-deployment
 spec:
+  revisionHistoryLimit: 0
   replicas: 1
   selector:
     matchLabels:
@@ -16,14 +17,14 @@ spec:
     spec:
       containers:
         - name: ntfy 
-          image: binwiederhier/ntfy:v2.14.0 # set deployed version
+          image: binwiederhier/ntfy:v2.14.0
           args: ["serve"]
-          env:  #example of adjustments made in environmental variables
+          env: 
             - name: TZ # set timezone
               value: America/Toronto
-            - name: NTFY_DEBUG # enable/disable debug
+            - name: NTFY_DEBUG
               value: "false"
-            - name: NTFY_LOG_LEVEL # adjust log level
+            - name: NTFY_LOG_LEVEL
               value: INFO
           ports: 
             - containerPort: 80
