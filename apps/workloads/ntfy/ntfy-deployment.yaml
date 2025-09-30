@@ -47,11 +47,11 @@ spec:
                 name: cache-volume #cache volume mounted to persistent volume
       volumes:
         - name: config-volume
-          configMap:  # uses configmap generator to parse server.yml to configmap
+          configMap:
             name: server-config
         - name: template1-volume
-          configMap:  # uses configmap generator to parse flux-alerts.yaml to configmap
-            name: template1-volume
+          configMap:
+            name: template1-config
         - name: cache-volume
-          persistentVolumeClaim: # stores /cache/ntfy in defined pv
+          persistentVolumeClaim:
             claimName: ntfy-pvc

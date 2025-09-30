@@ -10,6 +10,6 @@ configMapGenerator:
     - name: server-config
       files: 
         - server.yaml
-    - name: template1-volume
+    - name: template1-config
       files:
         - ./templates/flux-alerts.yaml
