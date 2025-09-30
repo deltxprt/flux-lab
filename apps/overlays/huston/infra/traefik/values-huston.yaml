@@ -1,3 +1,22 @@
+ingressRoute:
+  dashboard:
+    enabled: false
+    matchRule: Host(`traefik.lab.markaplay.net`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+    entryPoints:
+      - websecure
+    middlewares:
+      - name: traefik-dashboard-basicauth
+        namespace: traefik
+    tls:
+      secretName: traefik-cert
+  healthcheck:
+    enabled: true
+    matchRule: Host(`traefik.lab.markaplay.net`) && Path(`/ping`)
+    entryPoints:
+      - websecure
+    tls:
+      secretName: traefik-cert
+
 service:
   enabled: true
   type: LoadBalancer
