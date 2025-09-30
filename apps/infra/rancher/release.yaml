@@ -7,10 +7,10 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: rancher-stable
+      chart: rancher
       sourceRef:
         kind: HelmRepository
-        name: rancher
+        name: rancher-stable
         namespace: cattle-system
       version: 2.12.x
   valuesFrom:
