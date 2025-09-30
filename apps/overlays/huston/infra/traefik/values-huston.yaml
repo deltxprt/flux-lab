@@ -9,13 +9,6 @@ ingressRoute:
         namespace: traefik
     tls:
       secretName: traefik-cert
-  healthcheck:
-    enabled: true
-    matchRule: Host(`traefik.lab.markaplay.net`) && Path(`/ping`)
-    entryPoints:
-      - websecure
-    tls:
-      secretName: traefik-cert
 
 service:
   enabled: true
