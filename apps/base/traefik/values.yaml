@@ -5,6 +5,8 @@ ports:
   web:
     redirectTo: websecure
   websecure:
+    proxyProtocol:
+      trustedIPs: ["10.8.0.2/32"]
     tls:
       enabled: true
 providers:
