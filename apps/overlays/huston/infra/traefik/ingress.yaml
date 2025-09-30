@@ -1,4 +1,3 @@
----
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
@@ -16,19 +15,6 @@ spec:
       services:
         - name: ping@internal
           kind: TraefikService
-  tls:
-    secretName: traefik-cert
-  
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: traefik-management
-  namespace: traefik
-spec:
-  entryPoints:
-    - websecure
-  routes:
     - match: Host(`traefik.lab.markaplay.net`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
       kind: Rule
       middlewares:
