@@ -4,7 +4,7 @@ resources:
   - namespace.yaml
   - ../../../../workloads/ntfy
   - ntfy-ingress.yaml
-  - ntfy-certificate.yaml\
+  - ntfy-certificate.yaml
   - server-config.yaml
 namespace: ntfy
 
