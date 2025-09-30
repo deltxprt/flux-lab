@@ -15,7 +15,7 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
-    - match: Host(`traefik.lab.markaplay.net`) && Path(`/ping`)
+    - match: (Host(`traefik.lab.markaplay.net`) || Host(`10.0.50.210`)) && Path(`/ping`)
       kind: Rule
       services:
         - name: ping@internal

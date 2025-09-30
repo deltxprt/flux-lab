@@ -12,3 +12,4 @@ spec:
   commonName: "traefik.lab.markaplay.net"
   dnsNames:
   - "traefik.lab.markaplay.net"
+  - "10.0.50.210"
