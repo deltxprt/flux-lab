@@ -5,7 +5,6 @@ resources:
   - ../../../../base/traefik
   - default-headers.yaml
   - middleware.yaml
-  - ingress.yaml
   - secret-dashboard.yaml
   - traefik-cert.yaml
 
