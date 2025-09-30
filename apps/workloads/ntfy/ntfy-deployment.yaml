@@ -37,16 +37,13 @@ spec:
                   cpu: 150m
                   memory: 150Mi
           volumeMounts:
-              - mountPath: /etc/ntfy
-                subPath: server.yaml
-                name: config-volume
-#              - mountPath: /etc/ntfy/templates
-#                subPath: flux-alerts.yaml
-#                name: template1-volume
-              - mountPath: /var/cache/ntfy
-                name: cache-volume #cache volume mounted to persistent volume
+            - mountPath: /etc/ntfy
+              name: config 
+              readOnly: true
+            - mountPath: /var/cache/ntfy
+              name: cache-volume #cache volume mounted to persistent volume
       volumes:
-        - name: config-volume
+        - name: config
           configMap:
             name: ntfy-server-config
 #        - name: template1-volume
