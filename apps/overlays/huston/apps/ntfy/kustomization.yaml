@@ -4,13 +4,11 @@ resources:
   - namespace.yaml
   - ../../../../workloads/ntfy
   - ntfy-ingress.yaml
-  - ntfy-certificate.yaml
+  - ntfy-certificate.yaml\
+  - server-config.yaml
 namespace: ntfy
 
-configMapGenerator:
-    - name: server-config
-      files: 
-        - server.yaml
+#configMapGenerator:
 #    - name: template1-config
 #      files:
 #        - ./templates/flux-alerts.yaml
