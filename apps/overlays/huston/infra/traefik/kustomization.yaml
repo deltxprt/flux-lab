@@ -14,7 +14,7 @@ configMapGenerator:
     behavior: create
     namespace: traefik
     files:
-      - value.yaml=values-huston.yaml
+      - values.yaml=values-huston.yaml
 generatorOptions:
   disableNameSuffixHash: false
 
