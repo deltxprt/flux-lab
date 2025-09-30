@@ -1,6 +1,6 @@
 ingressRoute:
   dashboard:
-    enabled: false
+    enabled: true
     matchRule: Host(`traefik.lab.markaplay.net`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
     entryPoints:
       - websecure
