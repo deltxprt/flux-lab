@@ -8,7 +8,7 @@ resources:
   - server-config.yaml
 namespace: ntfy
 
-#configMapGenerator:
-#    - name: template1-config
-#      files:
-#        - ./templates/flux-alerts.yaml
+configMapGenerator:
+    - name: template-config
+      files:
+        - ./templates/

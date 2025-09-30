@@ -40,15 +40,23 @@ spec:
             - mountPath: /etc/ntfy
               name: config 
               readOnly: true
+            - mountPath: /etc/ntfy/templates
+              name: template-volume
+              readOnly: true
             - mountPath: /var/cache/ntfy
-              name: cache-volume #cache volume mounted to persistent volume
+              name: cache-volume
+            - mountPath: /var/lib/ntfy
+              name: auth-volume
       volumes:
         - name: config
           configMap:
             name: ntfy-server-config
-#        - name: template1-volume
-#          configMap:
-#            name: template1-config
+        - name: template-volume
+          configMap:
+            name: template-config
         - name: cache-volume
           persistentVolumeClaim:
             claimName: ntfy-pvc
+        - name: auth-volume
+          persistentVolumeClaim:
+            claimName: ntfy-auth-pvc
