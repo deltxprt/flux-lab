@@ -11,8 +11,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: rancher-latest
-        namespace: flux-system
-      version: 2.7.0
-  values:
-    hostname: armrancher.lab.markaplay.net
-    bootstrapPassword: admin
+        namespace: cattle-system
+      version: 2.12.x
+  valuesFrom:
+    - kind: ConfigMap
+      name: rancher-values
