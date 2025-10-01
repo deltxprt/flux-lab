@@ -4,7 +4,7 @@ metadata:
     name: ntfy-server-config
     namespace: ntfy
 data:
-    server.yml: ENC[AES256_GCM,data:nYHxwukKUoINs3LvkAq6bb2txKz4SdWu1R9IZO5elUGghYm00loQjttGFXmn/3F5yIpohSJucKeb1XI6eQIGAWOj0kXspq8DLCvTQyBm8Vm9yaiXa2CtXEDK8Sc+CbJpBgQkJnal5895sUIEJ7DegnbAxB4q4oy/X3L5KLAAGAlAJYbwbI8ZxEsA+rUy51Q8yRwnrAbjyq7Iq6oaItkXBWdYHTJ/1+wkDIohzDnUzDuI6jgFuTB7dl8KcTPXg2eXLP/tnavHVr8XwiSbItuY1OrYxlygna5Du348LiO58aRG5d7Ja1AYEusZA5F3v4NSJI+hAn9LKr5SLAF56W/FvWJueSjRmGw5Bxq0UtbxYE+YK5nJk+JeJY4P7fi/KwEk1niBr72uxqiWWJEPlvsqiLSsGX0OFzYo8TyLX4L3eQ==,iv:s2QC2k30ZXSfR/lsUy1cFLMtOeD4rzIqzAbce4PLuy4=,tag:B4ohEuHw4L2r9msHgND3vA==,type:str]
+    server.yml: ENC[AES256_GCM,data:lhTGbE0RTAnFHTFkt0NUwYzm7t32+P++LwEzpK9+LmlkguIAYahstNShJJZlKX4LCV3miYZ1+T0uIRUR0IWDZoLMh0Qz6oyKTNFkC1Wf1ZQwapUNbh803Mi+/DCwYSdkXXiewTLUQ56qt1zvPDhGngoitt4qPlGa+FWAtVWUCXkpLJ5gONJ7B+HJcnRMvGIQ/CAERCqPezVVnCqTRlAMF1XBc+XLh8pLpKJS+El97cTq8KKSatlY85yHxZmN2FxH4OZBJJz1wbfZ1mAxDxgx1Mixg0lc2U8jsF7O6IT4PlN5APP8Tlg=,iv:6uFk+/tyT6T34zr+jwrF9EicyrTTSDKHjxOOR/l2N3E=,tag:eLaNfnqzNrLJrsw9+gwDow==,type:str]
 sops:
     age:
         - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
@@ -16,7 +16,7 @@ sops:
             cXVXNmZralR3SlNhUUw1ZXB5a29GYlUKRGeExTwjUB2VYJ66LEaKQSv2KaMLqK2J
             wdROweWL/RmmcH7Y++0HTtd1SzZ6ivkyeI+7OsBwKjPeeyUd4YqkvQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-30T23:50:57Z"
-    mac: ENC[AES256_GCM,data:s2YVq53LSMtdkGwRvlaDg5LdupN80Pgb+xZd1MSO43+sX7lR/AsjEio3kArl9COiNKd0/Nw3c8FU7E/ocNHVdPGQTLWJPuJ9VxIex3xTgAyfskADRfbh2pqZpcUO4F1dGlyZos2VzPdTqPdipXlwAf5vNF9oMBSHFq35WrYuOOg=,iv:G88Wa70WCmrbEZJxE9cMGzFr6MdWDFQX2vFBSbPrgWo=,tag:zrTkNz4w8eWPLISD7XwwZg==,type:str]
+    lastmodified: "2025-10-01T00:30:42Z"
+    mac: ENC[AES256_GCM,data:QHKqYTLwOVEesvIzVgGsBnszN7K0Ag26yu/A9oFsimDeoFRL2fVSNd+zF5+Mug93maur16s1rZj1uPnpYTO8LZUNclDSg6Iy49I2s94NktWYj4mcIRCEf+4ZwGmzDfRZzeJwGNYkKZ88Ni4fO+ZfrvEkyLbqNwXAWDHoFjdT0ug=,iv:dyXuEYxfVnoRsa1xvihLnd0pxmmYVcQA2aQ9x3FsvMA=,tag:yD6ZZnGTSETH69ZbBB1RnQ==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
