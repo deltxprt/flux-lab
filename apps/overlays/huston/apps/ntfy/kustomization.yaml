@@ -12,4 +12,4 @@ configMapGenerator:
     - name: template-config
       namespace: ntfy
       files:
-        - ./templates/
+        - templates/
