@@ -26,7 +26,7 @@ spec:
     - match: Host(`openfaas.lab.markaplay.net`)
       kind: Rule
       services:
-      - name: openfaas
+      - name: gateway
         port: 8080
   tls:
     secretName: openfaas-cert
