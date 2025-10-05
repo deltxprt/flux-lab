@@ -11,5 +11,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: openfaas
-        namespace: flux-system
+        namespace: openfaas-fn
       version: 14.2.x
