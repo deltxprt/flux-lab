@@ -1,0 +1,13 @@
+# See the documentation for more information: https://pocket-id.org/docs/configuration/environment-variables
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: pocketid-config
+    namespace: pocketid
+data:
+  env: |-
+    APP_URL=https://oidc.ovh.markaplay.net
+    TRUST_PROXY=true
+    MAXMIND_LICENSE_KEY=
+    PUID=1000
+    PGID=100

@@ -19,8 +19,6 @@ kind: IngressRoute
 metadata:
   name: openfaas-web
   namespace: openfaas-fn
-  annotations: 
-    kubernetes.io/ingress.class: traefik-external
 spec:
   entryPoints:
     - websecure
