@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: searxng-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: searxng-pod
+  ports:
+    - name: http-searxng-out
+      protocol: TCP
+      port: 8080
+      targetPort:  http-searxng

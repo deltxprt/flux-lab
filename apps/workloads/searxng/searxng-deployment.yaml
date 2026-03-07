@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: searxng-deployment
+  labels:
+    app: searxng-deployment
+spec:
+  revisionHistoryLimit: 0
+  replicas: 1
+  selector:
+    matchLabels:
+      app: searxng-pod
+  template:
+    metadata:
+      labels:
+        app: searxng-pod
+    spec:
+      containers:
+        - name: redis
+          image: docker.io/valkey/valkey:8-alpine
+          args: ["valkey-server", "--save 30 1", "--loglevel warning"]
+          restart: unless-stop
+          volumeMounts:
+            - mountPath: /data
+              name: valkey-data
+          resources:
+            limits:
+              memory: 300Mi
+              cpu:  200m
+            requests:
+                  cpu: 150m
+                  memory: 150Mi
+        - name: searxng
+          image: docker.io/searxng/searxng:latest
+          args: ["serve"]
+          env: 
+            - name: SEARXNG_BASE_URL
+              value: https://search.markaplay.net/
+          ports: 
+            - containerPort: 8080
+              name: http-searxng
+          resources:
+            limits:
+              memory: 300Mi
+              cpu:  200m
+            requests:
+                  cpu: 150m
+                  memory: 150Mi
+          volumeMounts:
+            - mountPath: /var/cache/searxng
+              name: cache-volume
+            - mountPath: /etc/searxng
+              name: data-volume
+      volumes:
+        - name: cache-volume
+          persistentVolumeClaim:
+            claimName: searxng-cache-pvc
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: searxng-data-pvc
+        - name: valkey-data
+          persistentVolumeClaim:
+            claimName: valkey-data-pvc
