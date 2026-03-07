@@ -9,7 +9,7 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "searxng.markaplay.net"
+  commonName: "search.markaplay.net"
   dnsNames:
-  - "searxng.markaplay.net"
-  - "searxng.lab.markaplay.net"
+  - "search.markaplay.net"
+  - "search.lab.markaplay.net"

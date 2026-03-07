@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`searxng.markaplay.net`) || Host(`searxng.lab.markaplay.net`)
+    - match: Host(`search.markaplay.net`) || Host(`search.lab.markaplay.net`)
       kind: Rule
       services:
         - name: searxng-svc
