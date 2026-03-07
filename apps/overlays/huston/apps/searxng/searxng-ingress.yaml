@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: searxng-ingress
+  namespace: searxng
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`searxng.markaplay.net`) || Host(`searxng.lab.markaplay.net`)
+      kind: Rule
+      services:
+        - name: searxng-svc
+          kind: Service
+          port: 8080
+  tls:
+    secretName: searxng-cert

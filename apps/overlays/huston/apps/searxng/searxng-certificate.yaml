@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: searxng-cert
+  namespace: searxng
+spec:
+  secretName: searxng-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "searxng.markaplay.net"
+  dnsNames:
+  - "searxng.markaplay.net"
+  - "searxng.lab.markaplay.net"
