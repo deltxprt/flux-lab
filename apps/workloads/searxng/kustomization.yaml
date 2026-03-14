@@ -4,4 +4,5 @@ resources:
   - searxng-deployment.yaml # deployment definition
   - searxng-svc.yaml # service connecting pods to cluster network
   - searxng-pvc.yaml # pvc used to store cache and attachment
+  - config.yaml
 namespace: searxng # select namespace for whole application 

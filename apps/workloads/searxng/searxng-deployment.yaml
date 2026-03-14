@@ -49,6 +49,7 @@ spec:
           volumeMounts:
             - mountPath: /etc/searxng
               name: config
+              readOnly: true
             - mountPath: /var/cache/searxng
               name: cache-volume
       volumes:
