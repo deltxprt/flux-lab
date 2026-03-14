@@ -4,7 +4,7 @@ metadata:
   name: searxng-config
   namespace: searxng
 data:
-  server.yaml: |
+  settings.yml: |
     # see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
     use_default_settings: true
     server:
