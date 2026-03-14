@@ -11,7 +11,7 @@ data:
       # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
       limiter: false  # enable this when running the instance for a public usage on the internet
       image_proxy: true
-    redis:
+    valkey:
       url: redis://redis:6379/0
     search:
       formats:
