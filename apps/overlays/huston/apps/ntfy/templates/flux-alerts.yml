@@ -1,10 +1,10 @@
 title: |
   {{- if eq .severity "error" }}
-  ❌ {{ .title }}
+  ❌ {{ .involvedObject.name }}
   {{- else if eq .severity "warning" }}
-  ⚠️ {{ .title }}
+  ⚠️ {{ .involvedObject.name }}
   {{- else }}
-  ℹ️ {{ .title }}
+  ℹ️ {{ .involvedObject.name }}
   {{- end }}
 message: |
   Kind: {{ .involvedObject.kind }}
@@ -12,3 +12,9 @@ message: |
   Name: {{ .involvedObject.name }}
   Message: {{ .message }}
   Reason: {{ .reason }}
+priority: |
+  {{- if eq .severity "error" }}4
+  {{- else if eq .severity "warning" }}3
+  {{- else }}1
+  {{- end }}
+
