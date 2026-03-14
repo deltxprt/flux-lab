@@ -1,0 +1,14 @@
+title: |
+  {{- if eq .severity "error" }}
+  ❌ {{ .title }}
+  {{- else if eq .severity "warning" }}
+  ⚠️ {{ .title }}
+  {{- else }}
+  ℹ️ {{ .title }}
+  {{- end }}
+message: |
+  Kind: {{ .involvedObject.kind }}
+  Namespace: {{ .involvedObject.namespace }}
+  Name: {{ .involvedObject.name }}
+  Message: {{ .message }}
+  Reason: {{ .reason }}
