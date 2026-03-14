@@ -1,8 +1,18 @@
 ingressRoute:
   dashboard:
     enabled: false
-
-
+ports:
+  web:
+    redirectTo: websecure
+    proxyProtocol:
+      trustedIPs:
+        - '10.0.50.251/32'
+  websecure:
+    tls:
+      enabled: true
+    proxyProtocol:
+      trustedIPs:
+        - '10.0.50.251/32'
 service:
   enabled: true
   type: LoadBalancer
