@@ -51,8 +51,6 @@ spec:
               name: config
             - mountPath: /var/cache/searxng
               name: cache-volume
-            - mountPath: /etc/searxng
-              name: data-volume
       volumes:
         - name: config
           configMap:
@@ -60,9 +58,6 @@ spec:
         - name: cache-volume
           persistentVolumeClaim:
             claimName: searxng-cache-pvc
-        - name: data-volume
-          persistentVolumeClaim:
-            claimName: searxng-data-pvc
         - name: valkey-data
           persistentVolumeClaim:
             claimName: valkey-data-pvc
