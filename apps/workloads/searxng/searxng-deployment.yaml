@@ -33,10 +33,10 @@ spec:
         - name: searxng
           image: docker.io/searxng/searxng:latest
           args: ["serve"]
-          env: 
+          env:
             - name: SEARXNG_BASE_URL
               value: https://search.markaplay.net/
-          ports: 
+          ports:
             - containerPort: 8080
               name: http-searxng
           resources:
@@ -47,11 +47,16 @@ spec:
                   cpu: 150m
                   memory: 150Mi
           volumeMounts:
+            - mountPath: /etc/searxng
+              name: config
             - mountPath: /var/cache/searxng
               name: cache-volume
             - mountPath: /etc/searxng
               name: data-volume
       volumes:
+        - name: config
+          configMap:
+            name: searxng-config
         - name: cache-volume
           persistentVolumeClaim:
             claimName: searxng-cache-pvc
