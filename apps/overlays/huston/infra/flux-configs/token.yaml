@@ -5,19 +5,19 @@ metadata:
     namespace: flux-system
 type: Opaque
 stringData:
-    headers: ENC[AES256_GCM,data:jmqyI59hwSpz9wvPwpivud4EpSb3oIEpoMTcwRq1eTpJkfy8sxgyKYMJf0s6WEk6kvHyGEFtSe8vBx1zR5d5JW/pLyhlunuo1RcFHuaD,iv:10folSY2PwvkdEW8o1Ku5uDZ94Rypl8h/5z9/xjuyz0=,tag:VXMqAAwN7KaqMHESABN0QA==,type:str]
+    headers: ENC[AES256_GCM,data:QGCyXTzjhJYM6VpPtytbdlG4r5Zb3b6RMvonsPFY/x3k20VMTzZ3J53Gv9h6o416UE1ExkffUg==,iv:9uK7wSNGQwtHsBux6BAR1g3wjmer9mtIsiBsPoMDDDU=,tag:9chWwGRf+IVzVv23YlJt3w==,type:str]
 sops:
     age:
         - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB0ZFc1ZmJDbldXbWJBY1V0
-            Q2syTXNOWmc4ZENROUxNS200Zk41ZkhudUdBCnh1ekZyT1dyN3Y0cE00b21hZVV3
-            czlaV09BMjNzb3c2VHI4dytNczZJZmsKLS0tIDBCRzBZTEtSZGhhL3VaYjlLKzV3
-            UEg2ejJTY3RySWkxZHZOeWdzSDgrMGMKqVr0g1Jm+9HSIiKpXDVwE35O9YPuzi0M
-            8lj2eUtDxhMLm+Ts361DIobQnW7QUHp7KE1pYPHSWgBY1ghekPf9lA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBuMklNY2VOQjhEcGpOSU5Z
+            ZXpuTTNTb1RKSWdqWWtodW84NEFvL0tXUmhRCnl2UUZyenRZb1JScUJxb1gvVTdD
+            VlZDSVY4N2xjNnVoYzFjbDhObDFORVUKLS0tIDR6UWVPSzQ5dm1MaVBlVEoxYTNO
+            cXlhT2ttbXRiWjRESVlLak1TVEYzdWsKTVOLQ6gdFnRJzGzopLbXKMeJ9JB1yviw
+            DJSlmcsipIU3/w9RcC9dWYaad/lA1JFOFw8ZSGaOr09qwC8NugmaRA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-10-01T00:34:21Z"
-    mac: ENC[AES256_GCM,data:lmDKExfPxmKxRMgwM6eOhDKo9VUKvXkvajtOi/ck/LSj1gR+kWe+uZOrpqFGgF22x6QDHkfXymDllJv5W/9SRJAQC7W0PIYsDfM/v+uC1TjrJnsdlaKdp+66/DPo1OTbGsBJf0PJ2fK5xchtTYuI8jrvy1GL2wEN64QEp5pgBIM=,iv:1dMSZ6KsC+tv1dnhI3PA6FsIYyxs9Eln07gWfq1Yxn0=,tag:Sg4WnUx0UaNOYKJK5kL/7Q==,type:str]
+    lastmodified: "2026-03-14T02:12:43Z"
+    mac: ENC[AES256_GCM,data:FSaW3U1qPEmrNV5Qf5mZmE/0Apn5FVKPhD+NfwYaaYcIvVY3JCdbCeJMDziY1kx8hRXYbeigtPaPQOlFLEI+Dkfo4aOBWhzVnzwMU5yLgTa9s6sjSHuw2NWY1dzzgljJlhxAYOtmaGrJdEQN7lU0m6Un9yj/mFqkFdTjm+NZ1XA=,iv:Ss4W9t62qW9nQc/OtWrcf+L4FEdspptBYV5/6uBlpGo=,tag:+6+pb27Y1pAk2TV2JKm/yw==,type:str]
     encrypted_regex: ^(data|stringData)$
-    version: 3.10.2
+    version: 3.12.1
