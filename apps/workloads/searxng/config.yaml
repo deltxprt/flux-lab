@@ -1,20 +1,22 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: searxng-config
-  namespace: searxng
+    name: searxng-config
+    namespace: searxng
 data:
-  settings.yml: |
-    # see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
-    use_default_settings: true
-    server:
-      # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-      limiter: false  # enable this when running the instance for a public usage on the internet
-      image_proxy: true
-    valkey:
-      url: redis://redis:6379/0
-    search:
-      formats:
-        - html
-        - json
-        - rss
+    settings.yml: ENC[AES256_GCM,data:JnduVtuJQJ2nosB9eDd6+oBO9kBCJXgHqgCWcGPm6bDSWJrUBUvkWhDbaHbYGMc0PcRkjqs2mozKRSHK7RQuSgD54ufdlVlFtZRbns8ks9UJa8YezBMwZGMJRGXL7dPJA/YjC7Ea1RgBnb3TnR1owrFzwnnJl7p6c0Q2bTBJzC7adWjn9crvaU+JPeanqJZ6CXSfYDI8TxHzMEEBt6oOBHR0k3li03/FQa7lBklaeLqcJwX10mAfW1FPPTxDvuqxxp3zju1cF2xPWkMG9PJOY+QuAI6Wl1/+qVNVLLLcFXys0KJWMaXDjTSJrDnSXWjSAoFYtffN+k1MVfaNGujdmkvlWskhmCdgUbijd8gfiE9/7XTKy4kf1fdwvOL8P1pXBDXyU5295xsoBJdrnPqz/uty5Zvod7a1CJDYSnGxv72oJ/xdN7bkdLmxINkwe7OqYex8XqzuldtNHDF8k44aRsGlkAN1i7jxisswtcmLt6KX42NlAR2rRbDvsAbhDrW3z/HXZED1hDq1sR/9yimWcbvuA5PglR2D2fOHeXosOgZW4pqoXtIEywBU/LYq9isgbMgmUoADrhGrefKqmPvrR4uOHAZSMKZpT5ASztGkhG2NaQG3UaaldfTBfeaV9tLD1zWyWro1DX/LFCVnM0XoijK37Bt42OtcosZpyQ==,iv:nr4wOdDEt7cIhQdQQ4XSOVQZ38kziBUvd7wN6pRmBA4=,tag:t0/1YlU32/+kbqGBPyipeA==,type:str]
+sops:
+    age:
+        - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBiSFgvMGZFMGRzV2I1Uk13
+            MTNTZTJKRkdSQVMyVkl2M3pXbEhRVlUvampBCmVQRklKUElKZXdxSmhTeXVEYmsy
+            Vk9vazNwOHRSbzV1V3Y1V1RTaDluMncKLS0tIDk1ZjJaMFBUbGdZYlBsRnMrdEI2
+            ay9mUFduQzFyUFFSMnVyNk9VTGpONWsKF7edLHJsBuaZtWqo63/w9UZBVxN/sVgI
+            ryLNGCz/sH0k6CkGvhZmOk08bAkuL0lOJBkqWrX3MSjLsj7VEIfdPQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-03-14T02:27:48Z"
+    mac: ENC[AES256_GCM,data:ozGu196BEcIIlpOgAbuK6q4uki6XaLCEcw9XTVNu0ecOHka1u0IlV5wxK9RJt7cr7RFtuW64BCyZfyvWGXBakOc+Tf3pRwIWofUxRycPgU1zJlU63kGOdACFExujic/23zkAq2cdMB/7Ooh577krULRQmW4w7WR7iPPjdri344g=,iv:vlrFgMvO4HJJ8fLpjiSRjkfQW7rUwtbDPG+1Y8GdQJY=,tag:bLKObT0oCX9QKrdGrxpeWA==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.12.1
