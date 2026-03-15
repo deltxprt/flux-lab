@@ -4,19 +4,12 @@ metadata:
     name: ntfy-server-config
     namespace: ntfy
 data:
-    server.yml: ENC[AES256_GCM,data:lhTGbE0RTAnFHTFkt0NUwYzm7t32+P++LwEzpK9+LmlkguIAYahstNShJJZlKX4LCV3miYZ1+T0uIRUR0IWDZoLMh0Qz6oyKTNFkC1Wf1ZQwapUNbh803Mi+/DCwYSdkXXiewTLUQ56qt1zvPDhGngoitt4qPlGa+FWAtVWUCXkpLJ5gONJ7B+HJcnRMvGIQ/CAERCqPezVVnCqTRlAMF1XBc+XLh8pLpKJS+El97cTq8KKSatlY85yHxZmN2FxH4OZBJJz1wbfZ1mAxDxgx1Mixg0lc2U8jsF7O6IT4PlN5APP8Tlg=,iv:6uFk+/tyT6T34zr+jwrF9EicyrTTSDKHjxOOR/l2N3E=,tag:eLaNfnqzNrLJrsw9+gwDow==,type:str]
-sops:
-    age:
-        - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBXN0d4eFRocW1SN0VNcXlk
-            T0ozOVBYNGJ5QW1UU0hmdy9HK0E3UElER2hnCk5MLzdGcGtkZ1NKQjJmNmFnVkJZ
-            VXFxL3A1TFBraGNkNUxUSmhYRlYzSUUKLS0tIHpuOEhXWDBBb0thMmk0UmVSMUVP
-            cXVXNmZralR3SlNhUUw1ZXB5a29GYlUKRGeExTwjUB2VYJ66LEaKQSv2KaMLqK2J
-            wdROweWL/RmmcH7Y++0HTtd1SzZ6ivkyeI+7OsBwKjPeeyUd4YqkvQ==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-10-01T00:30:42Z"
-    mac: ENC[AES256_GCM,data:QHKqYTLwOVEesvIzVgGsBnszN7K0Ag26yu/A9oFsimDeoFRL2fVSNd+zF5+Mug93maur16s1rZj1uPnpYTO8LZUNclDSg6Iy49I2s94NktWYj4mcIRCEf+4ZwGmzDfRZzeJwGNYkKZ88Ni4fO+ZfrvEkyLbqNwXAWDHoFjdT0ug=,iv:dyXuEYxfVnoRsa1xvihLnd0pxmmYVcQA2aQ9x3FsvMA=,tag:yD6ZZnGTSETH69ZbBB1RnQ==,type:str]
-    encrypted_regex: ^(data|stringData)$
-    version: 3.10.2
+    server.yml: |-
+        base-url: https://ntfy.ovh.markaplay.net
+        cache-file: /var/cache/ntfy/cache.db
+        attachment-cache-dir: /var/cache/ntfy/attachments
+        auth-file: "/var/lib/ntfy/user.db"
+        auth-default-access: deny-all
+        behind-proxy: true
+        enable-login: true
+        enable-metrics: true

@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: node-exporter
+  namespace: monitoring
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: prometheus
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+        namespace: flux-system
+      version: 28.13.x
+  values:
+    prometheus:
+      enabled: false
+    alertmanager:
+      enabled: false
+    grafana:
+      enabled: false
+    prometheus-node-exporter:
+      tolerations:
+        - operator: Exists
+          effect: NoSchedule
+    kubeStateMetrics:
+      enabled: true
