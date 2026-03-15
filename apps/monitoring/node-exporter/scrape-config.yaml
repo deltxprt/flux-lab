@@ -1,0 +1,25 @@
+# talos-scrape-config.yaml
+# Additional scrape configuration for Talos machine metrics
+apiVersion: v1
+kind: Secret
+metadata:
+  name: additional-scrape-configs
+  namespace: monitoring
+stringData:
+  prometheus-additional.yaml: |
+    - job_name: 'talos-machine-metrics'
+      scheme: https
+      tls_config:
+        insecure_skip_verify: true
+      static_configs:
+        - targets:
+            - '10.0.0.60:9100'
+            - '10.0.0.61:9100'
+            - '10.0.50.200:9100'
+            - '10.0.50.201:9100'
+            - '10.0.50.202:9100'
+            - '10.0.50.203:9100'
+            - '10.0.50.204:9100'
+            - '10.0.50.205:9100'
+          labels:
+            source: 'talos-machine'

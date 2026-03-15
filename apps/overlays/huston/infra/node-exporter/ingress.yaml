@@ -26,7 +26,7 @@ spec:
     - match: Host(`metrics.huston.lab.markaplay.net`)
       kind: Rule
       services:
-      - name: node-exporter-prometheus-node-exporter
-        port: 9100
+      - name: node-exporter-prometheus-server
+        port: 80
   tls:
     secretName: node-exporter-cert

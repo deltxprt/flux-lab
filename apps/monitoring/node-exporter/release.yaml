@@ -14,8 +14,6 @@ spec:
         namespace: monitoring
       version: 28.13.x
   values:
-    prometheus:
-      enabled: false
     alertmanager:
       enabled: false
     grafana:
