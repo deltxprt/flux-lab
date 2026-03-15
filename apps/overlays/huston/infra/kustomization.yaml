@@ -6,4 +6,4 @@ resources:
   - cert-manager
   - metallb
   - traefik
-  - ../../../monitoring/node-exporter
+  - node-exporter
