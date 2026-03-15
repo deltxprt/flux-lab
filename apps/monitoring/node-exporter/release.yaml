@@ -7,10 +7,10 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: prometheus
+      chart: prometheus-community
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community
+        name: prometheus
         namespace: flux-system
       version: 28.13.x
   values:
