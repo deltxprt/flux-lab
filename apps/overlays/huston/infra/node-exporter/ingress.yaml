@@ -1,0 +1,32 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: node-exporter-cert
+  namespace: monitoring
+spec:
+  secretName: node-exporter-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "metrics.huston.lab.markaplay.net"
+  dnsNames:
+  - "metrics.huston.lab.markaplay.net"
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: node-exporter-cert
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`metrics.huston.lab.markaplay.net`)
+      kind: Rule
+      services:
+      - name: node-exorter-prometheus-node-exporter
+        port: 9100
+  tls:
+    secretName: node-exporter-cert
