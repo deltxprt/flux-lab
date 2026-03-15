@@ -14,6 +14,9 @@ spec:
         namespace: monitoring
       version: 28.13.x
   values:
+    server:
+      baseURL: https://metrics.huston.lab.markaplay.net
+      prefixURL: /
     alertmanager:
       enabled: false
     grafana:
