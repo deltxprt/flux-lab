@@ -6,4 +6,4 @@ resources:
   - cert-manager
   - metallb
   - traefik
-#  - node-exporter
+  - kube-prometheus-stack
