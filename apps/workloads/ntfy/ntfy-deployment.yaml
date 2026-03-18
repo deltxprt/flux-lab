@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ntfy-deployment
 spec:
-  revisionHistoryLimit: 0
+  revisionHistoryLimit: 1
   replicas: 1
   selector:
     matchLabels:
@@ -16,17 +16,17 @@ spec:
         app: ntfy-pod
     spec:
       containers:
-        - name: ntfy 
+        - name: ntfy
           image: binwiederhier/ntfy:v2.18.0
           args: ["serve"]
-          env: 
+          env:
             - name: TZ # set timezone
               value: America/Toronto
             - name: NTFY_DEBUG
               value: "false"
             - name: NTFY_LOG_LEVEL
               value: INFO
-          ports: 
+          ports:
             - containerPort: 80
               name: http-ntfy
           resources:
@@ -38,7 +38,7 @@ spec:
                   memory: 150Mi
           volumeMounts:
             - mountPath: /etc/ntfy
-              name: config 
+              name: config
               readOnly: true
             - mountPath: /etc/ntfy/templates
               name: template-volume

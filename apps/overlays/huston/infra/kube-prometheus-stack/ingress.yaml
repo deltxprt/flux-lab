@@ -2,10 +2,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: node-exporter-cert
+  name: prometheus-cert
   namespace: monitoring
 spec:
-  secretName: node-exporter-cert
+  secretName: prometheus-cert
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
@@ -17,7 +17,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: node-exporter-cert
+  name: prometheus-ingress
   namespace: monitoring
 spec:
   entryPoints:
@@ -29,4 +29,4 @@ spec:
       - name: kube-prometheus-stack-prometheus
         port: 9090
   tls:
-    secretName: node-exporter-cert
+    secretName: prometheus-cert
