@@ -14,6 +14,10 @@ spec:
         namespace: monitoring
       version: 82.10.x
   values:
+    prometheus:
+      prometheusSpec:
+        externalLabels:
+          cluster: "huston"
     alertmanager:
       enabled: false
     grafana:
