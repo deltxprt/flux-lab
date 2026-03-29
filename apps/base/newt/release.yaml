@@ -14,7 +14,7 @@ spec:
         namespace: newt-system
       version: ">=1.0.0"
   values:
-    newInstances:
+    newtInstances:
       - name: "main-tunnel"
         auth:
           existingSecretName: newt-key
