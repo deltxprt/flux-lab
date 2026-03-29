@@ -13,8 +13,8 @@ spec:
         name: newt
         namespace: newt-system
       version: latest
-    values:
-      newInstances:
-        - name: "main-tunnel"
-          auth:
-            existingSecretName: newt-key
+  values:
+    newInstances:
+      - name: "main-tunnel"
+        auth:
+          existingSecretName: newt-key
