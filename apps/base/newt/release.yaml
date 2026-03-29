@@ -7,10 +7,10 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: fossorial/newt
+      chart: newt
       sourceRef:
         kind: HelmRepository
-        name: newt
+        name: fossorial
         namespace: newt-system
       version: latest
   values:
