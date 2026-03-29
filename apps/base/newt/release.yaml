@@ -7,7 +7,7 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: fossorial
+      chart: fossorial/newt
       sourceRef:
         kind: HelmRepository
         name: newt
