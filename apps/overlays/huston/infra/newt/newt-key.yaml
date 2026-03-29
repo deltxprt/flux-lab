@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: newt-key
+    namespace: newt-system
+type: Opaque
+stringData:
+    endpointKey: ENC[AES256_GCM,data:F2uI2tPOk/mLjc57FVe9p5GuWEhf66BWYu6LmBvpHc7IYA==,iv:ZoJv7NI5Rfe/ta7MraZy6T+x5AISb9SM0zg/Txc/WaY=,tag:d5zweZM5TPstsWqIaOaayw==,type:str]
+    idKey: ENC[AES256_GCM,data:zKa3SpMuBYXnHFviMsxn,iv:Sm7XQ7QAAKIkw6MD1GjF0oU+loKmxS0w9KhFSyomQNk=,tag:+5wEtCfiYfAbz7VskCOuKQ==,type:str]
+    secretKey: ENC[AES256_GCM,data:uEr1TYYhoC2MDEiTrgJ9YPZgZ1K7zJLbblmx8G50t1LgW8pQaofR+BmQRdykSued,iv:QMoz0wtJCOTdxvjU/8Ny7Ez04UvG1NzVZl1S9Q8vXlE=,tag:wo6YcgD4GJzBT5W69c8wGQ==,type:str]
+sops:
+    age:
+        - recipient: age1z009ewmj2adfms328f3mc6aux27qq4d2mwhyunat9ul5x9k3fydq8mzxhr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBnSENpci9MTmx2WDZJWWM5
+            QUQvUW1Ic0pIckFqSFpIck5ReXJ1MkhjVUY0CmNRYTBGa2NyenhHUVEvUFhyVjgv
+            OVdCL2lnS3duYVI4UlNTUzNsZVZtVXcKLS0tIDVEb0NXaDRpelZFdDdRcTdORllU
+            M3lVK1hWa0pBWERzdTZwbkw4VXMrTU0KSDDf0mVj6nTZ54vQT523BtWv5TjHYlYE
+            3g0SjXJoP4SX0VgAjiKqFMJCxpbO9XXBlNd2h/aFWUompPXNK1MsTg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-03-29T17:56:05Z"
+    mac: ENC[AES256_GCM,data:UIWSlog3PokV4g3fuosq5TWVVWkO+oUM1bR9vwqCnSIdEp03wgFJ9GmJB8cjV9xqHWSs2VGesLhaQ/N1hY95PNW2FTZ5VnfrhXA1zjb4R92dkrvF7iWcouGfDXOQMn8FzEgp+4hqywmoH66s2P0DCCnIC4ROaLcqXvHTnp0N06A=,iv:rtAyIcPWwUMyjz8+qtoSA/ySqa1cg3J7nFw84+weods=,tag:FmffZK7NNxLTuw4oqYE5Hw==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.12.2
