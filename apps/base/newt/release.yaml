@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: fossorial
         namespace: newt-system
-      version: latest
+      version: ">=1.0.0"
   values:
     newInstances:
       - name: "main-tunnel"
